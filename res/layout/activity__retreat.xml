@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/f1"
+    android:orientation="vertical" >
+
+      <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+    
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="小黄人"
+        android:textColor="#fffff0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Welcome"
+        android:textColor="#fffff0"
+        android:textSize="18sp" />
+    
+    
+    <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/q1"
+       android:layout_below="@+id/welcome"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="320dp"
+       android:src="@drawable/b4"/>
+    
+    
+    <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/one"
+       android:layout_marginLeft="50dp"
+        android:layout_below="@+id/q1"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/v3"/>
+    
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eliminate"
+        android:text="清除本地数据"
+        android:textColor="#fffff0"
+        android:textSize="19sp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/q1"
+        android:layout_marginTop="15dp"
+        />
+    
+    <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/q2"
+       android:layout_below="@+id/eliminate"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:src="@drawable/b4"/>
+    
+    
+    
+    
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modification"
+        android:text="修改密码"
+        android:textColor="#fffff0"
+        android:textSize="19sp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/q2"
+        android:layout_marginTop="15dp"
+        />
+      
+      <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/two"
+       android:layout_marginLeft="50dp"
+        android:layout_below="@+id/q2"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/v2"/>
+       <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/q3"
+       android:layout_below="@+id/modification"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:src="@drawable/b4"/>
+       
+       <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retreat"
+        android:text="退出登录"
+        android:textColor="#fffff0"
+        android:textSize="19sp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/q3"
+        android:layout_marginTop="15dp"
+        />
+
+       <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/three"
+       android:layout_marginLeft="50dp"
+        android:layout_below="@+id/q3"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/v1"/>
+<ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/q4"
+       android:layout_below="@+id/retreat"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:src="@drawable/b4"/>
+
+  </RelativeLayout>
+</ScrollView>

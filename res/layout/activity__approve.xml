@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a4" />
+<TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="项目立项"
+        android:textColor="#ffffff"
+        android:textSize="21sp" />
+    
+       <TextView
+        android:id="@+id/zzzz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="主体信息阶段"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/b5" />
+
+    <TextView
+        android:id="@+id/xxxx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="35dp"
+        android:text="土地规划拍卖"
+        android:textColor="#8c8c8c" />
+
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vvvv"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/jump"
+        android:text="地勘阶段"
+        android:textColor="#8c8c8c" />
+    
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+		android:layout_toRightOf="@+id/vvvv"        
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/d2" />
+    
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/w6" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/zzzz"
+        android:src="@drawable/d1" />
+
+    <TextView
+        android:id="@+id/jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/zzzz"
+        android:text="阶段选择"
+        android:textColor="#2c75e4"
+        android:textSize="16sp" />
+    <!-- 第一段 -->
+
+
+
+    <!-- 第二段 -->
+
+   
+
+    <EditText
+        android:id="@+id/prjoctname"
+        android:layout_width="325dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:hint="项目名称"
+         android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prjoctname"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/b4" />
+
+    <!-- 第三段 -->
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q1"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="项目地址"
+        android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第四段 -->
+
+
+
+    <EditText
+        android:id="@+id/describe"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/q2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:hint="项目描述"
+     android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/describe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第五段 -->
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q3"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="13dp"
+        android:text="业主单位"
+        android:textColor="#2c75e4"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q3"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/d5" />
+    
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameone"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#000000"
+          android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/choose"
+        android:layout_below="@+id/q3"/>
+          
+             <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nametwo"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#000000"
+          android:layout_marginLeft="79dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/choose"
+        android:layout_below="@+id/q3"/>
+             
+                <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/namethree"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#000000"
+          android:layout_marginLeft="155dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/choose"
+        android:layout_below="@+id/q3"/>
+
+    <ImageView
+        android:id="@+id/q4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第六段 -->
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q4"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="13dp"
+        android:text="预计开工时间:"
+        android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/show1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q4"
+        android:layout_toRightOf="@+id/start"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="13dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/b4" />
+    <!-- 第七段 -->
+
+    <TextView
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q5"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="12dp"
+        android:text="预计竣工时间:"
+        android:textColor="#afafaf"  
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/shower1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q5"
+        android:layout_toRightOf="@+id/stop"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="13dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第八段 -->
+
+   
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q6"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="投资额："
+         android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/invest"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/q6"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="3dp"
+        android:hint="0"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第九段 -->
+
+    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q7"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="建筑面积："
+      android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/area"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/q7"
+        android:layout_marginLeft="98dp"
+        android:layout_marginTop="3dp"
+        android:hint="0"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第十段 -->
+
+    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q8"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="建筑层高："
+         android:textColor="#afafaf"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/higth"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/q8"
+        android:layout_marginLeft="98dp"
+        android:layout_marginTop="3dp"
+        android:hint="0"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/higth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第十一段 -->
+
+    <TextView
+        android:id="@+id/participation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q9"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="外资参与"
+        android:textColor="#2c75e4"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q9"
+        android:layout_toRightOf="@+id/participation"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/d2" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q9"
+        android:layout_toRightOf="@+id/participation"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/participation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/b4" />
+
+    <!-- 第十二段 -->
+
+    <TextView
+        android:id="@+id/owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q10"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="12dp"
+        android:text="业主类型"
+        android:textColor="#2c75e4"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q10"
+        android:layout_toRightOf="@+id/owner"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/d2" />
+
+    <TextView
+        android:id="@+id/shower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q10"
+         android:layout_toRightOf="@+id/owner"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/owner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/b4" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textview"
+        android:layout_alignRight="@+id/prjoctname"
+        android:src="@drawable/d4" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prjoctname"
+        android:layout_alignTop="@+id/textview"
+        android:src="@drawable/d7" />
+
+    </RelativeLayout>
+</ScrollView>

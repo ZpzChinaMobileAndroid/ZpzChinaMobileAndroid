@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    
+
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:id="@+id/designation"
+        android:src="#dadada"
+        />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/one"
+        android:src="@drawable/e2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/two"
+        android:text="土地规划/拍卖"
+        android:textSize="15sp"
+        android:textColor="#0000ff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+    <ImageView 
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+       android:src="#cecece"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@+id/two"
+       android:layout_marginTop="5dp"
+       android:id="@+id/aq1"
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/three"
+        android:text="上海中技桩业项目名称"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/aq1"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/four"
+        android:text="华东区  上海市  虹口区"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/three"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        />
+    
+    <TextView 
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/five"
+        android:text="           上海市虹口区广粤路汶水东路路口，麦德龙斜对过437号2幢1号楼"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/four"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        />
+</RelativeLayout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+  <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/first1"
+        android:src="@drawable/a4"
+        />
+	
+	<ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/back1"
+        android:src="@drawable/d7"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+       />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+       android:text="项目详情"
+       android:textColor="#ffffff"
+       android:textSize="21sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+       />
+        <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/r2"
+        android:layout_below="@+id/first1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/one1"
+        />
+ 
+     
+      
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="土地信息阶段"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:layout_below="@+id/first1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+         android:id="@+id/two1"
+        />
+          <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/d2"
+        android:layout_below="@+id/first1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="330dp"
+         android:id="@+id/five1"
+        />
+ 
+         <!-- 第一段 -->   
+    
+            <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:id="@+id/designation"
+        android:src="#dadada"
+       android:layout_below="@+id/two1"
+       android:layout_marginTop="10dp"
+        />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/one"
+        android:src="@drawable/e2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+  	android:layout_below="@+id/two1"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/two"
+        android:text="土地规划/拍卖"
+        android:textSize="15sp"
+        android:textColor="#0000ff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/one"
+        />
+    <ImageView 
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+       android:src="#cecece"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@+id/two"
+       android:layout_marginTop="5dp"
+       android:id="@+id/aq1"
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/three11"
+        android:text="上海中技桩业项目名称"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/aq1"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"
+        />
+     
+          <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/four11"
+        android:text="华东区  上海市  虹口区"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/three11"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        />
+          
+          <TextView 
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/five"
+        android:text="           上海市虹口区广粤路汶水东路路口，麦德龙斜对过437号2幢1号楼"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/four11"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        />
+
+     <ImageView
+         android:id="@+id/image"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/designation"
+         android:src="@drawable/r6" />
+     
+      <TextView 
+          android:layout_below="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/one111"
+        android:text="土地容积率"
+        android:textColor="#0000ff"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/two111"
+          android:layout_below="@+id/image"
+        android:text="地块用途"
+        android:textColor="#0000ff"
+        android:textSize="15sp"
+      android:layout_toRightOf="@+id/one111"
+      android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+     
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/three111"
+        android:text="土地面积"
+          android:layout_below="@+id/image"
+        android:textColor="#0000ff"
+        android:textSize="15sp"
+      android:layout_toLeftOf="@+id/one111"
+      android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        />
+
+       <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first111"
+        android:text="78%"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/one111"
+        android:layout_marginTop="10dp"
+        />
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sencend111"
+        android:text="酒店及餐饮"
+        android:textColor="#000000"
+        android:textSize="15sp"
+      android:layout_toRightOf="@+id/one111"
+        android:layout_below="@+id/one111"
+      android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+     
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thred111"
+        android:text="20000m²"
+        android:textColor="#000000"
+        android:textSize="15sp"
+      android:layout_toLeftOf="@+id/one111"
+        android:layout_below="@+id/one111"
+      android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        />
+     
+      
+      <TextView 
+          android:layout_below="@+id/first111"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/one1111"
+		    android:text="赵某某"
+		    android:textColor="#0000ff"
+		    android:textSize="15sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="20dp"
+		    
+		    />
+    
+    <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/two1111"
+		    android:text="项目经理"
+		    android:layout_below="@+id/one1111"
+		    android:textColor="#000000"
+		    android:textSize="15sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="10dp"
+		    />
+    
+    <ImageView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/one1111"
+		    android:src="@drawable/r9"
+		    android:layout_marginLeft="170dp"
+		    android:layout_marginTop="15dp"
+		    />
+    
+     <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/three1111"
+		    android:text="12345678911"
+		    android:layout_below="@+id/one1111"
+		    android:textColor="#000000"
+		    android:textSize="15sp"
+		    android:layout_marginLeft="190dp"
+		    android:layout_marginTop="10dp"
+		    />
+     
+     <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/four1111"
+		    android:text="拍卖单位—"
+		    android:layout_below="@+id/two1111"
+		    android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="10dp"
+		    />
+     
+      <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/five1111"
+		    android:text="上海中技桩业有限公司"
+		    android:layout_below="@+id/two1111"
+		   android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="100dp"
+		    android:layout_marginTop="10dp"
+		    />
+      <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/six1111"
+		    android:text="地址："
+		    android:layout_below="@+id/four1111"
+		  android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="10dp"
+		    />
+      
+      <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/seven1111"
+		    android:text="上海市 虹口区 广粤路437号"
+		    android:layout_below="@+id/four1111"
+		   android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="100dp"
+		    android:layout_marginTop="10dp"
+		    />
+
+      <ImageView
+          android:id="@+id/onrfirst"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/back1"
+          android:layout_toRightOf="@+id/three1111"
+          android:src="@drawable/h3" />
+
+      <TextView
+          android:id="@+id/three"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/five1"
+          android:layout_toRightOf="@+id/two"
+          android:text="土地信息阶段"
+          android:textColor="#000000"
+          android:textSize="13sp" />
+      
+         </RelativeLayout>
+</ScrollView>

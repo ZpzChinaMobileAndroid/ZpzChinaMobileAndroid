@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">信息采集</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新時間：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="action_settings">What</string>
+    
+    <string-array name="spinnername">   
+         <item>岗位</item> 
+          <item>项目经理</item>       
+          <item>采购经理</item>     
+          <item>设计经理</item>   
+          <item>项目总负责人</item> 
+          <item>其他</item> 
+          </string-array>
+          
+</resources>

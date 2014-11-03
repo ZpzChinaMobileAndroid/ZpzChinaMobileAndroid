@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/name"
+	    android:text="上海中技桩业项目名称"
+	    android:textColor="#000000"
+	    android:textSize="20sp"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginLeft="35dp"
+	    />
+   
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/photo"
+	    android:src="@drawable/h1"
+	    android:layout_toRightOf="@+id/name"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="27dp"
+	    />
+    
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/one"
+	    android:text="投资额"
+	    android:textColor="#0000ff"
+	    android:textSize="16sp"
+	    android:layout_below="@+id/name"
+	    android:layout_marginTop="30dp"
+	    android:layout_marginLeft="35dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/three"
+	    android:text="￥16,000,000"
+	    android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:layout_below="@+id/one"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="35dp"
+	    />
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/two"
+	    android:text="建筑面积"
+	    android:textColor="#0000ff"
+	    android:textSize="16sp"
+	    android:layout_below="@+id/name"
+	    android:layout_marginTop="30dp"
+	    android:layout_marginLeft="165dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/four"
+	    android:text="16,000m²"
+	    android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:layout_below="@+id/two"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="165dp"
+	    />
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/five"
+	    android:text="2014/5/03"
+	    android:textColor="#0000ff"
+	    android:textSize="11sp"
+	    android:layout_below="@+id/photo"
+	    android:layout_toRightOf="@+id/four"
+	    android:layout_marginTop="13dp"
+	    android:layout_marginLeft="45dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/six"
+	    android:text="2014/5/23"
+	    android:textColor="#f38b2a"
+	    android:textSize="11sp"
+	    android:layout_below="@+id/five"
+	    android:layout_toRightOf="@+id/four"
+	    android:layout_marginTop="3dp"
+	    android:layout_marginLeft="45dp"
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/senven"
+	    android:src="@drawable/h4"
+	    android:layout_below="@+id/six"
+	   	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="20dp"
+	    />
+	
+		<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/eight"
+	    android:src="@drawable/h2"
+	    android:layout_below="@+id/senven"
+	    android:layout_marginLeft="60dp"
+	    android:layout_marginTop="10dp"
+	    />
+		
+		<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/nine"
+	 	android:text="华南区——"
+	 	android:textColor="#0000ff"
+	 	android:textSize="14sp"
+	    android:layout_below="@+id/senven"
+	    android:layout_marginLeft="80dp"
+	    android:layout_marginTop="10dp"
+	    />
+		
+		
+		<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/ten"
+	 	android:text="上海市汶水路928号"
+	 	android:textColor="#000000"
+	 	android:textSize="14sp"
+	    android:layout_below="@+id/senven"
+	    android:layout_marginLeft="150dp"
+	    android:layout_marginTop="10dp"
+	    />
+		
+		<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/elevent"
+	    android:src="@drawable/h3"
+	    android:layout_below="@+id/senven"
+	    android:layout_marginLeft="300dp"
+	    android:layout_marginTop="10dp"
+	    />
+</RelativeLayout>

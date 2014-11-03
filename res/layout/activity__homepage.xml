@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+   <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <ImageView
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a4" />
+
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="信息采集"
+        android:textColor="#fffff0"
+        android:textSize="23sp" />
+     
+     
+     <ImageView
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:src="@drawable/c1" 
+        />
+   
+
+    <ImageView
+        android:id="@+id/result"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/c5" />
+
+    
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+       android:layout_marginBottom="50dp"
+        android:layout_above="@+id/project"
+        android:text="小黄人"
+        android:textColor="#fffff0"
+        android:textSize="22sp"
+       />
+
+    
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginBottom="20dp"
+        android:layout_above="@+id/project"
+        android:layout_marginLeft="25dp"
+        android:text="区域经理"
+        android:textColor="#fffff0"
+        android:textSize="17sp"
+       />
+
+    <ImageView
+        android:id="@+id/qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+       android:layout_marginBottom="20dp"
+        android:layout_above="@+id/project"
+        android:src="@drawable/c6" />
+
+    <TextView
+        android:id="@+id/geographic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+       android:layout_marginBottom="20dp"
+        android:layout_above="@+id/project"
+        android:text="上海是"
+        android:textColor="#fffff0"
+        android:textSize="16sp"
+       />
+    
+ <TextView
+        android:id="@+id/ geographic1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/geographic"
+        android:layout_marginLeft="5dp"
+       android:layout_marginBottom="20dp"
+        android:layout_above="@+id/project"
+        android:text="上海恩恩"
+        android:textColor="#fffff0"
+        android:textSize="16sp"
+       />
+
+
+    <ImageView
+        android:id="@+id/allproject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"        
+        android:layout_below="@+id/two"
+        android:src="@drawable/a10" />
+    
+     <ImageView
+        android:id="@+id/project1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/two"
+        android:layout_toLeftOf="@+id/allproject"
+        android:src="@drawable/c10" />
+     
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/project"
+        android:src="@drawable/a12"
+        android:layout_toLeftOf="@+id/project1"
+        android:layout_below="@+id/two"
+        
+        />
+    
+    <ImageView
+        android:id="@+id/myself1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/allproject"
+        android:layout_below="@+id/two"
+        android:src="@drawable/c10" />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myself"
+        android:src="@drawable/a11"
+        android:layout_toRightOf="@+id/myself1"
+        android:layout_below="@+id/two"
+        />
+    
+     <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/allproject"
+        android:src="@drawable/c11" />
+    
+    
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView11"
+        android:layout_marginTop="-1dp"
+        android:src="@drawable/c8" />
+
+   <TextView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/imageView11"
+       android:layout_marginTop="13dp"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/qqqqqq"
+       android:text="联系方式"
+       android:textColor="#ffffff"
+       android:textSize="19sp"/>
+   
+   <TextView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/qqqqqq"
+       android:layout_marginTop="5dp"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/mobile"
+       android:text="11111111111"
+       android:textColor="#ffffff"
+       android:textSize="16sp"/>
+    
+   <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/wwwww"
+       android:src="@drawable/c11"
+       android:layout_below="@+id/mobile"
+       android:layout_marginTop="10dp"
+       />
+   
+    <TextView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/wwwww"
+       android:layout_marginTop="13dp"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/eeeee"
+       android:text="联系方式"
+       android:textColor="#ffffff"
+       android:textSize="19sp"/>
+   
+   <TextView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/eeeee"
+       android:layout_marginTop="5dp"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/company"
+       android:text="上海中技"
+       android:textColor="#ffffff"
+       android:textSize="16sp"/>
+   
+   
+     </RelativeLayout>
+</ScrollView>

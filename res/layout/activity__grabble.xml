@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+
+      <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/first"
+        android:src="@drawable/a4"
+      />
+	
+      <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/voice"
+          android:layout_below="@+id/first"
+          android:text="请对准话筒输入...."
+          android:textColor="#dadada"
+          android:textSize="21sp"
+          android:layout_marginLeft="25dp"
+          android:layout_marginTop="25dp"/>
+      
+      
+    <ImageView
+        android:id="@+id/aaaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/back"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/d4" />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/back"
+        android:src="@drawable/d7"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+       />
+	
+
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="语音搜索"
+    android:textColor="#ffffff"
+    android:textSize="21sp"
+    android:layout_centerHorizontal="true"
+    android:layout_alignTop="@+id/back"
+    />    
+    
+    
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/w9" />
+
+</RelativeLayout>

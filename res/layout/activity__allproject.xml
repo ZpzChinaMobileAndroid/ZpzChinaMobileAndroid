@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+<ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/first"
+        android:src="@drawable/a4"
+      />
+	
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/k6" 
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>	
+        
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入内容"
+        android:textColor="#ffffff"
+        android:id="@+id/content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        />
+
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/content"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/k5"/>
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/d4"
+        android:layout_marginTop="25dp" 
+        android:layout_toRightOf="@+id/imageView1"
+        />
+ 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/d7"
+        android:layout_marginTop="25dp" 
+        android:layout_toLeftOf="@+id/imageView1"
+        />
+	
+    <ListView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:layout_below="@+id/first">
+        
+    </ListView>
+
+
+
+    
+    
+</RelativeLayout>

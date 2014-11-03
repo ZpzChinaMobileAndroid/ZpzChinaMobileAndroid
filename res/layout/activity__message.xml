@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/f3"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/aa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/f4" />
+
+    <!-- 第一段 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/d9" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="230dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/aa"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:background="@null"
+        android:hint="添加姓名"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q2"
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="20dp"
+        android:src="#d3d3d3" />
+
+    <!-- 第二段 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/d9" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="230dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/q2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:hint="添加电话"
+        android:textColor="#000000"
+        android:inputType="number"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q3"
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/phone"
+        android:layout_marginLeft="20dp"
+        android:src="#d3d3d3" />
+
+    <!-- 第三段 -->
+    
+    
+    <TextView
+        android:id="@+id/station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/q3"
+       android:layout_marginTop="12dp"
+        android:text="岗位"
+        android:textColor="#2c75e4"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/q4"
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/station"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:src="#d3d3d3" />
+
+    <!-- 第四段 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/d9" />
+
+    <EditText
+        android:id="@+id/company"
+        android:layout_width="230dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/q4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:hint="单位名称"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q5"
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/company"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:src="#d3d3d3" />
+
+    <!-- 第五段 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/d9" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="230dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/q5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:hint="单位地址"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/q6"
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/address"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:src="#d3d3d3" />
+    <!-- 第七段 -->
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/f6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="保存"
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/station"
+        android:layout_below="@+id/q3"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/d2" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/station"
+        android:layout_below="@+id/q3"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</RelativeLayout>

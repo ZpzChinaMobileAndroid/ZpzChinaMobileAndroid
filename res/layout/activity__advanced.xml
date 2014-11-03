@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+  <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/first"
+        android:src="@drawable/a4"
+      />
+	
+    <ImageView
+        android:id="@+id/found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/back"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/d4" />
+
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="高级搜索"
+    android:textColor="#ffffff"
+    android:textSize="21sp"
+    android:layout_centerHorizontal="true"
+    android:layout_alignTop="@+id/back"
+    />    
+    
+
+	<ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/back"
+        android:src="@drawable/d7"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+       />
+	
+	
+	<EditText 
+	    android:layout_width="340dp"
+	    android:layout_height="40dp"
+	    android:id="@+id/keyword"
+	    android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:layout_below="@+id/first"
+	    android:hint="项目关键字"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="15dp"
+	    
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b4"
+	    android:id="@+id/aa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="5dp"
+	    android:layout_below="@+id/keyword"/>
+	
+	<EditText 
+	    android:layout_width="340dp"
+	    android:layout_height="40dp"
+	    android:id="@+id/companyname"
+	    android:textColor="#000000"
+	    android:hint="相关公司名称"
+	    android:textSize="16sp"
+	    android:layout_below="@+id/aa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="5dp"
+	    
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b4"
+	    android:id="@+id/aaa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="5dp"
+	    android:layout_below="@+id/companyname"/>
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="区域"
+	    android:textColor="#2c75e4"
+	    android:textSize="16sp"
+	    android:id="@+id/district"
+	    android:layout_below="@+id/aaa"
+	    android:layout_marginLeft="18dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/d2"
+	    android:layout_toRightOf="@+id/district"
+	    android:layout_below="@+id/aaa"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text=""
+	    android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:id="@+id/show"
+	    android:layout_toRightOf="@+id/district"
+	    android:layout_below="@+id/aaa"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+		<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b4"
+	    android:id="@+id/aaaa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@+id/district"/>
+		
+		
+		
+			<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="城市"
+	    android:textColor="#2c75e4"
+	    android:textSize="16sp"
+	    android:id="@+id/province"
+	    android:layout_below="@+id/aaaa"
+	    android:layout_marginLeft="18dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/d2"
+	    android:layout_toRightOf="@+id/province"
+	    android:layout_below="@+id/aaaa"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text=""
+	     android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:id="@+id/show1"
+	    android:layout_toRightOf="@+id/province"
+	    android:layout_below="@+id/aaaa"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+		<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b4"
+	    android:id="@+id/aaaaa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@+id/province"/>
+		
+		
+		
+		
+		
+			<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="项目阶段"
+	    android:textColor="#2c75e4"
+	    android:textSize="16sp"
+	    android:id="@+id/stage"
+	    android:layout_below="@+id/aaaaa"
+	    android:layout_marginLeft="18dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/d2"
+	    android:layout_toRightOf="@+id/stage"
+	    android:layout_below="@+id/aaaaa"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text=""
+	      android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:id="@+id/show2"
+	    android:layout_toRightOf="@+id/stage"
+	    android:layout_below="@+id/aaaaa"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+		<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b4"
+	    android:id="@+id/aaaaaa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@+id/stage"/>
+		
+		
+		
+				<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="项目类别"
+	    android:textColor="#2c75e4"
+	    android:textSize="16sp"
+	    android:id="@+id/category"
+	    android:layout_below="@+id/aaaaaa"
+	    android:layout_marginLeft="18dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/d2"
+	    android:layout_toRightOf="@+id/category"
+	    android:layout_below="@+id/aaaaaa"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text=""
+	     android:textColor="#000000"
+	    android:textSize="16sp"
+	    android:id="@+id/show3"
+	    android:layout_toRightOf="@+id/category"
+	    android:layout_below="@+id/aaaaaa"
+	    android:layout_marginLeft="25dp"
+	    android:layout_marginTop="15dp"
+	    />
+	
+		<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b4"
+	    android:id="@+id/aaaaaaa"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@+id/category"/>
+	
+                  </RelativeLayout>
+</ScrollView>

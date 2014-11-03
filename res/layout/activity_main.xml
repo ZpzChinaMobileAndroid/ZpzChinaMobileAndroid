@@ -1,0 +1,108 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@drawable/a1"
+ >
+
+      <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+   <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a2"
+        android:id="@+id/imageview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+   
+   
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:src="@drawable/a5"
+        android:id="@+id/aa"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageview"
+        android:layout_marginTop="60dp"
+     
+       />
+ 
+    <EditText 
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:id="@+id/username"
+        android:hint="请填写用户名/手机号"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageview"
+        android:layout_marginTop="60dp"
+   
+       />
+     
+     <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/aa"
+        android:background="@drawable/a5"
+       />
+    
+     <ImageView 
+         android:layout_width="294dp"
+         android:layout_height="1dp"
+         android:src="#d3d3d3"
+         android:layout_below="@+id/aa"
+         android:layout_centerHorizontal="true"/>
+     
+     
+       <EditText 
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:id="@+id/userpassword"
+        android:hint="请输入密码"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/username"
+        android:password="true"
+       />
+       
+        
+       <ImageView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/langding"
+           android:src="@drawable/a3"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@+id/username"
+           android:layout_marginTop="60dp"/>
+      
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登         陆"
+        android:textColor="#fffff0"
+        android:textSize="16sp"
+        android:id="@+id/langding1"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+    />
+     <ImageView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/chosse1"
+         android:src="@drawable/a6"
+         android:layout_below="@+id/langding1"
+         android:layout_marginTop="45dp"
+         android:layout_marginLeft="30dp"
+         android:visibility="gone"
+         />
+        </RelativeLayout>
+</ScrollView>
+

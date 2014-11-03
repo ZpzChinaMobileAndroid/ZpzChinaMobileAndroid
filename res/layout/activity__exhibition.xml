@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/one1111"
+		    android:text="赵某某"
+		    android:textColor="#0000ff"
+		    android:textSize="15sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="20dp"
+		    
+		    />
+    
+    <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/two1111"
+		    android:text="项目经理"
+		    android:layout_below="@+id/one1111"
+		    android:textColor="#000000"
+		    android:textSize="15sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="10dp"
+		    />
+    
+    <ImageView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/one1111"
+		    android:src="@drawable/r9"
+		    android:layout_marginLeft="170dp"
+		    android:layout_marginTop="15dp"
+		    />
+    
+     <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/three1111"
+		    android:text="12345678911"
+		    android:layout_below="@+id/one1111"
+		    android:textColor="#000000"
+		    android:textSize="15sp"
+		    android:layout_marginLeft="190dp"
+		    android:layout_marginTop="10dp"
+		    />
+     
+     <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/four1111"
+		    android:text="拍卖单位—"
+		    android:layout_below="@+id/two1111"
+		    android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="10dp"
+		    />
+     
+      <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/five1111"
+		    android:text="上海中技桩业有限公司"
+		    android:layout_below="@+id/two1111"
+		   android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="100dp"
+		    android:layout_marginTop="10dp"
+		    />
+      <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/six1111"
+		    android:text="地址："
+		    android:layout_below="@+id/four1111"
+		  android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="20dp"
+		    android:layout_marginTop="10dp"
+		    />
+      
+      <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/seven1111"
+		    android:text="上海市 虹口区 广粤路437号"
+		    android:layout_below="@+id/four1111"
+		   android:textColor="#cecece"
+		    android:textSize="13sp"
+		    android:layout_marginLeft="100dp"
+		    android:layout_marginTop="10dp"
+		    />
+</RelativeLayout>

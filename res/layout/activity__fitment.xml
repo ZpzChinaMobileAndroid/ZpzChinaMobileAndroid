@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+      <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!-- 第一段 -->
+	
+	<ImageView
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a4" />
+        
+         <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="装修阶段"
+        android:textColor="#ffffff"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/zzzz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="装修阶段"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/b5" />
+
+    <TextView
+        android:id="@+id/xxxx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="35dp"
+        android:text="消防景观/绿化"
+        android:textColor="#8c8c8c" />
+    
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zzzz"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/w6" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/zzzz"
+        android:src="@drawable/r3" />
+
+    <TextView
+        android:id="@+id/jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/zzzz"
+        android:text="阶段选择"
+        android:textColor="#2c75e4"
+        android:textSize="16sp" />
+        <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/d7" />
+    
+	<!-- 第二段 -->
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/b1"
+	    android:id="@+id/er"
+	    android:layout_marginTop="11dp"
+	    android:layout_below="@+id/xxxx"
+	    />
+	
+	
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/d6"
+	    android:layout_marginTop="25dp"
+	    android:layout_below="@+id/xxxx"
+	    android:id="@+id/camera"
+	    android:layout_marginLeft="10dp"
+	    />
+	
+	
+	 <!-- 第三段 -->
+    
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/current"
+           android:text="弱点安装"
+           android:textColor="#2c75e4"
+           android:textSize="16sp"
+           android:layout_below="@+id/er"
+           android:layout_marginLeft="28dp"
+           android:layout_marginTop="17dp"/>
+       
+       <ImageView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/choose"
+           android:src="@drawable/d2"
+           android:layout_below="@+id/er"
+           android:layout_toRightOf="@+id/current"
+           android:layout_marginLeft="5dp"
+           android:layout_marginTop="17dp"/>
+       
+         <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/show"
+           android:text=""
+           android:textColor="#000000"
+           android:textSize="16sp"
+           android:layout_below="@+id/er"
+            android:layout_toRightOf="@+id/current"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="17dp"/>
+       
+       <ImageView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/b4"
+         android:id="@+id/q4"
+         android:layout_below="@+id/current"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="9dp"/>
+       
+	 <!-- 第四段 -->
+    
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/condition"
+           android:text="装修情况"
+           android:textColor="#2c75e4"
+           android:textSize="16sp"
+           android:layout_below="@+id/q4"
+           android:layout_marginLeft="28dp"
+           android:layout_marginTop="17dp"/>
+        
+        <ImageView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/choose"
+           android:src="@drawable/d2"
+           android:layout_below="@+id/q4"
+           android:layout_toRightOf="@+id/condition"
+           android:layout_marginLeft="5dp"
+           android:layout_marginTop="17dp"/>
+        
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/shower"
+           android:text=""
+           android:textColor="#000000"
+           android:textSize="16sp"
+           android:layout_below="@+id/q4"
+             android:layout_toRightOf="@+id/condition"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="17dp"/>
+       
+       
+       
+       <ImageView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/b4"
+         android:id="@+id/q6"
+         android:layout_below="@+id/condition"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="9dp"/>
+       
+         <!-- 第三段 -->
+       
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/schedule"
+           android:text="装修进度"
+           android:textColor="#2c75e4"
+           android:textSize="16sp"
+           android:layout_below="@+id/q6"
+           android:layout_marginLeft="28dp"
+           android:layout_marginTop="15dp"/>
+        
+        <ImageView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/choose"
+           android:src="@drawable/d2"
+           android:layout_below="@+id/q6"
+           android:layout_toRightOf="@+id/schedule"
+           android:layout_marginLeft="5dp"
+           android:layout_marginTop="16dp"/>
+        
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/showers"
+           android:text=""
+           android:textColor="#000000"
+           android:textSize="16sp"
+           android:layout_below="@+id/q6"
+           android:layout_toRightOf="@+id/schedule"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="15dp"/>
+       
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""
+           android:textColor="#000000"
+           android:textSize="13sp"
+           android:layout_below="@+id/q6"
+           android:layout_marginLeft="120dp"
+           android:layout_marginTop="10dp"/>
+       
+       
+       
+       <ImageView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/b4"
+         android:id="@+id/q10"
+         android:layout_below="@+id/schedule"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="8dp"/>
+
+       <ImageView
+           android:id="@+id/imageView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignRight="@+id/jump"
+           android:layout_alignTop="@+id/textview"
+           android:src="@drawable/d4" />
+       
+</RelativeLayout>
+</ScrollView>

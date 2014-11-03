@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/one111"
+        android:text="土地容积率"
+        android:textColor="#0000ff"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/two111"
+        android:text="地块用途"
+        android:textColor="#0000ff"
+        android:textSize="15sp"
+      android:layout_toRightOf="@+id/one111"
+      android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+     
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/three111"
+        android:text="土地面积"
+        android:textColor="#0000ff"
+        android:textSize="15sp"
+      android:layout_toLeftOf="@+id/one111"
+      android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        />
+
+       <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first111"
+        android:text="78%"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/one111"
+        android:layout_marginTop="10dp"
+        />
+    
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sencend111"
+        android:text="酒店及餐饮"
+        android:textColor="#000000"
+        android:textSize="15sp"
+      android:layout_toRightOf="@+id/one111"
+        android:layout_below="@+id/one111"
+      android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        />
+     
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thred111"
+        android:text="20000m²"
+        android:textColor="#000000"
+        android:textSize="15sp"
+      android:layout_toLeftOf="@+id/one111"
+        android:layout_below="@+id/one111"
+      android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        />
+</RelativeLayout>
