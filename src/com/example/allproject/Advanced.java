@@ -28,7 +28,7 @@ public class Advanced extends Activity{
 	EditText keyword,companyname;
 	TextView district,province,stage,category,show,show1,show2,show3;
 	ImageView found,back;
-	String[] strings={"工业","酒店及餐饮","商务办公","住宅/经济适用用房","公用事业设施","其他"};
+	String[] strings={"工业","酒店及餐饮","商务办公","住宅/经济适用用房","公用事业设施","其他kkk"};
 	public String category1[] = new String[] {"北京市","天津市","上海市","重庆市","河北省","山西省","内蒙古省","辽宁省","吉林省","黑龙江省","江苏省","浙江省","安徽省","福建省","香港特别行政区","澳门特别行政区","江西省","山东省","河南省","湖北省","湖南省","广东省",
 			"广西壮族自治区省","宁夏回族自治区","青海省","新疆维吾尔自治区","西藏自治区","台湾省","海南省","四川省","云南省","贵州省","陕西省","甘肃省" };
 	   public String category2[] = new String[] {"北京市","天津市","上海市","重庆市","石家庄市 ","唐山市","秦皇岛市","邯郸市","邢台市","保定市","张家口市","承德市","沧州市","廊坊市","衡水市",
