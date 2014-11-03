@@ -24,11 +24,11 @@ public class Sqlite {
 	Mysqlite sqlite;
 
 	public Sqlite(Context con) {
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 		sqlite=new Mysqlite(con);
 		}
 	
-		//´¢´æÊı¾İ
+		//å‚¨å­˜æ•°æ®
 	    public  void content(Information information){
 	    	SQLiteDatabase database=sqlite.getWritableDatabase();
 	    	String string ="insert into user(projectID ,projectCode ,projectVersion ,landName ," +
@@ -57,7 +57,7 @@ public class Sqlite {
 	        database.close();
 	    }
 	    
-	    //È¡Êı¾İ
+	    //å–æ•°æ®
 	    public ArrayList<Information>getInformations(){
 	    SQLiteDatabase database=sqlite.getReadableDatabase();
 	    ArrayList<Information>arrayList=new ArrayList<Information>();

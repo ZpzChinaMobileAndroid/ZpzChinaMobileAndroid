@@ -31,10 +31,10 @@ public class Approve extends Activity {
 	private	EditText projectname,describe,invest,area,higth;
 	private	TextView unit,address,start,stop,participation,owner,approve,show,shower,show1,shower1,nameone,nametwo,namethree;
 	private	ImageView choose;
-	String[] str={"Íâ×Ê¶À×Ê","ÖĞÍâ¶À×Ê","Ë½ÈËÆóÒµ","Õş¸®»ú¹Ø","¹úÓĞÆóÒµ","ÆäËû"};
-	String[] str2={"²ÎÓë","²»²ÎÓë"};
+	String[] str={"å¤–èµ„ç‹¬èµ„","ä¸­å¤–ç‹¬èµ„","ç§äººä¼ä¸š","æ”¿åºœæœºå…³","å›½æœ‰ä¼ä¸š","å…¶ä»–"};
+	String[] str2={"å‚ä¸","ä¸å‚ä¸"};
 	ArrayList<String >cellphone,company2,department,province,district;
-	String[] strings={"ÏîÄ¿¸ºÔğÈË","ÏîÄ¿¾­Àí","Éè¼Æ¾­Àí","ÏîÄ¿×Ü¸ºÔğÈË","ÆäËû"};
+	String[] strings={"é¡¹ç›®è´Ÿè´£äºº","é¡¹ç›®ç»ç†","è®¾è®¡ç»ç†","é¡¹ç›®æ€»è´Ÿè´£äºº","å…¶ä»–"};
 	ArrayList<String>arrayList=new ArrayList<String>();
 	String string,password,username;
 	 TextView  station,showsss ;
@@ -43,8 +43,8 @@ public class Approve extends Activity {
 	ArrayList<String>arrayList111,arrayList112,arrayList113,arrayList114;
 	 ArrayList<String> arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
 	String str3,str4,str5,str6,str7,str8,str9,str10,str11,str12,str13,str14;
-	//ÄêÔÂÈÕ
-	public String category1[] = new String[] { "2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024Äê","2025","2026","2027","2028","2029","2030","2031","2032","2033"};
+	//å¹´æœˆæ—¥
+	public String category1[] = new String[] { "2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024å¹´","2025","2026","2027","2028","2029","2030","2031","2032","2033"};
 	public String category2[][] = new String[][]{{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
 			{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
 			{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
@@ -72,29 +72,29 @@ public class Approve extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__approve);
 		
-	   projectname=(EditText) findViewById(id.prjoctname);//ÏîÄ¿Ãû³Æ
-	   address=(TextView) findViewById(id.address);//ÏîÄ¿µØÖ·
-	   describe=(EditText) findViewById(id.describe);//ÏîÄ¿ÃèÊö
-	   invest=(EditText) findViewById(id.invest);//Í¶×Ê¶î
-	   area=(EditText) findViewById(id.area);//Ãæ»ı
-	   higth=(EditText) findViewById(id.higth);//²ã¸ß
-	   unit=(TextView) findViewById(id.unit);//ÒµÖ÷µ¥Î»
-	   start=(TextView) findViewById(id.start);//¿ª¹¤Ê±¼ä
-	   stop=(TextView) findViewById(id.stop);//¿¢¹¤Ê±¼ä
-	   participation=(TextView) findViewById(id.participation);//Íâ×Ê²ÎÓë
-	   owner=(TextView) findViewById(id.owner);//ÒµÖ÷ÀàĞÍ
-	   choose=(ImageView) findViewById(id.choose);//Ôö¼ÓÓÃ»§ĞÅÏ¢
-	   approve=(TextView) findViewById(id.jump);//ÏîÄ¿Á¢Ïî·µ»ØÖ®Ç°½çÃæ
-	   ImageView   result=(ImageView) findViewById(id.back);//ÏîÄ¿Á¢Ïî·µ»ØÖ®Ç°½çÃæ
-	   ImageView   save=(ImageView) findViewById(id.save);//±£´æÏîÄ¿
-	   show=(TextView) findViewById(id.show);//ÏÔÊ¾ÊÇ·ñ²ÎÓë
-	   shower=(TextView) findViewById(id.shower);//ÀàĞÍÏÔÊ¾
-	   show1=(TextView) findViewById(id.show1);//ÏÔÊ¾¿ªÊ¼¹¤³Ì
-	   shower1=(TextView) findViewById(id.shower1);//ÏÔÊ¾¿¢¹¤ÈÕ³Ì
-	   nameone=(TextView) findViewById(id.nameone);//ÏÔÊ¾Ãû×Ö
-	   nametwo=(TextView) findViewById(id.nametwo);//ÏÔÊ¾Ãû×Ö2
-	   namethree=(TextView) findViewById(id.namethree);//ÏÔÊ¾Ãû×Ö3
-	   //ÉèÖÃ±ß¿òÄ£Ê½
+	   projectname=(EditText) findViewById(id.prjoctname);//é¡¹ç›®åç§°
+	   address=(TextView) findViewById(id.address);//é¡¹ç›®åœ°å€
+	   describe=(EditText) findViewById(id.describe);//é¡¹ç›®æè¿°
+	   invest=(EditText) findViewById(id.invest);//æŠ•èµ„é¢
+	   area=(EditText) findViewById(id.area);//é¢ç§¯
+	   higth=(EditText) findViewById(id.higth);//å±‚é«˜
+	   unit=(TextView) findViewById(id.unit);//ä¸šä¸»å•ä½
+	   start=(TextView) findViewById(id.start);//å¼€å·¥æ—¶é—´
+	   stop=(TextView) findViewById(id.stop);//ç«£å·¥æ—¶é—´
+	   participation=(TextView) findViewById(id.participation);//å¤–èµ„å‚ä¸
+	   owner=(TextView) findViewById(id.owner);//ä¸šä¸»ç±»å‹
+	   choose=(ImageView) findViewById(id.choose);//å¢åŠ ç”¨æˆ·ä¿¡æ¯
+	   approve=(TextView) findViewById(id.jump);//é¡¹ç›®ç«‹é¡¹è¿”å›ä¹‹å‰ç•Œé¢
+	   ImageView   result=(ImageView) findViewById(id.back);//é¡¹ç›®ç«‹é¡¹è¿”å›ä¹‹å‰ç•Œé¢
+	   ImageView   save=(ImageView) findViewById(id.save);//ä¿å­˜é¡¹ç›®
+	   show=(TextView) findViewById(id.show);//æ˜¾ç¤ºæ˜¯å¦å‚ä¸
+	   shower=(TextView) findViewById(id.shower);//ç±»å‹æ˜¾ç¤º
+	   show1=(TextView) findViewById(id.show1);//æ˜¾ç¤ºå¼€å§‹å·¥ç¨‹
+	   shower1=(TextView) findViewById(id.shower1);//æ˜¾ç¤ºç«£å·¥æ—¥ç¨‹
+	   nameone=(TextView) findViewById(id.nameone);//æ˜¾ç¤ºåå­—
+	   nametwo=(TextView) findViewById(id.nametwo);//æ˜¾ç¤ºåå­—2
+	   namethree=(TextView) findViewById(id.namethree);//æ˜¾ç¤ºåå­—3
+	   //è®¾ç½®è¾¹æ¡†æ¨¡å¼
 	   projectname.setBackgroundDrawable(null);
 	   describe.setBackgroundDrawable(null);
 	   invest.setBackgroundDrawable(null);
@@ -108,32 +108,32 @@ public class Approve extends Activity {
 	   
 	   
 	   
-	   //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+	   //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		string=getIntent().getStringExtra("token");
-		System.out.println("ÏîÄ¿Á¢Ïî½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-		//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+		System.out.println("é¡¹ç›®ç«‹é¡¹ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 		username=getIntent().getStringExtra("name");
-		System.out.println("ÏîÄ¿Á¢Ïî½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-		//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+		System.out.println("é¡¹ç›®ç«‹é¡¹ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 		password=getIntent().getStringExtra("password");
-		System.out.println("ÏîÄ¿Á¢Ïî½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		System.out.println("é¡¹ç›®ç«‹é¡¹ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("ÏîÄ¿Á¢Ïî½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("é¡¹ç›®ç«‹é¡¹ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company2=getIntent().getStringArrayListExtra("company");
-		 System.out.println("ÏîÄ¿Á¢Ïî½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("é¡¹ç›®ç«‹é¡¹ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("ÏîÄ¿Á¢Ïî½çÃæÊÕµ½µÄÖ°Îñ"+department);
-		 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+		 System.out.println("é¡¹ç›®ç«‹é¡¹ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-		 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
 	   
-		  //ÖĞ×ªÎÒµÄÖµ
+		  //ä¸­è½¬æˆ‘çš„å€¼
 	    arrayList2=new ArrayList<String>();
        arrayList2=getIntent().getStringArrayListExtra("one");	
        arrayList4=new ArrayList<String>();
@@ -153,12 +153,12 @@ public class Approve extends Activity {
        arrayList11=new ArrayList<String>();
        arrayList11=getIntent().getStringArrayListExtra("ten");		
        
-	   //ÏîÄ¿Á¢Ïî·µ»ØÖ®Ç°½çÃæ
+	   //é¡¹ç›®ç«‹é¡¹è¿”å›ä¹‹å‰ç•Œé¢
 	   approve.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				arrayList.add(projectname.getText().toString());
 				arrayList.add(address.getText().toString());
@@ -199,12 +199,12 @@ public class Approve extends Activity {
 			}
 		});
 	   
-	   //±£´æµ½±¾µØ
+	   //ä¿å­˜åˆ°æœ¬åœ°
 	   save.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 			arrayList.add(projectname.getText().toString());
 			arrayList.add(address.getText().toString());
@@ -243,17 +243,17 @@ public class Approve extends Activity {
 		
 		startActivity(intent);
 		finish();
-		 Toast.makeText(Approve.this, "±£´æµ½±¾µØ³É¹¦", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(Approve.this, "ä¿å­˜åˆ°æœ¬åœ°æˆåŠŸ", Toast.LENGTH_SHORT).show();
 		}
 	});
 	   
 	   
-	   //·µ»ØÖ®Ç°½çÃæ
+	   //è¿”å›ä¹‹å‰ç•Œé¢
 	   result.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				arrayList.add(projectname.getText().toString());
 				arrayList.add(address.getText().toString());
@@ -293,14 +293,14 @@ public class Approve extends Activity {
 				
 			}
 		});
-	   //½ÓÊÜµÄÖµ£¬ÓÃÓÚÏÔÊ¾±£´æ
+	   //æ¥å—çš„å€¼ï¼Œç”¨äºæ˜¾ç¤ºä¿å­˜
 	   ArrayList<String>arrayList1=new ArrayList<String>();
        arrayList1=getIntent().getStringArrayListExtra("two");	  
       
-	   System.out.println("ÏîÄ¿Á¢Ïî½ÓÊÜµÄÖµ"+arrayList1);
+	   System.out.println("é¡¹ç›®ç«‹é¡¹æ¥å—çš„å€¼"+arrayList1);
 	   str3=new String();str4=new String();str5=new String();str6=new String();str7=new String();str8=new String();
 	   str9=new String();str10=new String();str11=new String();str12=new String();str13=new String();str14=new String();
-    //ÅĞ¶ÏÒ»ÏÂ²»µÈÓÚnullµÄÊ±ºò
+    //åˆ¤æ–­ä¸€ä¸‹ä¸ç­‰äºnullçš„æ—¶å€™
 	   if(arrayList1!=null){
        str3=arrayList1.get(0);     projectname.setText(str3);
 	   str4=arrayList1.get(1);     describe.setText(str4);
@@ -319,24 +319,24 @@ public class Approve extends Activity {
 	
 	   
 	   
-	 //Íâ×Ê²ÎÓë
+	 //å¤–èµ„å‚ä¸
 	   participation.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 			AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 			builder.setItems(str2,new AlertDialog.OnClickListener() {
 				
 				@Override
 				public void onClick(DialogInterface arg0, int arg1) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 						for(int i=0;i<str2.length;i++){
 							if(i==arg1){
 					
-					         //ÏÔÊ¾ÊÇ·ñ²ÎÓë
+					         //æ˜¾ç¤ºæ˜¯å¦å‚ä¸
 			                  show.setText(str2[arg1]);	
 			                  arg0.dismiss();
 							}
@@ -347,42 +347,42 @@ public class Approve extends Activity {
 		}
 	});
 	
-	 //ÒµÖ÷ÀàĞÍ
+	 //ä¸šä¸»ç±»å‹
 	   owner.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			final boolean[]	checkedItems =new boolean[]{false,false,false,false,false,false};
 			AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 			AlertDialog.Builder builder2=new AlertDialog.Builder(Approve.this);
-			builder2.setTitle("ÌáÊ¾");
+			builder2.setTitle("æç¤º");
 			builder2.setMultiChoiceItems(str, checkedItems, new AlertDialog.OnMultiChoiceClickListener() {
 				@Override
 				public void onClick(DialogInterface arg0, int arg1, boolean arg2) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-				checkedItems[arg1]=arg2;          //¸Ä±ä±»²Ù×÷ÁĞ±íµÄ×´Ì¬
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+				checkedItems[arg1]=arg2;          //æ”¹å˜è¢«æ“ä½œåˆ—è¡¨çš„çŠ¶æ€
 				}
 			});
-			builder2.setPositiveButton("È·¶¨", new AlertDialog. OnClickListener() {
+			builder2.setPositiveButton("ç¡®å®š", new AlertDialog. OnClickListener() {
 				
 				@Override
 				public void onClick(DialogInterface arg0, int arg1) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 
-					String result="";          //ÓÃÓÚ±£´æÑ¡Ôñ½á¹û
+					String result="";          //ç”¨äºä¿å­˜é€‰æ‹©ç»“æœ
 					for(int i=0;i<checkedItems.length;i++){
 						if(checkedItems[i]){
-							result+=str[i]+"¡¢";        //½«Ñ¡ÏîÄÚÈİÌí¼Óµ½resultÖĞ
+							result+=str[i]+"ã€";        //å°†é€‰é¡¹å†…å®¹æ·»åŠ åˆ°resultä¸­
 						}
 					}
-					//ÅĞ¶ÏÒ»ÏÂresult²»Îª¿ÕµÄÊ±ºò£¬½«ËùµÃµ½µÄ½á¹ûÏÔÊ¾³öÀ´
+					//åˆ¤æ–­ä¸€ä¸‹resultä¸ä¸ºç©ºçš„æ—¶å€™ï¼Œå°†æ‰€å¾—åˆ°çš„ç»“æœæ˜¾ç¤ºå‡ºæ¥
 				if("".equals(result)){}	
 					result=result.substring(0,result.length()-1);
-					shower.setText(result);     //ÏÔÊ¾ËùÑ¡ÔñµÄÄÚÈİ
+					shower.setText(result);     //æ˜¾ç¤ºæ‰€é€‰æ‹©çš„å†…å®¹
 				}
 			});
-			builder2.setNegativeButton("È¡Ïû", null);
+			builder2.setNegativeButton("å–æ¶ˆ", null);
 			builder2.show();
 				
 			}
@@ -392,40 +392,40 @@ public class Approve extends Activity {
 	
 	   
 	   
-	 //Ôö¼ÓÓÃ»§ĞÅÏ¢
+	 //å¢åŠ ç”¨æˆ·ä¿¡æ¯
 	   choose.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Approve.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
 				
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 				
-				//¸ÚÎ»
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -437,32 +437,32 @@ public class Approve extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  
 						if(two.equals("")){
-					    	   Toast.makeText(Approve.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Approve.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
 						
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Approve.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Approve.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Approve.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Approve.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList111.size()>10){
-								Toast.makeText(Approve.this, "Ãû¶îÒÑÂú£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Approve.this, "åé¢å·²æ»¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -475,7 +475,7 @@ public class Approve extends Activity {
 						    arrayList111.add(company.getText().toString());               
 						    arrayList111.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList111);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList111);
 						String stringone=new String();  
 						
 						if(arrayList111!=null&&arrayList111.size()==5){
@@ -500,40 +500,40 @@ public class Approve extends Activity {
 	   
 		
 	   
-	 //ÒµÖ÷µ¥Î»
+	 //ä¸šä¸»å•ä½
 	   unit.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Approve.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
 				
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 				
-				//¸ÚÎ»
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -545,32 +545,32 @@ public class Approve extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Approve.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Approve.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
 						
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Approve.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Approve.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Approve.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Approve.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList111.size()>10){
-								Toast.makeText(Approve.this, "Ãû¶îÒÑÂú£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Approve.this, "åé¢å·²æ»¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -583,7 +583,7 @@ public class Approve extends Activity {
 						    arrayList111.add(company.getText().toString());               
 						    arrayList111.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList111);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList111);
 						String stringone=new String();  
 						
 						if(arrayList111!=null&&arrayList111.size()==5){
@@ -607,22 +607,22 @@ public class Approve extends Activity {
 		});
 	
 	   
-	 //ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚÒ»Î»
+	 //ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬ä¸€ä½
 		nameone.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Approve.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 				
 				String string1=new String();   	String string2=new String();   	String string3=new String();
 				String string4=new String();    String string5=new String();
@@ -663,22 +663,22 @@ public class Approve extends Activity {
 				
 				
 				
-				//¸ÚÎ»
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -690,32 +690,32 @@ public class Approve extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Approve.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Approve.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Approve.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Approve.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Approve.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Approve.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList112.size()>10){
-								Toast.makeText(Approve.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Approve.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -728,7 +728,7 @@ public class Approve extends Activity {
 						    arrayList112.add(company.getText().toString());               
 						    arrayList112.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList112);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList112);
 						String stringone=new String();  
 						
 						if(arrayList112!=null&&arrayList112.size()==5){
@@ -752,22 +752,22 @@ public class Approve extends Activity {
 	
 		
 		
-		//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚ¶şÎ»
+		//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬äºŒä½
 		nametwo.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Approve.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 				
 				String string1=new String();   	String string2=new String();   	String string3=new String();
 				String string4=new String();    String string5=new String();
@@ -804,22 +804,22 @@ public class Approve extends Activity {
 					string5 =arrayList113.get(14);  addressimage.setText(string5);
 				}
 			
-				//¸ÚÎ»
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -831,32 +831,32 @@ public class Approve extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Approve.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Approve.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Approve.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Approve.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Approve.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Approve.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList113.size()>10){
-								Toast.makeText(Approve.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Approve.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -869,7 +869,7 @@ public class Approve extends Activity {
 						    arrayList113.add(company.getText().toString());               
 						    arrayList113.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList113);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList113);
 						String stringone=new String();  
 						
 						if(arrayList113!=null&&arrayList113.size()==5){
@@ -893,22 +893,22 @@ public class Approve extends Activity {
 		
 
 
-		//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚÈıÎ»
+		//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬ä¸‰ä½
 		namethree.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Approve.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 				
 				String string1=new String();   	String string2=new String();   	String string3=new String();
 				String string4=new String();    String string5=new String();
@@ -945,22 +945,22 @@ public class Approve extends Activity {
 					string5 =arrayList114.get(14);  addressimage.setText(string5);
 				}
 				
-				//¸ÚÎ»
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Approve.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -972,32 +972,32 @@ public class Approve extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Approve.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Approve.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Approve.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Approve.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Approve.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Approve.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList114.size()>10){
-								Toast.makeText(Approve.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Approve.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -1010,7 +1010,7 @@ public class Approve extends Activity {
 						    arrayList114.add(company.getText().toString());               
 						    arrayList114.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList114);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList114);
 						String stringone=new String();  
 						
 						if(arrayList114!=null&&arrayList114.size()==5){
@@ -1033,13 +1033,13 @@ public class Approve extends Activity {
 		});
 
 	   
-	 //¿ª¹¤Ê±¼ä  
+	 //å¼€å·¥æ—¶é—´  
 	 
 		 
 		 start.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
-	                showSelectDialog(Approve.this, "ÇøÓòÑ¡Ôñ", category1, category2,category3);
+	                showSelectDialog(Approve.this, "åŒºåŸŸé€‰æ‹©", category1, category2,category3);
 	            }
 	        });
 		}
@@ -1049,7 +1049,7 @@ public class Approve extends Activity {
 		        LinearLayout llContent = new LinearLayout(context);
 		        llContent.setOrientation(LinearLayout.HORIZONTAL);
 		        
-		        //µÚÒ»¼¶ÁĞ±í
+		        //ç¬¬ä¸€çº§åˆ—è¡¨
 		        final WheelView wheelLeft = new WheelView(context);
 		        wheelLeft.setVisibleItems(5);
 		        wheelLeft.setCyclic(true);
@@ -1058,7 +1058,7 @@ public class Approve extends Activity {
 		        paramsLeft.gravity = Gravity.RIGHT;
 		        
 		        
-		        //µÚ¶ş¼¶ÁĞ±í
+		        //ç¬¬äºŒçº§åˆ—è¡¨
 		        final WheelView wheelRight = new WheelView(context);
 		        wheelRight.setVisibleItems(5);
 		        wheelRight.setCyclic(true);
@@ -1067,7 +1067,7 @@ public class Approve extends Activity {
 		        paramsRight.gravity = Gravity.RIGHT;
 		        
 		        
-		        //µÚÈı¼¶ÁĞ±í
+		        //ç¬¬ä¸‰çº§åˆ—è¡¨
 		        final WheelView wheellast = new WheelView(context);
 		        wheellast.setVisibleItems(5);
 		        wheellast.setCyclic(true);
@@ -1088,7 +1088,7 @@ public class Approve extends Activity {
 		                wheellast.setCurrentItem(last[newValue].length );
 		            }
 		        });
-		        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "È·¶¨", new DialogInterface.OnClickListener() {
+		        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "ç¡®å®š", new DialogInterface.OnClickListener() {
 		            @Override
 		            public void onClick(DialogInterface dialog, int which) {
 		                int leftPosition = wheelLeft.getCurrentItem();
@@ -1099,7 +1099,7 @@ public class Approve extends Activity {
 		                dialog.dismiss();
 		            }
 		        });
-		        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "È¡Ïû", new DialogInterface.OnClickListener() {
+		        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "å–æ¶ˆ", new DialogInterface.OnClickListener() {
 		            @Override
 		            public void onClick(DialogInterface dialog, int which) {
 		                dialog.dismiss();
@@ -1110,12 +1110,12 @@ public class Approve extends Activity {
 		            dialog.show();
 		        }
 	   
-	 //¿¢¹¤Ê±¼ä
+	 //ç«£å·¥æ—¶é—´
 	   
 	        stop.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
-	                showSelectDialog1(Approve.this, "ÇøÓòÑ¡Ôñ", category1, category2,category3);
+	                showSelectDialog1(Approve.this, "åŒºåŸŸé€‰æ‹©", category1, category2,category3);
 	            }
 	        });
 		}
@@ -1125,7 +1125,7 @@ public class Approve extends Activity {
 		        LinearLayout llContent = new LinearLayout(context);
 		        llContent.setOrientation(LinearLayout.HORIZONTAL);
 		        
-		        //µÚÒ»¼¶ÁĞ±í
+		        //ç¬¬ä¸€çº§åˆ—è¡¨
 		        final WheelView wheelLeft = new WheelView(context);
 		        wheelLeft.setVisibleItems(5);
 		        wheelLeft.setCyclic(true);
@@ -1134,7 +1134,7 @@ public class Approve extends Activity {
 		        paramsLeft.gravity = Gravity.RIGHT;
 		        
 		        
-		        //µÚ¶ş¼¶ÁĞ±í
+		        //ç¬¬äºŒçº§åˆ—è¡¨
 		        final WheelView wheelRight = new WheelView(context);
 		        wheelRight.setVisibleItems(5);
 		        wheelRight.setCyclic(true);
@@ -1143,7 +1143,7 @@ public class Approve extends Activity {
 		        paramsRight.gravity = Gravity.RIGHT;
 		        
 		        
-		        //µÚÈı¼¶ÁĞ±í
+		        //ç¬¬ä¸‰çº§åˆ—è¡¨
 		        final WheelView wheellast = new WheelView(context);
 		        wheellast.setVisibleItems(5);
 		        wheellast.setCyclic(true);
@@ -1164,7 +1164,7 @@ public class Approve extends Activity {
 		                wheellast.setCurrentItem(last[newValue].length );
 		            }
 		        });
-		        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "È·¶¨", new DialogInterface.OnClickListener() {
+		        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "ç¡®å®š", new DialogInterface.OnClickListener() {
 		            @Override
 		            public void onClick(DialogInterface dialog, int which) {
 		                int leftPosition = wheelLeft.getCurrentItem();
@@ -1175,7 +1175,7 @@ public class Approve extends Activity {
 		                dialog.dismiss();
 		            }
 		        });
-		        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "È¡Ïû", new DialogInterface.OnClickListener() {
+		        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "å–æ¶ˆ", new DialogInterface.OnClickListener() {
 		            @Override
 		            public void onClick(DialogInterface dialog, int which) {
 		                dialog.dismiss();
@@ -1186,7 +1186,7 @@ public class Approve extends Activity {
 		            dialog.show();
 		        }
 	        }
-//	//ÉèÖÃ·µ»Ø¼ü
+//	//è®¾ç½®è¿”å›é”®
 //			@Override
 //			public void onBackPressed() {
 //				// TODO Auto-generated method stub

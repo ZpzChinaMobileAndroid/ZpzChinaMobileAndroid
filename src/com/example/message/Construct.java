@@ -39,13 +39,13 @@ public class Construct extends Activity {
 		setContentView(R.layout.activity__construct);
 		
 	
-		 ImageView  save=(ImageView) findViewById(id.imageView3);//±£´æÏîÄ¿
-		 ImageView  back=(ImageView) findViewById(id.back);//·µ»Ø½çÃæ
-		 TextView jumpTextView=(TextView) findViewById(id.jump);//Ìø×ª»ØÈ¥
+		 ImageView  save=(ImageView) findViewById(id.imageView3);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+		 ImageView  back=(ImageView) findViewById(id.back);//ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½
+		 TextView jumpTextView=(TextView) findViewById(id.jump);//ï¿½ï¿½×ªï¿½ï¿½È¥
 		 gird = (GridView) findViewById(R.id.girdview);
 		 gird.setAdapter(myAdpter);
-		  //ÖÐ×ªÎÒµÄÖµ
-		  //ÖÐ×ªÎÒµÄÖµ
+		  //ï¿½ï¿½×ªï¿½Òµï¿½Öµ
+		  //ï¿½ï¿½×ªï¿½Òµï¿½Öµ
 	 	    arrayList2=new ArrayList<String>();
 	        arrayList2=getIntent().getStringArrayListExtra("one");	
 	        arrayList3=new ArrayList<String>();
@@ -67,39 +67,39 @@ public class Construct extends Activity {
 	        arrayList11=new ArrayList<String>();
 	        arrayList11=getIntent().getStringArrayListExtra("ten");		
 	       
-	      //½ÓÊÕ´«¹ýÀ´µÄtokenÖµ
+	      //ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tokenÖµ
 			string=getIntent().getStringExtra("token");
-			System.out.println("Ö÷ÌåÊ©¹¤½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-			//½ÓÊÕ´«¹ýÀ´µÄµÇÂ¼Ãû
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½tokenÖµ"+string);
+			//ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Â¼ï¿½ï¿½
 			username=getIntent().getStringExtra("name");
-			System.out.println("Ö÷ÌåÊ©¹¤½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-			//½ÓÊÕ´«¹ýÀ´µÄµÇÂ¼ÃÜÂë
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½"+username);
+			//ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 			password=getIntent().getStringExtra("password");
-			System.out.println("Ö÷ÌåÊ©¹¤½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-			 //½ÓÊÕ´«¹ýÀ´µÄÊÖ»úºÅ
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½ï¿½"+password);
+			 //ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½
 			 cellphone=getIntent().getStringArrayListExtra("cellphone");
-			 System.out.println("Ö÷ÌåÊ©¹¤½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-			 //½ÓÊÕ´«¹ýÀ´µÄËùÊôµ¥Î»
+			 System.out.println("ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½"+cellphone);
+			 //ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»
 			 company=getIntent().getStringArrayListExtra("company");
-			 System.out.println("Ö÷ÌåÊ©¹¤½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-			 //½ÓÊÕ´«¹ýÀ´µÄÖ°Îñ
+			 System.out.println("ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»"+company);
+			 //ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½
 			 department=getIntent().getStringArrayListExtra("department");
-			 System.out.println("Ö÷ÌåÊ©¹¤½çÃæÊÕµ½µÄÖ°Îñ"+department);
-			 //½ÓÊÕ´«¹ýÀ´µÄÇøÓò
+			 System.out.println("ï¿½ï¿½ï¿½ï¿½Ê©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½Ö°ï¿½ï¿½"+department);
+			 //ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			 district=getIntent().getStringArrayListExtra("district");
-			 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-			 //½ÓÊÕ´«¹ýÀ´µÄ³ÇÊÐ
+			 System.out.println("ï¿½ï¿½ï¿½Ø¹æ»®ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½Ö°ï¿½ï¿½"+district);
+			 //ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
 			 province=getIntent().getStringArrayListExtra("province");
-			 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+			 System.out.println("ï¿½ï¿½ï¿½Ø¹æ»®ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½Ö°ï¿½ï¿½"+province);
 			 
 			 
 			 
-			 //Ìø×ª»ØÈ¥µ½Ñ¡Ôñ½çÃæ
+			 //ï¿½ï¿½×ªï¿½ï¿½È¥ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½
 			 back.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ÉµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						
 						Intent intent=new Intent(Construct.this,Content.class);
 						intent.putExtra("key7", "1");
@@ -129,12 +129,12 @@ public class Construct extends Activity {
 				});
 			
 			 
-			  //±£´æµ½±¾µØ
+			  //ï¿½ï¿½ï¿½æµ½ï¿½ï¿½ï¿½ï¿½
 			   save.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View arg0) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ÉµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					  
 				Intent intent=new Intent(Construct.this,Myself.class);
 				intent.putExtra("one", arrayList);
@@ -162,16 +162,16 @@ public class Construct extends Activity {
 				
 				startActivity(intent);
 				finish();
-				 Toast.makeText(Construct.this, "±£´æµ½±¾µØ³É¹¦", Toast.LENGTH_SHORT).show();
+				 Toast.makeText(Construct.this, "ï¿½ï¿½ï¿½æµ½ï¿½ï¿½ï¿½Ø³É¹ï¿½", Toast.LENGTH_SHORT).show();
 				}
 			});
 			 
-		 //Ìø×ª»ØÈ¥µ½Ñ¡Ôñ½çÃæ
+		 //ï¿½ï¿½×ªï¿½ï¿½È¥ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½
 		 jumpTextView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ÉµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				
 				Intent intent=new Intent(Construct.this,Content.class);
 				intent.putExtra("key7", "1");
@@ -201,12 +201,12 @@ public class Construct extends Activity {
 		 
 		
 //		 
-//		//ÕÕÏà»ú
+//		//ï¿½ï¿½ï¿½ï¿½ï¿½
 //		 camera.setOnClickListener(new OnClickListener() {
 //				
 //				@Override
 //				public void onClick(View arg0) {
-//					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//					// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ÉµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //					
 //					 Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 //					 startActivityForResult(intent, 1);
@@ -273,7 +273,7 @@ public class Construct extends Activity {
 
 		}
 	 
-	//ÉèÖÃ·µ»Ø¼ü
+	//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½Ø¼ï¿½
 			@Override
 			public void onBackPressed() {
 				// TODO Auto-generated method stub

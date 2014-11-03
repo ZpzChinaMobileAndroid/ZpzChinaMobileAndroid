@@ -13,19 +13,19 @@ public class Mysqlite extends SQLiteOpenHelper{
 	
 	public Mysqlite(Context context) {
 		
-		//²ÎÊıÒ»:ÉÏÏÂÎÄ»·¾³ ²ÎÊı¶ş£ºÊı¾İ¿âµÄÃû×Ö ²ÎÊıËÄ£º°æ±¾ºÅ ²ÎÊıÈı
+		//å‚æ•°ä¸€:ä¸Šä¸‹æ–‡ç¯å¢ƒ å‚æ•°äºŒï¼šæ•°æ®åº“çš„åå­— å‚æ•°å››ï¼šç‰ˆæœ¬å· å‚æ•°ä¸‰
 		super(context, DBNAME, null, VERSION);
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 	}
-	// µ±ÒªÓÃµ½Êı¾İ¿âÊ±£¬ÏµÍ³»áÈ¥¼ì²éµ±Ç°³ÌĞòÖĞÊÇ·ñ°üº¬Êı¾İ¿â£¬Èç¹û²»°üº¬£¬×ßOncreate·½·¨
-	 // ×¢Òâ£ºÒ»¿ªÊ¼´´½¨ÁË3¸öÁĞµÄÊı¾İ¿â£¬½øĞĞÁËÒ»ÏµÁĞµÄ²âÊÔ£¬µ±ÓĞÒ»ÌìÅöµ½ÒªÔö¼Óµ½4¸öÁĞÊ±£¬Ò»¶¨ÒªÏÈ°ÑÔ­Êı¾İ¿âÉ¾µôÔÙÈ¥²âÊÔ
+	// å½“è¦ç”¨åˆ°æ•°æ®åº“æ—¶ï¼Œç³»ç»Ÿä¼šå»æ£€æŸ¥å½“å‰ç¨‹åºä¸­æ˜¯å¦åŒ…å«æ•°æ®åº“ï¼Œå¦‚æœä¸åŒ…å«ï¼Œèµ°Oncreateæ–¹æ³•
+	 // æ³¨æ„ï¼šä¸€å¼€å§‹åˆ›å»ºäº†3ä¸ªåˆ—çš„æ•°æ®åº“ï¼Œè¿›è¡Œäº†ä¸€ç³»åˆ—çš„æµ‹è¯•ï¼Œå½“æœ‰ä¸€å¤©ç¢°åˆ°è¦å¢åŠ åˆ°4ä¸ªåˆ—æ—¶ï¼Œä¸€å®šè¦å…ˆæŠŠåŸæ•°æ®åº“åˆ æ‰å†å»æµ‹è¯•
 	@Override
-	public void onCreate(SQLiteDatabase arg0) {							//´´½¨Êı¾İ¿â
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-		// Ò»°ãÀ´Ëµ£¬´Ë´¦¾ùÊÇ½øĞĞ´´½¨±íµÄ²Ù×÷
-		// create table ±íÃû £¨_id integer primary key autoincrement,ÁĞÃû  ÁĞ´æ´¢µÄÀàĞÍ£¬¡£¡£¡££©£»
-	    // Ö´ĞĞÏÂÃæµÄ·½·¨´ú±íÎÒÒªÔÚÊı¾İ¿âÖĞ´´½¨Ò»¸öÃûÎªgameInfoµÄ±í
-		// ¸ÃÊı¾İ¿â»á±»´æ·ÅÔÚdata/data/³ÌĞò°üÃû/databases/
+	public void onCreate(SQLiteDatabase arg0) {							//åˆ›å»ºæ•°æ®åº“
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		// ä¸€èˆ¬æ¥è¯´ï¼Œæ­¤å¤„å‡æ˜¯è¿›è¡Œåˆ›å»ºè¡¨çš„æ“ä½œ
+		// create table è¡¨å ï¼ˆ_id integer primary key autoincrement,åˆ—å  åˆ—å­˜å‚¨çš„ç±»å‹ï¼Œã€‚ã€‚ã€‚ï¼‰ï¼›
+	    // æ‰§è¡Œä¸‹é¢çš„æ–¹æ³•ä»£è¡¨æˆ‘è¦åœ¨æ•°æ®åº“ä¸­åˆ›å»ºä¸€ä¸ªåä¸ºgameInfoçš„è¡¨
+		// è¯¥æ•°æ®åº“ä¼šè¢«å­˜æ”¾åœ¨data/data/ç¨‹åºåŒ…å/databases/
 				
 		arg0.execSQL("create table user(_id integer primary key autoincrement, projectID text," +
 				"projectCode text,projectVersion text,landName text,district text, province text,city text," +
@@ -38,11 +38,11 @@ public class Mysqlite extends SQLiteOpenHelper{
 				"decorationSituation text,decorationProgress text,url text)");
 	         
 	 }
-	//µ±Êı¾İ¿âµÄ°æ±¾ºÅ·¢Éú¸Ä±äÊ±»áÔËĞĞµÄ·½·¨£¬Òª¸ÉµÄÊÂ¶ù£ºÉ¾³ıÔ­Êı¾İ¿â£¬ÖØĞÂoncreate·½·¨
+	//å½“æ•°æ®åº“çš„ç‰ˆæœ¬å·å‘ç”Ÿæ”¹å˜æ—¶ä¼šè¿è¡Œçš„æ–¹æ³•ï¼Œè¦å¹²çš„äº‹å„¿ï¼šåˆ é™¤åŸæ•°æ®åº“ï¼Œé‡æ–°oncreateæ–¹æ³•
 	@Override
 	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-		//Èç¹ûÊı¾İ¿âÖĞ´æÔÚtableÕâÕÅ±í£¬¾Í°ÑÕâÕÅ±íÉ¾³ı
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+		//å¦‚æœæ•°æ®åº“ä¸­å­˜åœ¨tableè¿™å¼ è¡¨ï¼Œå°±æŠŠè¿™å¼ è¡¨åˆ é™¤
 	
 		
 	}

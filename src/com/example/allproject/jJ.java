@@ -20,60 +20,60 @@ public class jJ extends Activity {
 	String string,username,password;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+	// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 	super.onCreate(savedInstanceState);
 	
 	setContentView(R.layout.jia);
   
-//½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+//æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 string=getIntent().getStringExtra("token");
-System.out.println("±¾µØÏîÄ¿½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 username=getIntent().getStringExtra("name");
-System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 password=getIntent().getStringExtra("password");
-System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
+System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
 
-//ÍÁµØ¹æ»®
+//åœŸåœ°è§„åˆ’
    arrayList=new ArrayList<String>();
    arrayList=getIntent().getStringArrayListExtra("one");	
-   System.out.println("ÍÁµØ¹æ»®ÏÔÊ¾"+arrayList);
+   System.out.println("åœŸåœ°è§„åˆ’æ˜¾ç¤º"+arrayList);
    arrayList1=new ArrayList<String>();
    arrayList1=getIntent().getStringArrayListExtra("two");	
-   System.out.println("ÏîÄ¿Á¢ÏîÏÔÊ¾"+arrayList1);
-//  µØ¿±½×¶Î
+   System.out.println("é¡¹ç›®ç«‹é¡¹æ˜¾ç¤º"+arrayList1);
+//  åœ°å‹˜é˜¶æ®µ
    arrayList2=new ArrayList<String>();
    arrayList2=getIntent().getStringArrayListExtra("three");	
-   System.out.println("µØ¿±½×¶ÎÏÔÊ¾"+arrayList2);
-//  Éè¼Æ½×¶Î
+   System.out.println("åœ°å‹˜é˜¶æ®µæ˜¾ç¤º"+arrayList2);
+//  è®¾è®¡é˜¶æ®µ
    arrayList3=new ArrayList<String>();
    arrayList3=getIntent().getStringArrayListExtra("four");	
-   System.out.println("Éè¼Æ½×¶ÎÏÔÊ¾"+arrayList3);
-//  ³öÍ¼½×¶Î
+   System.out.println("è®¾è®¡é˜¶æ®µæ˜¾ç¤º"+arrayList3);
+//  å‡ºå›¾é˜¶æ®µ
    arrayList4=new ArrayList<String>();
    arrayList4=getIntent().getStringArrayListExtra("five");	
-   System.out.println("³öÍ¼½×¶ÎÏÔÊ¾"+arrayList4);
- // µØÆ½ 
+   System.out.println("å‡ºå›¾é˜¶æ®µæ˜¾ç¤º"+arrayList4);
+ // åœ°å¹³ 
    arrayList5=new ArrayList<String>();
    arrayList5=getIntent().getStringArrayListExtra("six");	
-   System.out.println("µØÆ½ÏÔÊ¾"+arrayList5);
- //  ×®»ù»ù¿Ó
+   System.out.println("åœ°å¹³æ˜¾ç¤º"+arrayList5);
+ //  æ¡©åŸºåŸºå‘
    arrayList6=new ArrayList<String>();
    arrayList6=getIntent().getStringArrayListExtra("seven");	
-   System.out.println("×®»ù»ù¿ÓÏÔÊ¾"+arrayList6);
- //  Ö÷ÌåÊ©¹¤
+   System.out.println("æ¡©åŸºåŸºå‘æ˜¾ç¤º"+arrayList6);
+ //  ä¸»ä½“æ–½å·¥
    arrayList7=new ArrayList<String>();
    arrayList7=getIntent().getStringArrayListExtra("eight");	
-   System.out.println("Ö÷ÌåÊ©¹¤ÏÔÊ¾"+arrayList7);
- //Ïû·ÀÂÌ»¯
+   System.out.println("ä¸»ä½“æ–½å·¥æ˜¾ç¤º"+arrayList7);
+ //æ¶ˆé˜²ç»¿åŒ–
    arrayList8=new ArrayList<String>();
    arrayList8=getIntent().getStringArrayListExtra("nine");	
-   System.out.println("Ïû·ÀÂÌ»¯ÏÔÊ¾"+arrayList8);
- //  ×°ĞŞ½×¶Î
+   System.out.println("æ¶ˆé˜²ç»¿åŒ–æ˜¾ç¤º"+arrayList8);
+ //  è£…ä¿®é˜¶æ®µ
    arrayList9=new ArrayList<String>();
    arrayList9=getIntent().getStringArrayListExtra("ten");	
-   System.out.println("×°ĞŞ½×¶ÎÏÔÊ¾"+arrayList9);
+   System.out.println("è£…ä¿®é˜¶æ®µæ˜¾ç¤º"+arrayList9);
    arrayList111=new ArrayList<String>();
    arrayList111=getIntent().getStringArrayListExtra("user");	
    arrayList112=new ArrayList<String>();
@@ -88,7 +88,7 @@ System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
 	
 	@Override
 	public void onClick(View arg0) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		Intent intent=new Intent(jJ.this,Project.class);
 		intent.putExtra("one", arrayList);
 		intent.putExtra("two", arrayList1);
@@ -110,10 +110,10 @@ System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
 });
    
     }
-     //·µ»Ø¼üÉèÖÃ
+     //è¿”å›é”®è®¾ç½®
      @Override
      public void onBackPressed() {
-  	// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+  	// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 	Intent intent=new Intent(jJ.this,Homepage.class);
 	intent.putExtra("one", arrayList);
 	intent.putExtra("two", arrayList3);

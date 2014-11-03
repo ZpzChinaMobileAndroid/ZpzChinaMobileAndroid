@@ -36,14 +36,14 @@ public class Register extends Activity{
 	Handler handler=new Handler(){
 		public void handleMessage(android.os.Message msg) {
 			if(msg.what==1){
-				Toast.makeText(Register.this, "×¢²á³É¹¦£¬ÇëÖØĞÂµÇÂ½", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Register.this, "æ³¨å†ŒæˆåŠŸï¼Œè¯·é‡æ–°ç™»é™†", Toast.LENGTH_SHORT).show();
 				Intent intent=new Intent(Register.this,MainActivity.class);
 				startActivity(intent);
 				finish();	
 			}else if (msg.what==2) {
-				Toast.makeText(Register.this, "ÓÃ»§ÃûÒÑ´æÔÚ£¬ÇëÖØĞÂÌîÈë×¢²áĞÅÏ¢", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Register.this, "ç”¨æˆ·åå·²å­˜åœ¨ï¼Œè¯·é‡æ–°å¡«å…¥æ³¨å†Œä¿¡æ¯", Toast.LENGTH_SHORT).show();
 			}else if(msg.what==3) {
-				Toast.makeText(Register.this, "¶Ô²»Æğ£¬ÄúÁ½´ÎÊäÈëµÄÃÜÂë²»Í¬£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Register.this, "å¯¹ä¸èµ·ï¼Œæ‚¨ä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸åŒï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 			}
 		};
 	};
@@ -52,33 +52,33 @@ public class Register extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__register);
 	
-		 mobliphone=(EditText) findViewById(R.id.mobliphone); //ÇëÌîĞ´ÊÖ»úºÅ
-		 testing=(EditText) findViewById(R.id.testing);//ÇëÊäÈëÑéÖ¤Âë
-	     password=(EditText) findViewById(R.id.password);//µÚÒ»´ÎÊäÈëÃÜÂë
-		 repeat=(EditText) findViewById(R.id.repeat);//µÚ¶ş´ÎÊäÈëÃÜÂë
-		 register=(ImageView) findViewById(R.id.imageview);//×¢²á
-		  cancel=(ImageView) findViewById(R.id.imageview1);//È¡Ïû
+		 mobliphone=(EditText) findViewById(R.id.mobliphone); //è¯·å¡«å†™æ‰‹æœºå·
+		 testing=(EditText) findViewById(R.id.testing);//è¯·è¾“å…¥éªŒè¯ç 
+	     password=(EditText) findViewById(R.id.password);//ç¬¬ä¸€æ¬¡è¾“å…¥å¯†ç 
+		 repeat=(EditText) findViewById(R.id.repeat);//ç¬¬äºŒæ¬¡è¾“å…¥å¯†ç 
+		 register=(ImageView) findViewById(R.id.imageview);//æ³¨å†Œ
+		  cancel=(ImageView) findViewById(R.id.imageview1);//å–æ¶ˆ
 		 
-		 //È¡Ïû¶Ô»°¿ò±ßÔµ
+		 //å–æ¶ˆå¯¹è¯æ¡†è¾¹ç¼˜
 		mobliphone.setBackgroundDrawable(null);
 		testing.setBackgroundDrawable(null);
 		password.setBackgroundDrawable(null);
 		repeat.setBackgroundDrawable(null);
 		
 		
-		//×¢²áÉèÖÃ
+		//æ³¨å†Œè®¾ç½®
 		register.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			new Thread(){
 				@Override
 				public void run() {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-			//ÅĞ¶ÏÊäÈëµÄÓÃ»§ÃÜÂëÊÇ·ñÏàÍ¬
-			String firtString=	password.getText().toString(); System.out.println("ÃÜÂë1£º"+firtString);
-			String twoString=	repeat.getText().toString(); System.out.println("ÃÜÂë2£º"+twoString);
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+			//åˆ¤æ–­è¾“å…¥çš„ç”¨æˆ·å¯†ç æ˜¯å¦ç›¸åŒ
+			String firtString=	password.getText().toString(); System.out.println("å¯†ç 1ï¼š"+firtString);
+			String twoString=	repeat.getText().toString(); System.out.println("å¯†ç 2ï¼š"+twoString);
 			
 			if(firtString.equals(twoString)){
 					
@@ -89,9 +89,9 @@ public class Register extends Activity{
 					jsonObject.put("userName", mobliphone.getText().toString());
 					jsonObject.put("password", password.getText().toString());
 					jsonObject.put("DeviceType", "mobile");
-					System.out.println("×¢²áÕËºÅµÄÆ´½ÓÎª£º"+jsonObject.toString());
+					System.out.println("æ³¨å†Œè´¦å·çš„æ‹¼æ¥ä¸ºï¼š"+jsonObject.toString());
 				} catch (JSONException e) {
-					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 					e.printStackTrace();
 		}	
 				try {
@@ -102,7 +102,7 @@ public class Register extends Activity{
 				   if( httpResponse.getStatusLine().getStatusCode()==200){
 					   HttpEntity entity = httpResponse.getEntity();
 						String string = EntityUtils.toString(entity);
-						System.out.println("×¢²áºóÊÕµ½µÄ·µ»ØÖµ:" + string);
+						System.out.println("æ³¨å†Œåæ”¶åˆ°çš„è¿”å›å€¼:" + string);
 				   if(string.contains("200")){
 					   handler.sendEmptyMessage(1);
 				   }else{
@@ -110,10 +110,10 @@ public class Register extends Activity{
 				   }
 				   }
 			} catch (ClientProtocolException e1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 						e1.printStackTrace();
 					} catch (IOException e1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 						e1.printStackTrace();
 					}
 				}else if(firtString!=twoString) {
@@ -124,12 +124,12 @@ public class Register extends Activity{
 			}
 		});
 		
-		//È¡ÏûÉèÖÃ
+		//å–æ¶ˆè®¾ç½®
 		cancel.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Register.this,MainActivity.class);
 				startActivity(intent);
@@ -138,7 +138,7 @@ public class Register extends Activity{
 		});
 		
   }
-	//ÉèÖÃ·µ»Ø¼ü
+	//è®¾ç½®è¿”å›é”®
 	@Override
 	public void onBackPressed() {
 		// TODO Auto-generated method stub

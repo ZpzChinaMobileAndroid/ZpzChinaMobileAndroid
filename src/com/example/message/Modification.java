@@ -48,11 +48,11 @@ public class Modification extends Activity{
 				intent.putExtra("province", province);
 			   startActivity(intent);
 			   finish();
-			   Toast.makeText(Modification.this, "ĞŞ¸ÄÃÜÂë³É¹¦", Toast.LENGTH_SHORT).show();
+			   Toast.makeText(Modification.this, "ä¿®æ”¹å¯†ç æˆåŠŸ", Toast.LENGTH_SHORT).show();
 		   }else if(msg.what==2){
-			   Toast.makeText(Modification.this, "ÊäÈëµÄÔ­ÃÜÂë´íÎó£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+			   Toast.makeText(Modification.this, "è¾“å…¥çš„åŸå¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 		   }else if(msg.what==3){
-				Toast.makeText(Modification.this, "ÄúÊäÈëµÄÁ½´ÎĞÂÃÜÂë²»Í¬£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Modification.this, "æ‚¨è¾“å…¥çš„ä¸¤æ¬¡æ–°å¯†ç ä¸åŒï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 			}
 	   };	
 	};
@@ -62,49 +62,49 @@ public class Modification extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__modification);
 		
-		oldpassword=(EditText) findViewById(id.oldpassword);//¾ÉÃÜÂë
-		newpassword=(EditText) findViewById(id.newpassword);//ĞÂÃÜÂë
-		newpasswordtwo=(EditText) findViewById(id.newpassword1);//ÔÙ´ÎÊäÈëĞÂÃÜÂë
-		result=(ImageView) findViewById(id.result);//·µ»Øµ½Ö÷½çÃæ
-		sucess=(ImageView) findViewById(id.sucess);//È·ÈÏĞŞ¸Ä
+		oldpassword=(EditText) findViewById(id.oldpassword);//æ—§å¯†ç 
+		newpassword=(EditText) findViewById(id.newpassword);//æ–°å¯†ç 
+		newpasswordtwo=(EditText) findViewById(id.newpassword1);//å†æ¬¡è¾“å…¥æ–°å¯†ç 
+		result=(ImageView) findViewById(id.result);//è¿”å›åˆ°ä¸»ç•Œé¢
+		sucess=(ImageView) findViewById(id.sucess);//ç¡®è®¤ä¿®æ”¹
 		
-		//È¥µô¶Ô»°¿ò
+		//å»æ‰å¯¹è¯æ¡†
 		oldpassword.setBackgroundDrawable(null);
 		newpassword.setBackgroundDrawable(null);
 		newpasswordtwo.setBackgroundDrawable(null);
 		
-		//½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		token=getIntent().getStringExtra("token");
-		System.out.println("ĞŞ¸ÄÃÜÂë½çÃæ½ÓÊÜµÄtokenÖµ:"+token);
-		//½ÓÊÕ´«¹ıÀ´µÄÓÃ»§ÃÜÂë
+		System.out.println("ä¿®æ”¹å¯†ç ç•Œé¢æ¥å—çš„tokenå€¼:"+token);
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„ç”¨æˆ·å¯†ç 
 	    username=getIntent().getStringExtra("username");
-		System.out.println("ĞŞ¸ÄÃÜÂë½çÃæ½ÓÊÜµÄÓÃ»§ÃÜÂë:"+username);
-		//½ÓÊÕ´«¹ıÀ´µÄÓÃ»§ÃÜÂë
+		System.out.println("ä¿®æ”¹å¯†ç ç•Œé¢æ¥å—çš„ç”¨æˆ·å¯†ç :"+username);
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„ç”¨æˆ·å¯†ç 
 		userpassword=getIntent().getStringExtra("userpassword");
-		System.out.println("ĞŞ¸ÄÃÜÂë½çÃæ½ÓÊÜµÄÓÃ»§ÃÜÂë:"+userpassword);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		System.out.println("ä¿®æ”¹å¯†ç ç•Œé¢æ¥å—çš„ç”¨æˆ·å¯†ç :"+userpassword);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company=getIntent().getStringArrayListExtra("company");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄÖ°Îñ"+department);
-		 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-		 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
 		
 		
-		//ĞŞ¸ÄÃÜÂëµÄ²Ù×÷
+		//ä¿®æ”¹å¯†ç çš„æ“ä½œ
 		sucess.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				new Thread(){
 					public void run() {
@@ -114,33 +114,33 @@ public class Modification extends Activity{
 						String twoString=newpasswordtwo.getText().toString();
 						
 					
-						//ÅĞ¶ÏÁ½´ÎÃÜÂëÊÇ·ñÏàÍ¬	
+						//åˆ¤æ–­ä¸¤æ¬¡å¯†ç æ˜¯å¦ç›¸åŒ	
 						if(firString.equals(twoString)){
 
 						HttpClient httpClient=new DefaultHttpClient();
 						HttpPut httpPut=new HttpPut("http://EIPQAS.zhongjichina.com/ZPZChina.svc/Users/");
-						//·Ö×°Êı¾İ
+						//åˆ†è£…æ•°æ®
 						JSONObject jsonObject=new JSONObject();
 						try {
 							jsonObject.put("oldPassword", oldpassword.getText().toString());
 							jsonObject.put("newPassword", newpassword.getText().toString());
 							jsonObject.put("token", token);
 						} catch (JSONException e) {
-							// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 							e.printStackTrace();
 						}
-						System.out.println("ĞŞ¸ÄÃÜÂë½çÃæµÄÆ´½ÓÊı¾İ:"+jsonObject.toString());
+						System.out.println("ä¿®æ”¹å¯†ç ç•Œé¢çš„æ‹¼æ¥æ•°æ®:"+jsonObject.toString());
 						
 						try {
 							httpPut.addHeader("Content-Type"," application/json; charset=UTF-8");
 							httpPut.setEntity(new StringEntity(jsonObject.toString()));
 							HttpResponse httpResponse=httpClient.execute(httpPut);
 							httpResponse.getStatusLine().getStatusCode();
-							System.out.println("ĞŞ¸ÄÃÜÂëµÄÍøÂçÁ¬½ÓÖµ£º"+httpResponse.getStatusLine().getStatusCode());
+							System.out.println("ä¿®æ”¹å¯†ç çš„ç½‘ç»œè¿æ¥å€¼ï¼š"+httpResponse.getStatusLine().getStatusCode());
 							if(httpResponse.getStatusLine().getStatusCode()==200){
 								HttpEntity httpEntity=httpResponse.getEntity();
 								String string=EntityUtils.toString(httpEntity);
-								System.out.println("½ÓÊÜµ½µÄ·µ»ØÖµ"+string);
+								System.out.println("æ¥å—åˆ°çš„è¿”å›å€¼"+string);
 								if(string.contains("200")){
 									handler.sendEmptyMessage(1);
 								}else {
@@ -148,13 +148,13 @@ public class Modification extends Activity{
 								}
 							}
 						} catch (UnsupportedEncodingException e) {
-							// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 							e.printStackTrace();
 						} catch (ClientProtocolException e) {
-							// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 							e.printStackTrace();
 						} catch (IOException e) {
-							// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 							e.printStackTrace();
 						}
 						
@@ -170,12 +170,12 @@ public class Modification extends Activity{
 		});
 		
 		
-		//·µ»Øµ½Ö÷½çÃæ
+		//è¿”å›åˆ°ä¸»ç•Œé¢
 		result.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Modification.this,Homepage.class);
 				intent.putExtra("token", token);
@@ -192,10 +192,10 @@ public class Modification extends Activity{
 		});
 
   }
-	//ÉèÖÃ·µ»Ø¼ü
+	//è®¾ç½®è¿”å›é”®
 	@Override
 	public void onBackPressed() {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		Intent intent=new Intent(Modification.this,Homepage.class);
 		intent.putExtra("token", token);
 		intent.putExtra("name", username);

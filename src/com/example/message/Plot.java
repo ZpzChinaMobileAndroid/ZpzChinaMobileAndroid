@@ -37,8 +37,8 @@ public class Plot extends Activity {
 	private	ImageView choose,save,back;
 	String string,password,username;
 	ArrayList<String >cellphone,company2,department,province,district;
-	//ÄêÔÂÈÕ
-		public String category1[] = new String[] { "2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024Äê","2025","2026","2027","2028","2029","2030","2031","2032","2033"};
+	//å¹´æœˆæ—¥
+		public String category1[] = new String[] { "2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024å¹´","2025","2026","2027","2028","2029","2030","2031","2032","2033"};
 		public String category2[][] = new String[][]{{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
 				{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
 				{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
@@ -66,43 +66,43 @@ public class Plot extends Activity {
 		private ImageView saveimage;
 	ArrayList<String>arrayList=new ArrayList<String>();
 	 ArrayList<String> arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11,arrayList111,arrayList112,arrayList113,arrayList114;
-	String [] sringStrings={"ÒÑ°²×°","Î´°²×°"};
-	String[] strings={"ÏîÄ¿¸ºÔğÈË","ÏîÄ¿¾­Àí","Éè¼Æ¾­Àí","ÏîÄ¿×Ü¸ºÔğÈË","ÆäËû"};
+	String [] sringStrings={"å·²å®‰è£…","æœªå®‰è£…"};
+	String[] strings={"é¡¹ç›®è´Ÿè´£äºº","é¡¹ç›®ç»ç†","è®¾è®¡ç»ç†","é¡¹ç›®æ€»è´Ÿè´£äºº","å…¶ä»–"};
 	String str,str1,str2,str3,str4,str5,str6,str7,str8,str9;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__plot);
 		
-		elevator=(TextView) findViewById(id.elevator);//µçÌİ
-		condition=(TextView) findViewById(id.condition);//¿Õµ÷
-		heating=(TextView) findViewById(id.heating);//¹©Å¯·½Ê½
-		material=(TextView) findViewById(id.material);//ÍâÇ½²ÄÁÏ
-		structure=(TextView) findViewById(id.structure);//¸Ö½á¹¹
-		plot=(TextView) findViewById(id.jump);//·µ»Øµ½Ç°Ò»¸ö½çÃæ
-		design=(TextView) findViewById(id.design);//Ôö¼ÓĞÅÏ¢
-		start=(TextView) findViewById(id.start);//¿ªÊ¼Ê±¼ä
-		stop=(TextView) findViewById(id.stop);//¿¢¹¤Ê±¼ä
-		choose=(ImageView) findViewById(id.choose);//Ôö¼ÓĞÅÏ¢
-		save=(ImageView) findViewById(id.save);//±£´æÏîÄ¿
-		back=(ImageView) findViewById(id.back);//·µ»Ø½çÃæ
-		show=(TextView) findViewById(id.show);//ÏÔÊ¾µçÌİ
-		show1=(TextView) findViewById(id.show1);//ÏÔÊ¾¿Õµ÷
-		show2=(TextView) findViewById(id.show2);//ÏÔÊ¾¹©Å¯·½Ê½
-		show3=(TextView) findViewById(id.show3);//ÏÔÊ¾ÍâÇ½²ÄÁÏ
-		show4=(TextView) findViewById(id.show4);//ÏÔÊ¾¸Ö½á¹¹
-		show5=(TextView) findViewById(id.show5);//ÏÔÊ¾¿ªÊ¼Ê±¼ä
-		show6=(TextView) findViewById(id.show6);//ÏÔÊ¾¿¢¹¤Ê±¼ä
-		 nameone=(TextView) findViewById(id.nameone);//ÏÔÊ¾Ãû×Ö
-		 nametwo=(TextView) findViewById(id.nametwo);//ÏÔÊ¾Ãû×Ö2
-		 namethree=(TextView) findViewById(id.namethree);//ÏÔÊ¾Ãû×Ö3
+		elevator=(TextView) findViewById(id.elevator);//ç”µæ¢¯
+		condition=(TextView) findViewById(id.condition);//ç©ºè°ƒ
+		heating=(TextView) findViewById(id.heating);//ä¾›æš–æ–¹å¼
+		material=(TextView) findViewById(id.material);//å¤–å¢™ææ–™
+		structure=(TextView) findViewById(id.structure);//é’¢ç»“æ„
+		plot=(TextView) findViewById(id.jump);//è¿”å›åˆ°å‰ä¸€ä¸ªç•Œé¢
+		design=(TextView) findViewById(id.design);//å¢åŠ ä¿¡æ¯
+		start=(TextView) findViewById(id.start);//å¼€å§‹æ—¶é—´
+		stop=(TextView) findViewById(id.stop);//ç«£å·¥æ—¶é—´
+		choose=(ImageView) findViewById(id.choose);//å¢åŠ ä¿¡æ¯
+		save=(ImageView) findViewById(id.save);//ä¿å­˜é¡¹ç›®
+		back=(ImageView) findViewById(id.back);//è¿”å›ç•Œé¢
+		show=(TextView) findViewById(id.show);//æ˜¾ç¤ºç”µæ¢¯
+		show1=(TextView) findViewById(id.show1);//æ˜¾ç¤ºç©ºè°ƒ
+		show2=(TextView) findViewById(id.show2);//æ˜¾ç¤ºä¾›æš–æ–¹å¼
+		show3=(TextView) findViewById(id.show3);//æ˜¾ç¤ºå¤–å¢™ææ–™
+		show4=(TextView) findViewById(id.show4);//æ˜¾ç¤ºé’¢ç»“æ„
+		show5=(TextView) findViewById(id.show5);//æ˜¾ç¤ºå¼€å§‹æ—¶é—´
+		show6=(TextView) findViewById(id.show6);//æ˜¾ç¤ºç«£å·¥æ—¶é—´
+		 nameone=(TextView) findViewById(id.nameone);//æ˜¾ç¤ºåå­—
+		 nametwo=(TextView) findViewById(id.nametwo);//æ˜¾ç¤ºåå­—2
+		 namethree=(TextView) findViewById(id.namethree);//æ˜¾ç¤ºåå­—3
 		 
 		arrayList111=new ArrayList<String>();
 		arrayList111=new ArrayList<String>();
 		arrayList111=new ArrayList<String>();
 		arrayList111=new ArrayList<String>();
-		  //ÖĞ×ªÎÒµÄÖµ
-		  //ÖĞ×ªÎÒµÄÖµ
+		  //ä¸­è½¬æˆ‘çš„å€¼
+		  //ä¸­è½¬æˆ‘çš„å€¼
  	    arrayList2=new ArrayList<String>();
         arrayList2=getIntent().getStringArrayListExtra("one");	
         arrayList3=new ArrayList<String>();
@@ -122,38 +122,38 @@ public class Plot extends Activity {
         arrayList11=new ArrayList<String>();
         arrayList11=getIntent().getStringArrayListExtra("ten");	
 	       
-       //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+       //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
        string=getIntent().getStringExtra("token");
-       System.out.println("³öÍ¼½×¶Î½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-       //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+       System.out.println("å‡ºå›¾é˜¶æ®µç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+       //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
        username=getIntent().getStringExtra("name");
-       System.out.println("³öÍ¼½×¶Î½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-       //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+       System.out.println("å‡ºå›¾é˜¶æ®µç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+       //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
        password=getIntent().getStringExtra("password");
-       System.out.println("³öÍ¼½×¶Î½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-       //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+       System.out.println("å‡ºå›¾é˜¶æ®µç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+       //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
   	 cellphone=getIntent().getStringArrayListExtra("cellphone");
-  	 System.out.println("³öÍ¼½×¶Î½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-  	 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+  	 System.out.println("å‡ºå›¾é˜¶æ®µç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+  	 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
   	 company2=getIntent().getStringArrayListExtra("company");
-  	 System.out.println("³öÍ¼½×¶Î½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-  	 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+  	 System.out.println("å‡ºå›¾é˜¶æ®µç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+  	 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
   	 department=getIntent().getStringArrayListExtra("department");
-  	 System.out.println("³öÍ¼½×¶Î½çÃæÊÕµ½µÄÖ°Îñ"+department);
-  	 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+  	 System.out.println("å‡ºå›¾é˜¶æ®µç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+  	 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 	 district=getIntent().getStringArrayListExtra("district");
-	 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-	 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+	 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 	 province=getIntent().getStringArrayListExtra("province");
-	 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+	 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
 		
 		
-	    //±£´æµ½±¾µØ
+	    //ä¿å­˜åˆ°æœ¬åœ°
 		   save.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 	
 		    arrayList=new ArrayList<String>();
 		    arrayList.add(show5.getText().toString());
@@ -190,16 +190,16 @@ public class Plot extends Activity {
 			
 			startActivity(intent);
 			finish();
-			 Toast.makeText(Plot.this, "±£´æµ½±¾µØ³É¹¦", Toast.LENGTH_SHORT).show();
+			 Toast.makeText(Plot.this, "ä¿å­˜åˆ°æœ¬åœ°æˆåŠŸ", Toast.LENGTH_SHORT).show();
 			}
 		});
 	    
-		//·µ»Øµ½Ç°Ò»¸ö½çÃæ
+		//è¿”å›åˆ°å‰ä¸€ä¸ªç•Œé¢
 		plot.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 			    arrayList=new ArrayList<String>();
 				arrayList.add(show5.getText().toString());
@@ -236,12 +236,12 @@ public class Plot extends Activity {
 			}
 		});
 		
-		//·µ»Øµ½Ç°Ò»¸ö½çÃæ
+		//è¿”å›åˆ°å‰ä¸€ä¸ªç•Œé¢
 				back.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View v) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						
 					    arrayList=new ArrayList<String>();
 						arrayList.add(show5.getText().toString());
@@ -278,10 +278,10 @@ public class Plot extends Activity {
 					}
 				});
 		
-		//ÏÔÊ¾±£´æÖµ
+		//æ˜¾ç¤ºä¿å­˜å€¼
 		 arrayList6=new ArrayList<String>();
 		 arrayList6=getIntent().getStringArrayListExtra("five");	
-	     System.out.println("³öÍ¼½×¶ÎµÄ½ÓÊÜÖµ"+arrayList6);
+	     System.out.println("å‡ºå›¾é˜¶æ®µçš„æ¥å—å€¼"+arrayList6);
 		str=new String();str1=new String();str2=new String();str3=new String();str4=new String();
 		str5=new String();str6=new String();str7=new String();str8=new String();str9=new String();
 		if(arrayList6!=null){
@@ -296,39 +296,39 @@ public class Plot extends Activity {
 		}
 		
 		
-		//Ôö¼ÓĞÅÏ¢
+		//å¢åŠ ä¿¡æ¯
 		design.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Plot.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
-				//¸ÚÎ»
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -340,32 +340,32 @@ public class Plot extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Plot.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Plot.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
 						
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Plot.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Plot.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Plot.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Plot.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList111.size()>10){
-								Toast.makeText(Plot.this, "Ãû¶îÒÑÂú£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Plot.this, "åé¢å·²æ»¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -378,7 +378,7 @@ public class Plot extends Activity {
 						    arrayList111.add(company.getText().toString());               
 						    arrayList111.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList111);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList111);
 						String stringone=new String();  
 						
 						if(arrayList111!=null&&arrayList111.size()==5){
@@ -401,11 +401,11 @@ public class Plot extends Activity {
 			}
 		});
 		
-		//¿ªÊ¼Ê±¼ä
+		//å¼€å§‹æ—¶é—´
 		start.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showSelectDialog(Plot.this, "ÇøÓòÑ¡Ôñ", category1, category2,category3);
+                showSelectDialog(Plot.this, "åŒºåŸŸé€‰æ‹©", category1, category2,category3);
             }
         });
 	}
@@ -415,7 +415,7 @@ public class Plot extends Activity {
 	        LinearLayout llContent = new LinearLayout(context);
 	        llContent.setOrientation(LinearLayout.HORIZONTAL);
 	        
-	        //µÚÒ»¼¶ÁĞ±í
+	        //ç¬¬ä¸€çº§åˆ—è¡¨
 	        final WheelView wheelLeft = new WheelView(context);
 	        wheelLeft.setVisibleItems(5);
 	        wheelLeft.setCyclic(true);
@@ -424,7 +424,7 @@ public class Plot extends Activity {
 	        paramsLeft.gravity = Gravity.RIGHT;
 	        
 	        
-	        //µÚ¶ş¼¶ÁĞ±í
+	        //ç¬¬äºŒçº§åˆ—è¡¨
 	        final WheelView wheelRight = new WheelView(context);
 	        wheelRight.setVisibleItems(5);
 	        wheelRight.setCyclic(true);
@@ -433,7 +433,7 @@ public class Plot extends Activity {
 	        paramsRight.gravity = Gravity.RIGHT;
 	        
 	        
-	        //µÚÈı¼¶ÁĞ±í
+	        //ç¬¬ä¸‰çº§åˆ—è¡¨
 	        final WheelView wheellast = new WheelView(context);
 	        wheellast.setVisibleItems(5);
 	        wheellast.setCyclic(true);
@@ -456,7 +456,7 @@ public class Plot extends Activity {
 	                wheellast.setCurrentItem(last[newValue].length );
 	            }
 	        });
-	        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "È·¶¨", new DialogInterface.OnClickListener() {
+	        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "ç¡®å®š", new DialogInterface.OnClickListener() {
 	            @Override
 	            public void onClick(DialogInterface dialog, int which) {
 	                int leftPosition = wheelLeft.getCurrentItem();
@@ -467,7 +467,7 @@ public class Plot extends Activity {
 	                dialog.dismiss();
 	            }
 	        });
-	        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "È¡Ïû", new DialogInterface.OnClickListener() {
+	        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "å–æ¶ˆ", new DialogInterface.OnClickListener() {
 	            @Override
 	            public void onClick(DialogInterface dialog, int which) {
 	                dialog.dismiss();
@@ -477,11 +477,11 @@ public class Plot extends Activity {
 	        if (!dialog.isShowing()) {
 	            dialog.show();
 	        }
-		//¿¢¹¤Ê±¼ä
+		//ç«£å·¥æ—¶é—´
 	        stop.setOnClickListener(new OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
-	                showSelectDialog1(Plot.this, "¹¤³ÌÊ±¼ä", category1, category2,category3);
+	                showSelectDialog1(Plot.this, "å·¥ç¨‹æ—¶é—´", category1, category2,category3);
 	            }
 	        });
 	    }
@@ -492,7 +492,7 @@ public class Plot extends Activity {
 	        LinearLayout llContent = new LinearLayout(context);
 	        llContent.setOrientation(LinearLayout.HORIZONTAL);
 	        
-	        //µÚÒ»¼¶ÁĞ±í
+	        //ç¬¬ä¸€çº§åˆ—è¡¨
 	        final WheelView wheelLeft = new WheelView(context);
 	        wheelLeft.setVisibleItems(5);
 	        wheelLeft.setCyclic(false);
@@ -501,7 +501,7 @@ public class Plot extends Activity {
 	        paramsLeft.gravity = Gravity.LEFT;
 	        
 	        
-	        //µÚ¶ş¼¶ÁĞ±í
+	        //ç¬¬äºŒçº§åˆ—è¡¨
 	        final WheelView wheelRight = new WheelView(context);
 	        wheelRight.setVisibleItems(5);
 	        wheelRight.setCyclic(true);
@@ -510,7 +510,7 @@ public class Plot extends Activity {
 	        paramsRight.gravity = Gravity.RIGHT;
 	        
 	        
-	        //µÚÈı¼¶ÁĞ±í
+	        //ç¬¬ä¸‰çº§åˆ—è¡¨
 	        final WheelView wheellast = new WheelView(context);
 	        wheellast.setVisibleItems(5);
 	        wheellast.setCyclic(true);
@@ -531,7 +531,7 @@ public class Plot extends Activity {
 	                wheellast.setCurrentItem(last[newValue].length );
 	            }
 	        });
-	        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "È·¶¨", new DialogInterface.OnClickListener() {
+	        dialog.setButton(AlertDialog.BUTTON_POSITIVE, "ç¡®å®š", new DialogInterface.OnClickListener() {
 	            @Override
 	            public void onClick(DialogInterface dialog, int which) {
 	                int leftPosition = wheelLeft.getCurrentItem();
@@ -542,7 +542,7 @@ public class Plot extends Activity {
 	                dialog.dismiss();
 	            }
 	        });
-	        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "È¡Ïû", new DialogInterface.OnClickListener() {
+	        dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "å–æ¶ˆ", new DialogInterface.OnClickListener() {
 	            @Override
 	            public void onClick(DialogInterface dialog, int which) {
 	                dialog.dismiss();
@@ -553,39 +553,39 @@ public class Plot extends Activity {
 	            dialog.show();
 	        }
 		
-		//Ôö¼ÓĞÅÏ¢
+		//å¢åŠ ä¿¡æ¯
 		   choose.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View arg0) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 					View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 					final AlertDialog builder=new AlertDialog.Builder(Plot.this).create();
 					builder.setView(view,0,0,0,0);
-					name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-					phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+					name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+					phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 					station=(TextView)view.findViewById(id.station);
-					showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-					company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-					addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-					saveimage=(ImageView)view.findViewById(id.save);//±£´æ
-					//¸ÚÎ»
+					showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+					company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+					addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+					saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
+					//å²—ä½
 					station.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 						builder.setItems(strings, new AlertDialog. OnClickListener() {
 							
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 								for(int i=0;i<strings.length;i++){
 									if(i==arg1){
 							
-							         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+							         //æ˜¾ç¤ºå²—ä½åç§°
 					                 showsss.setText(strings[arg1]);	
 					                 String fiveString =showsss.getText().toString();
 					                  arg0.dismiss();
@@ -597,32 +597,32 @@ public class Plot extends Activity {
 					
 						}
 					});
-					//±£´æ
+					//ä¿å­˜
 					saveimage.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						
 							
-							//Ìí¼Óµç»°
+							//æ·»åŠ ç”µè¯
 							String two=phone.getText().toString();  int three=phone.getText().length();
 							if(two.equals("")){
-						    	   Toast.makeText(Plot.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						    	   Toast.makeText(Plot.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						       }
 							
-							//Ìí¼ÓĞÕÃû
+							//æ·»åŠ å§“å
 						       String one=name.getText().toString(); int four=name.getText().length();
 							if(one.equals("")){
-						          Toast.makeText(Plot.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						          Toast.makeText(Plot.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}else if(four>4){
-								Toast.makeText(Plot.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Plot.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}
 							
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 							if(!two.equals("")&&!one.equals("")&&four<5){
 								if(arrayList111.size()>10){
-									Toast.makeText(Plot.this, "Ãû¶îÒÑÂú£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Plot.this, "åé¢å·²æ»¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 									
 								}else{
 									builder.dismiss();
@@ -635,7 +635,7 @@ public class Plot extends Activity {
 							    arrayList111.add(company.getText().toString());               
 							    arrayList111.add(addressimage.getText().toString()); 
 							}
-							System.out.println("´¢´æµÄÊı¾İ"+arrayList111);
+							System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList111);
 							String stringone=new String();  
 							
 							if(arrayList111!=null&&arrayList111.size()==5){
@@ -659,22 +659,22 @@ public class Plot extends Activity {
 			});
 		   
 		   
-		 //ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚÒ»Î»
+		 //ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬ä¸€ä½
 			nameone.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 					View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 					final AlertDialog builder=new AlertDialog.Builder(Plot.this).create();
 					builder.setView(view,0,0,0,0);
-					name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-					phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+					name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+					phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 					station=(TextView)view.findViewById(id.station);
-					showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-					company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-					addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-					saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+					showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+					company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+					addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+					saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 					
 					String string1=new String();   	String string2=new String();   	String string3=new String();
 					String string4=new String();    String string5=new String();
@@ -715,22 +715,22 @@ public class Plot extends Activity {
 					
 					
 					
-					//¸ÚÎ»
+					//å²—ä½
 					station.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 						builder.setItems(strings, new AlertDialog. OnClickListener() {
 							
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 								for(int i=0;i<strings.length;i++){
 									if(i==arg1){
 							
-							         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+							         //æ˜¾ç¤ºå²—ä½åç§°
 					                 showsss.setText(strings[arg1]);	
 					                 String fiveString =showsss.getText().toString();
 					                  arg0.dismiss();
@@ -742,33 +742,33 @@ public class Plot extends Activity {
 					
 						}
 					});
-					//±£´æ
+					//ä¿å­˜
 					saveimage.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						
 							
-							//Ìí¼Óµç»°
+							//æ·»åŠ ç”µè¯
 							String two=phone.getText().toString();  int three=phone.getText().length();
 							if(two.equals("")){
-						    	   Toast.makeText(Plot.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						    	   Toast.makeText(Plot.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						       }
 							
-							//Ìí¼ÓĞÕÃû
+							//æ·»åŠ å§“å
 						       String one=name.getText().toString(); int four=name.getText().length();
 							if(one.equals("")){
-						          Toast.makeText(Plot.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						          Toast.makeText(Plot.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}else if(four>4){
-								Toast.makeText(Plot.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Plot.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}
 							
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 							if(!two.equals("")&&!one.equals("")&&four<5){
 								if(arrayList112.size()>10){
-									Toast.makeText(Plot.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Plot.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 									
 								}else{
 									builder.dismiss();
@@ -781,7 +781,7 @@ public class Plot extends Activity {
 							    arrayList112.add(company.getText().toString());               
 							    arrayList112.add(addressimage.getText().toString()); 
 							}
-							System.out.println("´¢´æµÄÊı¾İ"+arrayList112);
+							System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList112);
 							String stringone=new String();  
 							
 							if(arrayList112!=null&&arrayList112.size()==5){
@@ -805,22 +805,22 @@ public class Plot extends Activity {
 		
 			
 			
-			//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚ¶şÎ»
+			//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬äºŒä½
 			nametwo.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 					View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 					final AlertDialog builder=new AlertDialog.Builder(Plot.this).create();
 					builder.setView(view,0,0,0,0);
-					name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-					phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+					name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+					phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 					station=(TextView)view.findViewById(id.station);
-					showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-					company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-					addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-					saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+					showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+					company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+					addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+					saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 					
 					String string1=new String();   	String string2=new String();   	String string3=new String();
 					String string4=new String();    String string5=new String();
@@ -857,22 +857,22 @@ public class Plot extends Activity {
 						string5 =arrayList113.get(14);  addressimage.setText(string5);
 					}
 				
-					//¸ÚÎ»
+					//å²—ä½
 					station.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 						builder.setItems(strings, new AlertDialog. OnClickListener() {
 							
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 								for(int i=0;i<strings.length;i++){
 									if(i==arg1){
 							
-							         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+							         //æ˜¾ç¤ºå²—ä½åç§°
 					                 showsss.setText(strings[arg1]);	
 					                 String fiveString =showsss.getText().toString();
 					                  arg0.dismiss();
@@ -884,33 +884,33 @@ public class Plot extends Activity {
 					
 						}
 					});
-					//±£´æ
+					//ä¿å­˜
 					saveimage.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						
 							
-							//Ìí¼Óµç»°
+							//æ·»åŠ ç”µè¯
 							String two=phone.getText().toString();  int three=phone.getText().length();
 							if(two.equals("")){
-						    	   Toast.makeText(Plot.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						    	   Toast.makeText(Plot.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						       }
 							
-							//Ìí¼ÓĞÕÃû
+							//æ·»åŠ å§“å
 						       String one=name.getText().toString(); int four=name.getText().length();
 							if(one.equals("")){
-						          Toast.makeText(Plot.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						          Toast.makeText(Plot.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}else if(four>4){
-								Toast.makeText(Plot.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Plot.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}
 							
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 							if(!two.equals("")&&!one.equals("")&&four<5){
 								if(arrayList113.size()>10){
-									Toast.makeText(Plot.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Plot.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 									
 								}else{
 									builder.dismiss();
@@ -923,7 +923,7 @@ public class Plot extends Activity {
 							    arrayList113.add(company.getText().toString());               
 							    arrayList113.add(addressimage.getText().toString()); 
 							}
-							System.out.println("´¢´æµÄÊı¾İ"+arrayList113);
+							System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList113);
 							String stringone=new String();  
 							
 							if(arrayList113!=null&&arrayList113.size()==5){
@@ -947,22 +947,22 @@ public class Plot extends Activity {
 			
 	
 	
-			//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚÈıÎ»
+			//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬ä¸‰ä½
 			namethree.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View arg0) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 					View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 					final AlertDialog builder=new AlertDialog.Builder(Plot.this).create();
 					builder.setView(view,0,0,0,0);
-					name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-					phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+					name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+					phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 					station=(TextView)view.findViewById(id.station);
-					showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-					company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-					addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-					saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+					showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+					company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+					addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+					saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 					
 					String string1=new String();   	String string2=new String();   	String string3=new String();
 					String string4=new String();    String string5=new String();
@@ -999,22 +999,22 @@ public class Plot extends Activity {
 						string5 =arrayList114.get(14);  addressimage.setText(string5);
 					}
 					
-					//¸ÚÎ»
+					//å²—ä½
 					station.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 						builder.setItems(strings, new AlertDialog. OnClickListener() {
 							
 							@Override
 							public void onClick(DialogInterface arg0, int arg1) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 								for(int i=0;i<strings.length;i++){
 									if(i==arg1){
 							
-							         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+							         //æ˜¾ç¤ºå²—ä½åç§°
 					                 showsss.setText(strings[arg1]);	
 					                 String fiveString =showsss.getText().toString();
 					                  arg0.dismiss();
@@ -1026,33 +1026,33 @@ public class Plot extends Activity {
 					
 						}
 					});
-					//±£´æ
+					//ä¿å­˜
 					saveimage.setOnClickListener(new OnClickListener() {
 						
 						@Override
 						public void onClick(View arg0) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 						
 							
-							//Ìí¼Óµç»°
+							//æ·»åŠ ç”µè¯
 							String two=phone.getText().toString();  int three=phone.getText().length();
 							if(two.equals("")){
-						    	   Toast.makeText(Plot.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						    	   Toast.makeText(Plot.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						       }
 							
-							//Ìí¼ÓĞÕÃû
+							//æ·»åŠ å§“å
 						       String one=name.getText().toString(); int four=name.getText().length();
 							if(one.equals("")){
-						          Toast.makeText(Plot.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+						          Toast.makeText(Plot.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}else if(four>4){
-								Toast.makeText(Plot.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Plot.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 							}
 							
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-							//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+							//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 							if(!two.equals("")&&!one.equals("")&&four<5){
 								if(arrayList114.size()>10){
-									Toast.makeText(Plot.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Plot.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 									
 								}else{
 									builder.dismiss();
@@ -1065,7 +1065,7 @@ public class Plot extends Activity {
 							    arrayList114.add(company.getText().toString());               
 							    arrayList114.add(addressimage.getText().toString()); 
 							}
-							System.out.println("´¢´æµÄÊı¾İ"+arrayList114);
+							System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList114);
 							String stringone=new String();  
 							
 							if(arrayList114!=null&&arrayList114.size()==5){
@@ -1089,24 +1089,24 @@ public class Plot extends Activity {
 	
 		   
 		   
-		   //µçÌİ
+		   //ç”µæ¢¯
 		   elevator.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 				builder.setItems(sringStrings,new AlertDialog.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 							for(int i=0;i<sringStrings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾µçÌİ
+						         //æ˜¾ç¤ºç”µæ¢¯
 				                  show.setText(sringStrings[arg1]);	
 				                  arg0.dismiss();
 								}
@@ -1116,24 +1116,24 @@ public class Plot extends Activity {
 				builder.show();
 			}
 		});
-		   //ÏÔÊ¾¿Õµ÷
+		   //æ˜¾ç¤ºç©ºè°ƒ
 		   condition.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 				builder.setItems(sringStrings,new AlertDialog.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 							for(int i=0;i<sringStrings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾µçÌİ
+						         //æ˜¾ç¤ºç”µæ¢¯
 				                  show1.setText(sringStrings[arg1]);	
 				                  arg0.dismiss();
 								}
@@ -1143,24 +1143,24 @@ public class Plot extends Activity {
 				builder.show();
 			}
 		});
-		   //¹©Å¯·½Ê½
+		   //ä¾›æš–æ–¹å¼
 		   heating.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 				builder.setItems(sringStrings,new AlertDialog.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 							for(int i=0;i<sringStrings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¹©Å¯·½Ê½
+						         //æ˜¾ç¤ºä¾›æš–æ–¹å¼
 				                  show2.setText(sringStrings[arg1]);	
 				                  arg0.dismiss();
 								}
@@ -1170,19 +1170,19 @@ public class Plot extends Activity {
 				builder.show();
 			}
 		});
-		   //ÍâÇ½²ÄÁÏ
+		   //å¤–å¢™ææ–™
 		   material.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 				builder.setItems(sringStrings,new AlertDialog.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 							for(int i=0;i<sringStrings.length;i++){
 								if(i==arg1){
@@ -1196,19 +1196,19 @@ public class Plot extends Activity {
 				builder.show();
 			}
 		});
-		   //¸Ö½á¹¹
+		   //é’¢ç»“æ„
 		   structure.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				AlertDialog.Builder builder=new AlertDialog.Builder(Plot.this);
 				builder.setItems(sringStrings,new AlertDialog.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 							for(int i=0;i<sringStrings.length;i++){
 								if(i==arg1){
@@ -1223,7 +1223,7 @@ public class Plot extends Activity {
 			}
 		});
     }
-	//ÉèÖÃ·µ»Ø¼ü
+	//è®¾ç½®è¿”å›é”®
 			@Override
 			public void onBackPressed() {
 				// TODO Auto-generated method stub

@@ -41,12 +41,12 @@ public class ArrayWheelAdapter<T> implements WheelAdapter {
     
 
     public ArrayWheelAdapter(String[][] strings) {
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 //init
 	}
 
     public ArrayWheelAdapter(String[][][] strings) {
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 	}
 	@Override
     public String getItem(int index) {

@@ -13,7 +13,7 @@ public class Person  implements Serializable {
 	
 public Person(String username,String usephone,String station,String company,String address) {
 	super();
-	//Î»ËùÓĞµÄµÄÊı¾İ¸³Öµ
+	//ä½æ‰€æœ‰çš„çš„æ•°æ®èµ‹å€¼
 	this.username = username;
 	this.usephone = usephone;
 	this.station = station;

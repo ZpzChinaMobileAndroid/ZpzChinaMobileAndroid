@@ -14,21 +14,21 @@ public class Grabble extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__grabble);
 		
 		
-		ImageView grable=(ImageView) findViewById(id.imageView1);//ÓïÒô¼ü
+		ImageView grable=(ImageView) findViewById(id.imageView1);//è¯­éŸ³é”®
 		final TextView content=(TextView) findViewById(id.voice);
 		
 		grable.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
-			content.setText("ÕıÔÚ½ÓÊÕÄÚÈİ¡£¡£¡£¡£¡£¡£");	
+			content.setText("æ­£åœ¨æ¥æ”¶å†…å®¹ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚");	
 				
 			}
 		});
@@ -37,7 +37,7 @@ public class Grabble extends Activity {
 	}
 	 @Override
 	public void onBackPressed() {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		 
 		 Intent intent=new Intent(Grabble.this,Choosemenu.class);
 		 startActivity(intent);

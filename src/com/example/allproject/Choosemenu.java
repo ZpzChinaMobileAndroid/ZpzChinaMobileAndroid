@@ -16,23 +16,23 @@ public class Choosemenu extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.activity__choosemenu);
 		
-		ImageView voice=(ImageView) findViewById(id.imageView4);//ÓïÒôËÑË÷
-		ImageView advanced=(ImageView) findViewById(id.imageView2);//¸ß¼¶ÄÚÈİËÑË÷
-		ImageView map=(ImageView) findViewById(id.imageView3);//µØÍ¼ËÑË÷
+		ImageView voice=(ImageView) findViewById(id.imageView4);//è¯­éŸ³æœç´¢
+		ImageView advanced=(ImageView) findViewById(id.imageView2);//é«˜çº§å†…å®¹æœç´¢
+		ImageView map=(ImageView) findViewById(id.imageView3);//åœ°å›¾æœç´¢
 		EditText contentEditText=(EditText) findViewById(id.sky);
 		contentEditText.setBackgroundDrawable(null);
 		
-		//ÓïÒôËÑË÷
+		//è¯­éŸ³æœç´¢
 		voice.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		
 				Intent intent=new Intent(Choosemenu.this,Grabble.class);
 				 startActivity(intent);
@@ -42,12 +42,12 @@ public class Choosemenu extends Activity {
 		
 		
 		
-		//¸ß¼¶ÄÚÈİËÑË÷
+		//é«˜çº§å†…å®¹æœç´¢
 		advanced.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Choosemenu.this,Advanced.class);
 				 startActivity(intent);
@@ -57,12 +57,12 @@ public class Choosemenu extends Activity {
 		
 		
 		
-		//µØÍ¼ËÑËØ
+		//åœ°å›¾æœç´ 
 		map.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 			}
 		});

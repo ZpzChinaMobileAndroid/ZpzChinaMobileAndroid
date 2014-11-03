@@ -49,7 +49,7 @@ public class Preserve extends Activity {
 	ImageView photo, senven, eight, elevent;
 	String string,username,password;
 	ArrayList<String >cellphone,company,department;
-	String[] content={"²é¿´ÏîÄ¿ÏêÇé","·¢²¼ÈÎÎñ"};
+	String[] content={"æŸ¥çœ‹é¡¹ç›®è¯¦æƒ…","å‘å¸ƒä»»åŠ¡"};
 	ArrayList<String>aList=new ArrayList<String>();
 	ArrayList<String>arrayList,arrayList1,arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
     ArrayList<String>arrayList111,arrayList112,arrayList113,arrayList114;
@@ -61,9 +61,9 @@ public class Preserve extends Activity {
 //    Handler handler=new Handler(){
 //    public void handleMessage(android.os.Message msg) {
 //    	if(msg.what==1){
-//    		Toast.makeText(Preserve.this,"ÏîÄ¿·¢²¼³É¹¦",Toast.LENGTH_SHORT).show();
+//    		Toast.makeText(Preserve.this,"é¡¹ç›®å‘å¸ƒæˆåŠŸ",Toast.LENGTH_SHORT).show();
 //    	}else if(msg.what==2){
-//    		Toast.makeText(Preserve.this,"ÏîÄ¿·¢²¼Ê§°Ü",Toast.LENGTH_SHORT).show();
+//    		Toast.makeText(Preserve.this,"é¡¹ç›®å‘å¸ƒå¤±è´¥",Toast.LENGTH_SHORT).show();
 //    	}
 //       };	
 //    };
@@ -78,33 +78,33 @@ public class Preserve extends Activity {
 	
 	
 			
-			//½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+			//æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 			 string=getIntent().getStringExtra("token").replace("[", "").replace("]", "");
-			 System.out.println("±¾µØÏîÄ¿½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-			 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+			 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+			 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 			 username=getIntent().getStringExtra("name");
-			 System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-			 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+			 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+			 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 			 password=getIntent().getStringExtra("password");
-			 System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-			 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+			 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+			 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 			 cellphone=getIntent().getStringArrayListExtra("cellphone");
-			 System.out.println("Ö÷½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-			 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+			 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+			 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 			 company=getIntent().getStringArrayListExtra("company");
-			 System.out.println("Ö÷½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-			 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+			 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+			 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 			 department=getIntent().getStringArrayListExtra("department");
-			 System.out.println("Ö÷½çÃæÊÕµ½µÄÖ°Îñ"+department);
+			 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
 			 
 			 
 			 ListView listView=(ListView) findViewById(id.listview);
 			 listView.setAdapter(new MyAdpter());
 			 
-			 //ÍÁµØ¹æ»®
+			 //åœŸåœ°è§„åˆ’
 		        arrayList=new ArrayList<String>();
 		        arrayList=getIntent().getStringArrayListExtra("one");	
-		        System.out.println("±¾µØÏîÄ¿ÍÁµØ¹æ»®ÏÔÊ¾"+arrayList);
+		        System.out.println("æœ¬åœ°é¡¹ç›®åœŸåœ°è§„åˆ’æ˜¾ç¤º"+arrayList);
 		        if(arrayList!=null){
 		            string0=new String();  string1=new String();string2=new String();  string3=new String();
 		        	string4=new String();  string5=new String();string6=new String();string7=new String();
@@ -113,10 +113,10 @@ public class Preserve extends Activity {
 		        	string5=arrayList.get(5);
 		        
 		        }
-		     // ÏîÄ¿Á¢Ïî
+		     // é¡¹ç›®ç«‹é¡¹
 		        arrayList1=new ArrayList<String>();
 		        arrayList1=getIntent().getStringArrayListExtra("two");	
-		        System.out.println("±¾µØÏîÄ¿ÏîÄ¿Á¢ÏîÏÔÊ¾"+arrayList1);
+		        System.out.println("æœ¬åœ°é¡¹ç›®é¡¹ç›®ç«‹é¡¹æ˜¾ç¤º"+arrayList1);
 	            if(arrayList1!=null){
 	            	string8=new String();  string9=new String(); string10=new String(); string11=new String();
 		        	string12=new String();  string13=new String();string14=new String();  string15=new String();
@@ -126,26 +126,26 @@ public class Preserve extends Activity {
 		         	string13=arrayList1.get(5);string14=arrayList1.get(6);string15=arrayList1.get(7);string16=arrayList1.get(8);string17=arrayList1.get(9);
 		        	
 	            }
-		     //  µØ¿±½×¶Î
+		     //  åœ°å‹˜é˜¶æ®µ
 		        arrayList2=new ArrayList<String>();
 		        arrayList2=getIntent().getStringArrayListExtra("three");	
-		        System.out.println("±¾µØÏîÄ¿µØ¿±½×¶ÎÏÔÊ¾"+arrayList2);
+		        System.out.println("æœ¬åœ°é¡¹ç›®åœ°å‹˜é˜¶æ®µæ˜¾ç¤º"+arrayList2);
 	            if(arrayList2!=null){
 	            	 string19=new String(); 
 			    }
-		     //  Éè¼Æ½×¶Î
+		     //  è®¾è®¡é˜¶æ®µ
 		        arrayList3=new ArrayList<String>();
 		        arrayList3=getIntent().getStringArrayListExtra("four");	
-		        System.out.println("±¾µØÏîÄ¿Éè¼Æ½×¶ÎÏÔÊ¾"+arrayList3);
+		        System.out.println("æœ¬åœ°é¡¹ç›®è®¾è®¡é˜¶æ®µæ˜¾ç¤º"+arrayList3);
 	            if(arrayList3!=null){
 	            	 string20=new String(); string21=new String();
 	            	
 	            	string20=arrayList3.get(0);
 	            }
-		     //  ³öÍ¼½×¶Î
+		     //  å‡ºå›¾é˜¶æ®µ
 		        arrayList4=new ArrayList<String>();
 		        arrayList4=getIntent().getStringArrayListExtra("five");	
-		        System.out.println("±¾µØÏîÄ¿³öÍ¼½×¶ÎÏÔÊ¾"+arrayList4);
+		        System.out.println("æœ¬åœ°é¡¹ç›®å‡ºå›¾é˜¶æ®µæ˜¾ç¤º"+arrayList4);
 	            if(arrayList4!=null){
 	            	 string22=new String(); string23=new String(); string24=new String();  string25=new String();
 		        	 string26=new String();  string27=new String(); string28=new String();  string29=new String();
@@ -153,43 +153,43 @@ public class Preserve extends Activity {
 		        	string22=arrayList4.get(0);string23=arrayList4.get(1);string24=arrayList4.get(2);string25=arrayList4.get(3);
 		        	string26=arrayList4.get(4);string27=arrayList4.get(5);string28=arrayList4.get(6);
 			    }
-		      // µØÆ½ 
+		      // åœ°å¹³ 
 		        arrayList5=new ArrayList<String>();
 		        arrayList5=getIntent().getStringArrayListExtra("six");	
-		        System.out.println("±¾µØÏîÄ¿µØÆ½ÏÔÊ¾"+arrayList5);
+		        System.out.println("æœ¬åœ°é¡¹ç›®åœ°å¹³æ˜¾ç¤º"+arrayList5);
 	            if(arrayList5!=null){
 	            string30=new String();  
 	            	
 	            	string30=arrayList5.get(0);
 			    }
-		      //  ×®»ù»ù¿Ó
+		      //  æ¡©åŸºåŸºå‘
 		        arrayList6=new ArrayList<String>();
 		        arrayList6=getIntent().getStringArrayListExtra("seven");	
-		        System.out.println("±¾µØÏîÄ¿×®»ù»ù¿ÓÏÔÊ¾"+arrayList6);
+		        System.out.println("æœ¬åœ°é¡¹ç›®æ¡©åŸºåŸºå‘æ˜¾ç¤º"+arrayList6);
 	            if(arrayList6!=null){
 	            	 string32=new String();
 	            	
 	            	string32=arrayList6.get(0);
 			    }
-		      //  Ö÷ÌåÊ©¹¤
+		      //  ä¸»ä½“æ–½å·¥
 		        arrayList7=new ArrayList<String>();
 		        arrayList7=getIntent().getStringArrayListExtra("eight");	
-		        System.out.println("±¾µØÏîÄ¿Ö÷ÌåÊ©¹¤ÏÔÊ¾"+arrayList7);
+		        System.out.println("æœ¬åœ°é¡¹ç›®ä¸»ä½“æ–½å·¥æ˜¾ç¤º"+arrayList7);
 	            if(arrayList7!=null){
 			    }
-		      //Ïû·ÀÂÌ»¯
+		      //æ¶ˆé˜²ç»¿åŒ–
 		        arrayList8=new ArrayList<String>();
 		        arrayList8=getIntent().getStringArrayListExtra("nine");	
-		        System.out.println("±¾µØÏîÄ¿Ïû·ÀÂÌ»¯ÏÔÊ¾"+arrayList8);
+		        System.out.println("æœ¬åœ°é¡¹ç›®æ¶ˆé˜²ç»¿åŒ–æ˜¾ç¤º"+arrayList8);
 	            if(arrayList8!=null){
 	            	string33=new String(); string34=new String();
 	            	
 	            	string33=arrayList8.get(0);string34=arrayList8.get(1);
 			    }
-		      //  ×°ĞŞ½×¶Î
+		      //  è£…ä¿®é˜¶æ®µ
 		        arrayList9=new ArrayList<String>();
 		        arrayList9=getIntent().getStringArrayListExtra("ten");	
-		        System.out.println("±¾µØÏîÄ¿×°ĞŞ½×¶ÎÏÔÊ¾"+arrayList9);
+		        System.out.println("æœ¬åœ°é¡¹ç›®è£…ä¿®é˜¶æ®µæ˜¾ç¤º"+arrayList9);
 	            if(arrayList9!=null){
 	            	string35=new String();  string36=new String(); string37=new String(); 
 	            	
@@ -217,23 +217,23 @@ public class Preserve extends Activity {
 			    
 			    
 //			    
-//			  //Ñ¡Ôñ
+//			  //é€‰æ‹©
 //				senven = (ImageView)findViewById(id.senven);
 //			
 //				senven.setOnClickListener(new OnClickListener() {
 //					
 //					@Override
 //					public void onClick(View arg0) {
-//						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				
 //					AlertDialog.Builder builder=new AlertDialog.Builder(Preserve.this);
 //					builder.setItems(content, new AlertDialog.OnClickListener() {
 //						
 //						@Override
 //						public void onClick(DialogInterface arg0, int arg1) {
-//							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //							
-//						//²é¿´ÏîÄ¿ÏêÇé
+//						//æŸ¥çœ‹é¡¹ç›®è¯¦æƒ…
 //						if(arg1==0){
 //							Intent intent=new Intent(Preserve.this,jJ.class);	
 //							intent.putExtra("one", arrayList);
@@ -255,7 +255,7 @@ public class Preserve extends Activity {
 //							startActivity(intent);
 //							finish();
 //							
-//						     //´¢´æÊı¾İµ½Êı¾İ¿âÖĞ
+//						     //å‚¨å­˜æ•°æ®åˆ°æ•°æ®åº“ä¸­
 //							Information information=new Information();
 //							information.setProjectID(null);
 //							information.setProjectCode(null);
@@ -296,14 +296,14 @@ public class Preserve extends Activity {
 //						    new Sqlite(Preserve.this).content(information);
 //						}
 //						
-//		    //·¢²¼ÏîÄ¿
+//		    //å‘å¸ƒé¡¹ç›®
 //			else if(arg1==1){
 //
-//				//·¢²¼ÏîÄ¿½Ó¿Ú
+//				//å‘å¸ƒé¡¹ç›®æ¥å£
 //				new Thread(){
 //					@Override
 //					public void run() {
-//					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //								
 //					HttpClient httpClient=new DefaultHttpClient();
 //					HttpPost httpPost=new HttpPost("http://EIPQAS.zhongjichina.com/ZPZChina.svc/projects/");
@@ -348,24 +348,24 @@ public class Preserve extends Activity {
 //					jsonObject.put("token",string);
 //								
 //				} catch (JSONException e) {
-//					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+//					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 //				e.printStackTrace();
 //			}
-//				System.out.println("·¢²¼ÏîÄ¿Æ´½Ó"+jsonObject.toString());
+//				System.out.println("å‘å¸ƒé¡¹ç›®æ‹¼æ¥"+jsonObject.toString());
 //				
 //				try {
 //					httpPost.addHeader("Content-Type","application/json;charset=UTF-8");
 //					httpPost.setEntity(new StringEntity(jsonObject.toString()));
 //					HttpResponse httpResponse=httpClient.execute(httpPost);
 //					httpResponse.getStatusLine().getStatusCode();
-//					System.out.println("·¢²¼ÈÎÎñµÄÍøÂçÁ¬½ÓÖµ"+httpResponse.getStatusLine().getStatusCode());
+//					System.out.println("å‘å¸ƒä»»åŠ¡çš„ç½‘ç»œè¿æ¥å€¼"+httpResponse.getStatusLine().getStatusCode());
 //					if(httpResponse.getStatusLine().getStatusCode()==400||httpResponse.getStatusLine().getStatusCode()==404){
 //						  handler.sendEmptyMessage(2);
 //					}
 //					if(httpResponse.getStatusLine().getStatusCode()==200){
 //						HttpEntity httpEntity=httpResponse.getEntity();
 //						String string=EntityUtils.toString(httpEntity);
-//						System.out.println("·¢²¼ÈÎÎñ·µ»ØÖµ"+string);
+//						System.out.println("å‘å¸ƒä»»åŠ¡è¿”å›å€¼"+string);
 //						if (string.contains("200")) {
 //							handler.sendEmptyMessage(1);
 //						} else {
@@ -373,19 +373,19 @@ public class Preserve extends Activity {
 //						}
 //					}
 //				} catch (UnsupportedEncodingException e) {
-//					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+//					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 //					e.printStackTrace();
 //				} catch (ClientProtocolException e) {
-//					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+//					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 //					e.printStackTrace();
 //				} catch (IOException e) {
-//					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+//					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 //					e.printStackTrace();
 //				}
 //		};
 //        }.start();		
 //        
-//        		//·¢²¼ÕÕÆ¬½Ó¿Ú
+//        		//å‘å¸ƒç…§ç‰‡æ¥å£
 //          new Thread(){
 //    		public void run() {
 //    			
@@ -393,16 +393,16 @@ public class Preserve extends Activity {
 //    			HttpPost httpPost=new HttpPost("http://eipqas.zhongjichina.com/ZPZChina.svc/ProjectImgs/");
 //    			
 //    			JSONObject jsonObject =new JSONObject();
-////    			jsonObject.put("auctionUnitContacts", dd);//ÅÄÂôµ¥Î»ÁªÏµÈË
-////    			jsonObject.put("ownerUnitContacts", dd);//ÒµÖ÷µ¥Î»ÁªÏµÈË
-////    			jsonObject.put("explorationUnitContacts", dd);//µØ¿±¹«Ë¾ÁªÏµÈË
-////    			jsonObject.put("designInstituteContacts", dd);//Éè¼ÆÔºÁªÏµÈË
-////    			jsonObject.put("contractorUnitContacts", dd);//Ê©¹¤×Ü³Ğ°üÁªÏµÈË
-////    			jsonObject.put("pileFoundationUnitContacts", dd);//×®»ù·Ö°üÁªÏµÈË
+////    			jsonObject.put("auctionUnitContacts", dd);//æ‹å–å•ä½è”ç³»äºº
+////    			jsonObject.put("ownerUnitContacts", dd);//ä¸šä¸»å•ä½è”ç³»äºº
+////    			jsonObject.put("explorationUnitContacts", dd);//åœ°å‹˜å…¬å¸è”ç³»äºº
+////    			jsonObject.put("designInstituteContacts", dd);//è®¾è®¡é™¢è”ç³»äºº
+////    			jsonObject.put("contractorUnitContacts", dd);//æ–½å·¥æ€»æ‰¿åŒ…è”ç³»äºº
+////    			jsonObject.put("pileFoundationUnitContacts", dd);//æ¡©åŸºåˆ†åŒ…è”ç³»äºº
 //    			
 //    		};
 //    	}.start();
-//        		//·¢²¼ÁªÏµÈË½Ó¿Ú
+//        		//å‘å¸ƒè”ç³»äººæ¥å£
 //        	new Thread(){
 //        		public void run() {
 //        			
@@ -426,25 +426,25 @@ public class Preserve extends Activity {
 
 		@Override
 		public int getCount() {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			return aList.size();
 		}
 
 		@Override
 		public Object getItem(int arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			return null;
 		}
 
 		@Override
 		public long getItemId(int arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			return 0;
 		}
 
 		@Override
 		public View getView(int arg0, View arg1, ViewGroup arg2) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			View view = getLayoutInflater().inflate(R.layout.test,null);
 
 			name = (TextView) view.findViewById(id.name);
@@ -461,15 +461,15 @@ public class Preserve extends Activity {
 			eight = (ImageView) view.findViewById(id.eight);
 			elevent = (ImageView) view.findViewById(id.elevent);
 
-			name.setText("ÉÏº£ÖĞ¼¼×®ÒµÏîÄ¿Ãû³Æ");
-			one.setText("Í¶×Ê¶î");
-			two.setText("½¨ÖşÃæ»ı");
+			name.setText("ä¸Šæµ·ä¸­æŠ€æ¡©ä¸šé¡¹ç›®åç§°");
+			one.setText("æŠ•èµ„é¢");
+			two.setText("å»ºç­‘é¢ç§¯");
 			three.setText(xinxiArrayList.get(arg0).getAreaOfStructure());
 			four.setText(xinxiArrayList.get(arg0).getInvestment());
 			five.setText(xinxiArrayList.get(arg0).getExpectedStartTime());
 			six.setText(xinxiArrayList.get(arg0).getExpectedFinishTime());
-			nine.setText("»ªÄÏÇø");
-			ten.setText("ÉÏº£ÊĞãëË®Â·928ºÅ");
+			nine.setText("åå—åŒº");
+			ten.setText("ä¸Šæµ·å¸‚æ±¶æ°´è·¯928å·");
 			
 			return view;
 		}
@@ -477,10 +477,10 @@ public class Preserve extends Activity {
 	}
 	
 	
-//·µ»Ø¼üÉèÖÃ
+//è¿”å›é”®è®¾ç½®
 	@Override
 	public void onBackPressed() {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		Intent intent=new Intent(Preserve.this,Homepage.class);
 		intent.putExtra("one", arrayList);
 		intent.putExtra("two", arrayList3);

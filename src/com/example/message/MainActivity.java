@@ -72,8 +72,8 @@ public class MainActivity extends Activity {
 	private ImageView chosse;
 	private String yonghu,mima;
 	String[] keyString;
-	ArrayList<String>arrayList=new ArrayList<String>();//ÓÃÓÚ´¢´æÕËºÅ
-	ArrayList<String>arrayList1=new ArrayList<String>();//ÓÃÓÚ´¢´æÃÜÂë
+	ArrayList<String>arrayList=new ArrayList<String>();//ç”¨äºå‚¨å­˜è´¦å·
+	ArrayList<String>arrayList1=new ArrayList<String>();//ç”¨äºå‚¨å­˜å¯†ç 
 	int num=0;
 	ArrayList<String> messageArrayList = new ArrayList<String>();
 	ArrayList<String> arrayList3 = new ArrayList<String>();
@@ -84,20 +84,20 @@ public class MainActivity extends Activity {
 	Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
 			if (msg.what == 1) {
-				Toast.makeText(MainActivity.this, "µÇÂ½³É¹¦", Toast.LENGTH_SHORT).show();
+				Toast.makeText(MainActivity.this, "ç™»é™†æˆåŠŸ", Toast.LENGTH_SHORT).show();
 				Intent intent = new Intent(MainActivity.this, Homepage.class);
-				intent.putExtra("token",messageArrayList.toString());// ½«tokenÖµ´«³öÈ¥
-				intent.putExtra("name", yonghu);//½«ÓÃ»§Ãû´«³öÈ¥
-				intent.putExtra("password", mima);//½«ÃÜÂë´«³öÈ¥
-				intent.putExtra("cellphone",arrayList3 );//½«ÊÖ»úºÅÂë
-				intent.putExtra("company", arrayList4);//½«ËùÊô¹«Ë¾
-				intent.putExtra("department", arrayList5);//½«ËùÊô¹«Ë¾
-				intent.putExtra("district", arrayList6);//½«ËùÊô¹«Ë¾
-				intent.putExtra("province", arrayList7);//½«ËùÊô¹«Ë¾
+				intent.putExtra("token",messageArrayList.toString());// å°†tokenå€¼ä¼ å‡ºå»
+				intent.putExtra("name", yonghu);//å°†ç”¨æˆ·åä¼ å‡ºå»
+				intent.putExtra("password", mima);//å°†å¯†ç ä¼ å‡ºå»
+				intent.putExtra("cellphone",arrayList3 );//å°†æ‰‹æœºå·ç 
+				intent.putExtra("company", arrayList4);//å°†æ‰€å±å…¬å¸
+				intent.putExtra("department", arrayList5);//å°†æ‰€å±å…¬å¸
+				intent.putExtra("district", arrayList6);//å°†æ‰€å±å…¬å¸
+				intent.putExtra("province", arrayList7);//å°†æ‰€å±å…¬å¸
 				startActivity(intent);
 				finish();
 			} else if (msg.what == 2) {
-				Toast.makeText(MainActivity.this, "µÇÂ½Ê§°Ü", Toast.LENGTH_SHORT).show();
+				Toast.makeText(MainActivity.this, "ç™»é™†å¤±è´¥", Toast.LENGTH_SHORT).show();
 			}
 		};
 	};
@@ -107,86 +107,86 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		username = (EditText) findViewById(R.id.username);// ÓÃ»§Ãû
-		userpassword = (EditText) findViewById(R.id.userpassword);// ÓÃ»§ÃÜÂë
-		langding = (ImageView) findViewById(R.id.langding);// µÇÂ¼
-//		remeber = (TextView) findViewById(R.id.remeber);// ¼Ç×¡ÃÜÂë
-//		forget = (TextView) findViewById(R.id.forget);// Íü¼ÇÃÜÂë
-//		forgo = (ImageView) findViewById(R.id.chosse);// Ã»ÓĞÑ¡Ôñ¼Ç×¡
-		chosse = (ImageView) findViewById(R.id.chosse1);// Ñ¡Ôñ¼Ç×¡
+		username = (EditText) findViewById(R.id.username);// ç”¨æˆ·å
+		userpassword = (EditText) findViewById(R.id.userpassword);// ç”¨æˆ·å¯†ç 
+		langding = (ImageView) findViewById(R.id.langding);// ç™»å½•
+//		remeber = (TextView) findViewById(R.id.remeber);// è®°ä½å¯†ç 
+//		forget = (TextView) findViewById(R.id.forget);// å¿˜è®°å¯†ç 
+//		forgo = (ImageView) findViewById(R.id.chosse);// æ²¡æœ‰é€‰æ‹©è®°ä½
+		chosse = (ImageView) findViewById(R.id.chosse1);// é€‰æ‹©è®°ä½
 
-		// ÉèÖÃÊäÈë¿ò£¬È¡ÏûÖÜÎ§¿ò¼Ü
+		// è®¾ç½®è¾“å…¥æ¡†ï¼Œå–æ¶ˆå‘¨å›´æ¡†æ¶
 		username.setBackgroundDrawable(null);
 		userpassword.setBackgroundDrawable(null);
 		
-		//µ÷ÓÃ¾²Ì¬Àà
+		//è°ƒç”¨é™æ€ç±»
 		if(Network.checkNetWorkStatus(MainActivity.this)){
 			
 		}else{
-			Toast.makeText(MainActivity.this, "µ±Ç°Ã»ÓĞÍøÂç", Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this, "å½“å‰æ²¡æœ‰ç½‘ç»œ", Toast.LENGTH_SHORT).show();
 		}
 
-		// ÉèÖÃµÇÂ½ËùĞèÒªµÄÉèÖÃ
+		// è®¾ç½®ç™»é™†æ‰€éœ€è¦çš„è®¾ç½®
 
 	langding.setOnClickListener(new OnClickListener() {
 
 
 			@Override
 		public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 
-//				//ÁÙÊ±Êı¾İµÄÌø×ª 
+//				//ä¸´æ—¶æ•°æ®çš„è·³è½¬ 
 		//		Intent intent = new Intent(MainActivity.this, Homepage.class);
 		//		startActivity(intent);
 		//		finish();
-			//	 ÅĞ¶ÏÊäÈëµÄÄÚÈİ
+			//	 åˆ¤æ–­è¾“å…¥çš„å†…å®¹
 				
 				String str = username.getText().toString();
 				if (str.trim().equals("")) {
-					Toast.makeText(MainActivity.this, "ÇëÊäÈëÓÃ»§Ãû",Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainActivity.this, "è¯·è¾“å…¥ç”¨æˆ·å",Toast.LENGTH_SHORT).show();
 			}
 				String str1 = userpassword.getText().toString();
 				if (str1.trim().equals("")) {
-					Toast.makeText(MainActivity.this, "ÇëÊäÈëÃÜÂë",Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainActivity.this, "è¯·è¾“å…¥å¯†ç ",Toast.LENGTH_SHORT).show();
 			}
 				yonghu=username.getText().toString();
 				mima=userpassword.getText().toString();
-				System.out.println("´¢´æÆğÀ´µÄÓÃ»§ÃûÊÇ£º"+yonghu);
-				//´æ´¢ÕËºÅÃÜÂë
+				System.out.println("å‚¨å­˜èµ·æ¥çš„ç”¨æˆ·åæ˜¯ï¼š"+yonghu);
+				//å­˜å‚¨è´¦å·å¯†ç 
 				arrayList.add(yonghu);arrayList1.add(mima);
-				System.out.println("´¢´æÆğÀ´µÄÕËºÅ"+arrayList);
-				System.out.println("´¢´æÆğÀ´µÄÃÜÂë"+arrayList1);
+				System.out.println("å‚¨å­˜èµ·æ¥çš„è´¦å·"+arrayList);
+				System.out.println("å‚¨å­˜èµ·æ¥çš„å¯†ç "+arrayList1);
 	
 
 				new Thread() {
 					public void run() {
-						// ÉèÖÃÍøÂçÁ¬½Ó£¬µÇÂ½½çÃæ
+						// è®¾ç½®ç½‘ç»œè¿æ¥ï¼Œç™»é™†ç•Œé¢
 
 						HttpClient httpclient = new DefaultHttpClient();
 						HttpPost httppost = new HttpPost("http://EIPQAS.zhongjichina.com/ZPZChina.svc/Users/login");
-						// //·Ö×°Êı¾İ
+						// //åˆ†è£…æ•°æ®
 						JSONObject jsonObject = new JSONObject();
 						try {
 							jsonObject.put("userName", username.getText());
 							jsonObject.put("password", userpassword.getText());
 							jsonObject.put("deviceType","android" );
 						} catch (JSONException e1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 							e1.printStackTrace();
 						}
-						System.out.println("Æ´½ÓºóÊı¾İ" + jsonObject.toString());
+						System.out.println("æ‹¼æ¥åæ•°æ®" + jsonObject.toString());
 
 						try {
 							httppost.addHeader("Content-Type"," application/json; charset=UTF-8");
 							httppost.setEntity(new StringEntity(jsonObject.toString()));
 							HttpResponse response = httpclient.execute(httppost);
 							response.getStatusLine().getStatusCode();
-							System.out.println("ÍøÂçÁ¬½ÓÖµ:"+ response.getStatusLine().getStatusCode());
+							System.out.println("ç½‘ç»œè¿æ¥å€¼:"+ response.getStatusLine().getStatusCode());
 							if (response.getStatusLine().getStatusCode() == 200) {
 								HttpEntity entity = response.getEntity();
 								String string = EntityUtils.toString(entity);
-								System.out.println("µÇÂ½ºóÊÕµ½µÄ·µ»ØÖµ" + string);
-								// Ğ´Ò»¸ö½âÎö·µ»ØÖµµÄ·½·¨
+								System.out.println("ç™»é™†åæ”¶åˆ°çš„è¿”å›å€¼" + string);
+								// å†™ä¸€ä¸ªè§£æè¿”å›å€¼çš„æ–¹æ³•
 								analysis(string);
 								if (string.contains("200")) {
 
@@ -211,21 +211,21 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-//		// ¼ÇÂ¼ÃÜÂëÉèÖÃ
+//		// è®°å½•å¯†ç è®¾ç½®
 //		remeber.setOnClickListener(new OnClickListener() {
 //
 //			@Override
 //			public void onClick(View arg0) {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				
-//				//Í¼±êµÄÇĞ»»
+//				//å›¾æ ‡çš„åˆ‡æ¢
 //				if(num%2==0){
 //					   forgo.setVisibility(View.GONE);
 //				       chosse.setVisibility(View.VISIBLE);
-//				   	//¼Ç×¡ÕËºÅÃÜÂëµÄ²Ù×÷
+//				   	//è®°ä½è´¦å·å¯†ç çš„æ“ä½œ
 //				       arrayList.add(yonghu);arrayList1.add(mima);
-//					System.out.println("´¢´æÆğÀ´µÄÕËºÅ"+arrayList);
-//					System.out.println("´¢´æÆğÀ´µÄÃÜÂë"+arrayList1);
+//					System.out.println("å‚¨å­˜èµ·æ¥çš„è´¦å·"+arrayList);
+//					System.out.println("å‚¨å­˜èµ·æ¥çš„å¯†ç "+arrayList1);
 //				//   username.setText(arrayList.toString().replace("[", "").replace("]", ""));
 //				//  userpassword.setText(arrayList1.toString().replace("[", "").replace("]", ""));
 //				}else {
@@ -237,28 +237,28 @@ public class MainActivity extends Activity {
 //			}
 //		});
 
-//		// //ÉèÖÃÍü¼ÇÃÜÂë²½Öè
+//		// //è®¾ç½®å¿˜è®°å¯†ç æ­¥éª¤
 //		forget.setOnClickListener(new OnClickListener() {
 //
 //			@Override
 //			public void onClick(View arg0) {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //
 //			}
 //		});
 
 	}
 
-	// µ÷ÓÃ½âÎö·½·¨
+	// è°ƒç”¨è§£ææ–¹æ³•
 	private void analysis(String string) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		try {
 			JSONObject jsonObject = new JSONObject(string);
-			JSONObject jsonObject1 = jsonObject.getJSONObject("d");// µÚÒ»²ãÃû×Ö
-			JSONArray jsonArray = jsonObject1.getJSONArray("data");// µÚ¶ş²ãÃû×Ö
+			JSONObject jsonObject1 = jsonObject.getJSONObject("d");// ç¬¬ä¸€å±‚åå­—
+			JSONArray jsonArray = jsonObject1.getJSONArray("data");// ç¬¬äºŒå±‚åå­—
 			JSONObject json = jsonArray.getJSONObject(0);
 
-			// »ñÈ¡ĞèÒªµÄ×ÊÁÏÎÄ±¾µÄ¼üÖµ
+			// è·å–éœ€è¦çš„èµ„æ–™æ–‡æœ¬çš„é”®å€¼
 			String userid = json.getString("userID");
 			String token = json.getString("userToken");
 			String cellphone=json.getString("cellphone");
@@ -267,32 +267,32 @@ public class MainActivity extends Activity {
 			String district=json.getString("district");
 			String province=json.getString("province");
 
-			System.out.println("ÓÃ»§IDÖµ:" + userid);
-			System.out.println("ÓÃ»§TokenÖµ:" + token);
-			System.out.println("ÓÃ»§ÊÖ»úºÅ:" + cellphone);
-			System.out.println("ÓÃ»§ËùÊô¹«Ë¾:" +company);
-			System.out.println("ÓÃ»§Ö°³Æ:" +title);
-			System.out.println("ÓÃ»§ÇøÓò:" +district);
-			System.out.println("ÓÃ»§³ÇÊĞ:" +province);
+			System.out.println("ç”¨æˆ·IDå€¼:" + userid);
+			System.out.println("ç”¨æˆ·Tokenå€¼:" + token);
+			System.out.println("ç”¨æˆ·æ‰‹æœºå·:" + cellphone);
+			System.out.println("ç”¨æˆ·æ‰€å±å…¬å¸:" +company);
+			System.out.println("ç”¨æˆ·èŒç§°:" +title);
+			System.out.println("ç”¨æˆ·åŒºåŸŸ:" +district);
+			System.out.println("ç”¨æˆ·åŸå¸‚:" +province);
 			
 
-			// ½«½âÎö³öÀ´µÄ¼üÖµ´æÆğÀ´
+			// å°†è§£æå‡ºæ¥çš„é”®å€¼å­˜èµ·æ¥
 			messageArrayList.add(token);
-			System.out.println("´¢´æÆğÀ´µÄ¶«Î÷"+messageArrayList);
+			System.out.println("å‚¨å­˜èµ·æ¥çš„ä¸œè¥¿"+messageArrayList);
 			arrayList3.add(cellphone);
-			System.out.println("´¢´æÆğÀ´µÄ¶«Î÷"+arrayList3);
+			System.out.println("å‚¨å­˜èµ·æ¥çš„ä¸œè¥¿"+arrayList3);
 			arrayList4.add(company);
-			System.out.println("´¢´æÆğÀ´µÄ¶«Î÷"+arrayList4);
+			System.out.println("å‚¨å­˜èµ·æ¥çš„ä¸œè¥¿"+arrayList4);
 			arrayList5.add(title);
-			System.out.println("´¢´æÆğÀ´µÄ¶«Î÷"+arrayList5);
+			System.out.println("å‚¨å­˜èµ·æ¥çš„ä¸œè¥¿"+arrayList5);
 			arrayList6.add(district);
-			System.out.println("´¢´æÆğÀ´µÄ¶«Î÷"+arrayList6);
+			System.out.println("å‚¨å­˜èµ·æ¥çš„ä¸œè¥¿"+arrayList6);
 			arrayList7.add(province);
-			System.out.println("´¢´æÆğÀ´µÄ¶«Î÷"+arrayList7);
+			System.out.println("å‚¨å­˜èµ·æ¥çš„ä¸œè¥¿"+arrayList7);
 			
 			
 		} catch (JSONException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		}
 		

@@ -47,12 +47,12 @@ public class Homepage extends Activity {
 	Handler handler=new Handler(){
 		public void handleMessage(android.os.Message msg) {
 			if(msg.what==1){
-				Toast.makeText(Homepage.this, "ÍË³ö³É¹¦", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Homepage.this, "é€€å‡ºæˆåŠŸ", Toast.LENGTH_SHORT).show();
 				Intent intent=new Intent(Homepage.this,MainActivity.class);
 				startActivity(intent);
 				finish();
 			}else if(msg.what==2){
-				Toast.makeText(Homepage.this, "ÍË³öÊ§°Ü£¬ÇëÖØĞÂ³¢ÊÔ", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Homepage.this, "é€€å‡ºå¤±è´¥ï¼Œè¯·é‡æ–°å°è¯•", Toast.LENGTH_SHORT).show();
 			}
 			
 		};
@@ -63,71 +63,71 @@ public class Homepage extends Activity {
 		setContentView(R.layout.activity__homepage);
 		
 	 
-	 project=(ImageView) findViewById(R.id.project);//ĞÂ½¨ÏîÄ¿
-	 allproject=(ImageView) findViewById(R.id.allproject);//È«²¿ÈÎÎñ
-	 result=(ImageView) findViewById(R.id.result);//ÍË³öÒ³Ãæ
-	 myself=(ImageView) findViewById(R.id.myself);//±¾µØÈÎÎñ
-	 name=(TextView) findViewById(R.id.name);//µÇÂ¼ÓÃ»§µÄĞÅÏ¢
-	 moblile=(TextView) findViewById(id.mobile);//ÏÔÊ¾ÊÖ»úºÅ
-	 geographic=(TextView) findViewById(id.geographic);//ÏÔÊ¾ÇøÓò
-	 geographic1=(TextView) findViewById(id.geographic1);//ÏÔÊ¾³ÇÊĞ
-	 companyshow=(TextView) findViewById(id.company);//ÏÔÊ¾ËùÊô¹«Ë¾
-	 title=(TextView) findViewById(id.title);//ÏÔÊ¾Ö°³Æ
+	 project=(ImageView) findViewById(R.id.project);//æ–°å»ºé¡¹ç›®
+	 allproject=(ImageView) findViewById(R.id.allproject);//å…¨éƒ¨ä»»åŠ¡
+	 result=(ImageView) findViewById(R.id.result);//é€€å‡ºé¡µé¢
+	 myself=(ImageView) findViewById(R.id.myself);//æœ¬åœ°ä»»åŠ¡
+	 name=(TextView) findViewById(R.id.name);//ç™»å½•ç”¨æˆ·çš„ä¿¡æ¯
+	 moblile=(TextView) findViewById(id.mobile);//æ˜¾ç¤ºæ‰‹æœºå·
+	 geographic=(TextView) findViewById(id.geographic);//æ˜¾ç¤ºåŒºåŸŸ
+	 geographic1=(TextView) findViewById(id.geographic1);//æ˜¾ç¤ºåŸå¸‚
+	 companyshow=(TextView) findViewById(id.company);//æ˜¾ç¤ºæ‰€å±å…¬å¸
+	 title=(TextView) findViewById(id.title);//æ˜¾ç¤ºèŒç§°
 	 
 	 cellphone=new ArrayList<String>();
-	 //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 	 string=getIntent().getStringExtra("token").replace("[", "").replace("]", "");
-	 System.out.println("Ö÷½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-	 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+	 System.out.println("ä¸»ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 	  username=getIntent().getStringExtra("name");
-	 System.out.println("Ö÷½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-	 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+	 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 	 password=getIntent().getStringExtra("password");
-	 System.out.println("Ö÷½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-	 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+	 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 	 cellphone=getIntent().getStringArrayListExtra("cellphone");
-	 System.out.println("Ö÷½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-	 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+	 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 	 company=getIntent().getStringArrayListExtra("company");
-	 System.out.println("Ö÷½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-	 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+	 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+	 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 	 department=getIntent().getStringArrayListExtra("department");
-	 System.out.println("Ö÷½çÃæÊÕµ½µÄÖ°Îñ"+department);
-	//½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+	 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+	//æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 	district=getIntent().getStringArrayListExtra("district");
-	System.out.println("Ö÷½çÃæÊÕµ½µÄÇøÓò"+district);
-	//½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+	System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„åŒºåŸŸ"+district);
+	//æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 	province=getIntent().getStringArrayListExtra("province");
-	System.out.println("Ö÷½çÃæÊÕµ½µÄ³ÇÊĞ"+province);
+	System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„åŸå¸‚"+province);
 	 
 	
 	
-	//µ÷ÓÃ¾²Ì¬Àà
+	//è°ƒç”¨é™æ€ç±»
 			if(Network.checkNetWorkStatus(Homepage.this)){
 				
 			}else{
-				Toast.makeText(Homepage.this, "µ±Ç°Ã»ÓĞÍøÂç", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Homepage.this, "å½“å‰æ²¡æœ‰ç½‘ç»œ", Toast.LENGTH_SHORT).show();
 			}
 			
-	 //ÏÔÊ¾Ö°ÎñÁªÏµ·½Ê½
+	 //æ˜¾ç¤ºèŒåŠ¡è”ç³»æ–¹å¼
 			if(cellphone!=null&&company!=null&&department!=null){
 				
 	           String string1 =cellphone.get(0);String string2=company.get(0);String string3=department.get(0);
 	           name.setText(username);     moblile.setText(string1);   companyshow.setText(string2);    title.setText(string3);
 	 }
-	//ÏÔÊ¾ÇøÓò³ÇÊĞ
+	//æ˜¾ç¤ºåŒºåŸŸåŸå¸‚
 			if(district!=null&&province!=null){
 				String string=district.get(0);  geographic.setText(string);
 				String string2=province.get(0); geographic1.setText(string2);
 			}
 			
 			
-		//ĞÂ½¨ÉèÖÃ
+		//æ–°å»ºè®¾ç½®
 	 project.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 			Intent intent=new Intent(Homepage.this,Project.class);
 			intent.putExtra("token", string);
@@ -144,22 +144,22 @@ public class Homepage extends Activity {
 		}
 	});
 	
-		//Ìø×ªµ½ÍË³ö½çÃæ
+		//è·³è½¬åˆ°é€€å‡ºç•Œé¢
 		result.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		    	menu.showMenu();
 			}
 		});
 		
-	//È«²¿ÈÎÎñ
+	//å…¨éƒ¨ä»»åŠ¡
 	 allproject.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				Intent intent=new Intent(Homepage.this,Allproject.class);
 				intent.putExtra("token", string);
 				intent.putExtra("name", username);
@@ -171,13 +171,13 @@ public class Homepage extends Activity {
 				finish();
 			}
 		});
-	 //±¾µØÈÎÎñ
+	 //æœ¬åœ°ä»»åŠ¡
 	
 	myself.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 			Intent intent=new Intent(Homepage.this,Myself.class);
 			intent.putExtra("token", string);
@@ -194,43 +194,43 @@ public class Homepage extends Activity {
 	});
 	
 	
-	//»ñÈ¡ÆÁÄ»µÄ¿í¸ß
+	//è·å–å±å¹•çš„å®½é«˜
 	DisplayMetrics dm = new DisplayMetrics();getWindowManager().getDefaultDisplay().getMetrics(dm);
-	int width = dm.widthPixels;//¿í¶È
-	int height = dm.heightPixels ;//¸ß¶È
+	int width = dm.widthPixels;//å®½åº¦
+	int height = dm.heightPixels ;//é«˜åº¦
 	int  screenWidth=getWindowManager().getDefaultDisplay().getWidth();
 	
-	//²à»¬ÉèÖÃ
+	//ä¾§æ»‘è®¾ç½®
 	menu = new SlidingMenu(this);
 	menu.setMode(SlidingMenu.LEFT);
-    menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);//ÉèÖÃ»¬¶¯µÄÆÁÄ»¾ÖÏŞ£¬¸ÃÉèÖÃÎªÈ«ÆÁÇøÓò¶¼¿ÉÒÔ»¬¶¯
-    menu.setShadowWidthRes(R.dimen.shadow_width);//ÉèÖÃ°µÓ°µÄ¿í¶È
-    menu.setShadowDrawable(R.drawable.shadow);//ÉèÖÃ°µÓ°
-    menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);//SlidingMenu»®³öÊ±Ö÷Ò³ÃæÏÔÊ¾µÄÊ£Óà¿í¶È
-    menu.setBehindWidth((int)(screenWidth*(5.0/6.0)));//ÉèÖÃSlidingMenu²Ëµ¥µÄ¿í¶È
-    menu.setFadeDegree(0.35f);//SlidingMenu»¬¶¯Ê±µÄ½¥±ä³Ì¶È
-    menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);//Ê¹SlidingMenu¸½¼ÓÔÚActivityÉÏ
-    menu.setMenu(R.layout.activity__retreat);//ÉèÖÃmenuµÄ²¼¾ÖÎÄ¼ş
+    menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);//è®¾ç½®æ»‘åŠ¨çš„å±å¹•å±€é™ï¼Œè¯¥è®¾ç½®ä¸ºå…¨å±åŒºåŸŸéƒ½å¯ä»¥æ»‘åŠ¨
+    menu.setShadowWidthRes(R.dimen.shadow_width);//è®¾ç½®æš—å½±çš„å®½åº¦
+    menu.setShadowDrawable(R.drawable.shadow);//è®¾ç½®æš—å½±
+    menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);//SlidingMenuåˆ’å‡ºæ—¶ä¸»é¡µé¢æ˜¾ç¤ºçš„å‰©ä½™å®½åº¦
+    menu.setBehindWidth((int)(screenWidth*(5.0/6.0)));//è®¾ç½®SlidingMenuèœå•çš„å®½åº¦
+    menu.setFadeDegree(0.35f);//SlidingMenuæ»‘åŠ¨æ—¶çš„æ¸å˜ç¨‹åº¦
+    menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);//ä½¿SlidingMenué™„åŠ åœ¨Activityä¸Š
+    menu.setMenu(R.layout.activity__retreat);//è®¾ç½®menuçš„å¸ƒå±€æ–‡ä»¶
     
     
     
-    TextView eliminate=(TextView)menu.findViewById(id.eliminate);//Çå³ı±¾µØÊı¾İ
-	TextView retreat=(TextView)menu. findViewById(id.retreat);//ÍË³öµÇÂ½
-	TextView modification=(TextView)menu. findViewById(id.modification);//ĞŞ¸ÄÃÜÂë
-	TextView users=(TextView)menu. findViewById(id.user);//ÓÃ»§ÃûÏÔÊ¾
+    TextView eliminate=(TextView)menu.findViewById(id.eliminate);//æ¸…é™¤æœ¬åœ°æ•°æ®
+	TextView retreat=(TextView)menu. findViewById(id.retreat);//é€€å‡ºç™»é™†
+	TextView modification=(TextView)menu. findViewById(id.modification);//ä¿®æ”¹å¯†ç 
+	TextView users=(TextView)menu. findViewById(id.user);//ç”¨æˆ·åæ˜¾ç¤º
 	users.setText(username);
 	
-	////ÍË³öµÇÂ¼
+	////é€€å‡ºç™»å½•
 	 retreat.setOnClickListener(new OnClickListener() {
 			
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 		new Thread(){
 			@Override
 			public void run() {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 			
 		HttpClient httpClient=new DefaultHttpClient();
@@ -242,17 +242,17 @@ public class Homepage extends Activity {
 			jsonObject.put("deviceType"," null");
 			
 		} catch (JSONException e1) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e1.printStackTrace();
 		}
-		System.out.println("ÍË³öÆ´½Óºó"+jsonObject.toString());
+		System.out.println("é€€å‡ºæ‹¼æ¥å"+jsonObject.toString());
 		
 		try {
 			httpPost.addHeader("Content-Type"," application/json; charset=UTF-8");
 	        httpPost.setEntity(new StringEntity(jsonObject.toString()));
 			HttpResponse response=httpClient.execute(httpPost);
 			response.getStatusLine().getStatusCode();
-			System.out.println("½ÓÊÕµ½µÄÍøÂçÖµ£º"+response.getStatusLine().getStatusCode());
+			System.out.println("æ¥æ”¶åˆ°çš„ç½‘ç»œå€¼ï¼š"+response.getStatusLine().getStatusCode());
 			if(response.getStatusLine().getStatusCode()==200){
 				HttpEntity entity=response.getEntity();
 				String result=EntityUtils.toString(entity);
@@ -264,10 +264,10 @@ public class Homepage extends Activity {
 			}
 			
 		} catch (ClientProtocolException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		}
 			};
@@ -275,13 +275,13 @@ public class Homepage extends Activity {
 	   }
 	});
 	 
-	 //ĞŞ¸ÄÃÜÂë
+	 //ä¿®æ”¹å¯†ç 
 	 
 	 modification.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 			Intent  intent=new Intent(Homepage.this,Modification.class);
 			intent.putExtra("token",string);
@@ -301,25 +301,24 @@ public class Homepage extends Activity {
 	
 	
 	}
-	// ÉèÖÃ·µ»Ø¼ü
+	// è®¾ç½®è¿”å›é”®
 		@Override
 		public void onBackPressed() {
 			// TODO Auto-generated method stub
 
 			AlertDialog.Builder builder = new AlertDialog.Builder(Homepage.this);
 			builder.setIcon(R.drawable.icon48);
-			builder.setTitle("ÌáÊ¾");
-			builder.setMessage("ÊÇ·ñÍË³ö");
-			builder.setPositiveButton("È·¶¨", new AlertDialog.OnClickListener() {
+			builder.setTitle("æç¤º");
+			builder.setMessage("æ˜¯å¦é€€å‡º");
+			builder.setPositiveButton("ç¡®å®š", new AlertDialog.OnClickListener() {
 
 				@Override
 				public void onClick(DialogInterface arg0, int arg1) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					finish();
 				}
 			});
-			builder.setNegativeButton("È¡Ïû", null);
+			builder.setNegativeButton("å–æ¶ˆ", null);
 			builder.show();
-
 		}
 }

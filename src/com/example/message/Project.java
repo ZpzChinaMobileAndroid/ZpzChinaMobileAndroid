@@ -86,8 +86,8 @@ public class Project extends Activity {
 	ArrayList<String >cellphone,company2,department,district,province;
 	ArrayList<String>arrayList111,arrayList112,arrayList113,arrayList114;
 	String str1,str2,str3,str4,str5,str6,str7,str8;
-	String [] str={"¹¤Òµ","¾ÆµêÒÔ²ÍÒû","ÉÌÎñ°ì¹«","×¡Õ¬/¾­¼ÃÊÊÓÃ·¿","¹«¹²ÊÂÒµÉèÊ©","ÆäËû"};
-	String[] strings={"ÏîÄ¿¸ºÔğÈË"};
+	String [] str={"å·¥ä¸š","é…’åº—ä»¥é¤é¥®","å•†åŠ¡åŠå…¬","ä½å®…/ç»æµé€‚ç”¨æˆ¿","å…¬å…±äº‹ä¸šè®¾æ–½","å…¶ä»–"};
+	String[] strings={"é¡¹ç›®è´Ÿè´£äºº"};
 	GridView gird;
 	boolean bo = true;
 	static List<Bitmap> list = new LinkedList<Bitmap>();
@@ -103,60 +103,60 @@ public class Project extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__project);
 	
-		 plot=(EditText) findViewById(R.id.plot); //ÍÁµØÃû³Æ
-		 address=(EditText) findViewById(R.id.address);//µØ¿éµØÖ·
-		 area=(EditText) findViewById(R.id.area);//ÍÁµØÃæ»ı
-		 volume=(EditText) findViewById(R.id.volume);//ÍÁµØÈİ»ıÂÊ
-		 back=(ImageView) findViewById(R.id.back);//·µ»Øµ½Ö÷½çÃæ
-		 purpose=(TextView) findViewById(R.id.purpose);//ÍÁµØÓÃÍ¾
-		 region=(TextView) findViewById(R.id.region);//ËùÔÚÇøÓò
-		 choose=(ImageView) findViewById(R.id.choosee);//Ôö¼ÓÓÃ»§ĞÅÏ¢
-		 bidders=(TextView) findViewById(id.bidders);//ÅÄÂôµ¥Î»
-		 jump=(TextView) findViewById(id.jump);//Ìø×ªµ½ËùÓĞÑ¡Ïî
-		 show=(TextView) findViewById(id.show);//ÏÔÊ¾ÇøÓòÇøÓò
-		 show11=(TextView) findViewById(id.show11);//ÏÔÊ¾ÇøÓò³ÇÊĞ
-		 shower=(TextView) findViewById(id.shower);//ÏÔÊ¾ËùÑ¡ÔñµÄÄÚÈİ
-		 nameone=(TextView) findViewById(id.nameone);//ÏÔÊ¾Ãû×Ö
-		 nametwo=(TextView) findViewById(id.nametwo);//ÏÔÊ¾Ãû×Ö2
-		 namethree=(TextView) findViewById(id.namethree);//ÏÔÊ¾Ãû×Ö3
-		 ImageView save=(ImageView) findViewById(id.imageView3);//±£´æÏîÄ¿
+		 plot=(EditText) findViewById(R.id.plot); //åœŸåœ°åç§°
+		 address=(EditText) findViewById(R.id.address);//åœ°å—åœ°å€
+		 area=(EditText) findViewById(R.id.area);//åœŸåœ°é¢ç§¯
+		 volume=(EditText) findViewById(R.id.volume);//åœŸåœ°å®¹ç§¯ç‡
+		 back=(ImageView) findViewById(R.id.back);//è¿”å›åˆ°ä¸»ç•Œé¢
+		 purpose=(TextView) findViewById(R.id.purpose);//åœŸåœ°ç”¨é€”
+		 region=(TextView) findViewById(R.id.region);//æ‰€åœ¨åŒºåŸŸ
+		 choose=(ImageView) findViewById(R.id.choosee);//å¢åŠ ç”¨æˆ·ä¿¡æ¯
+		 bidders=(TextView) findViewById(id.bidders);//æ‹å–å•ä½
+		 jump=(TextView) findViewById(id.jump);//è·³è½¬åˆ°æ‰€æœ‰é€‰é¡¹
+		 show=(TextView) findViewById(id.show);//æ˜¾ç¤ºåŒºåŸŸåŒºåŸŸ
+		 show11=(TextView) findViewById(id.show11);//æ˜¾ç¤ºåŒºåŸŸåŸå¸‚
+		 shower=(TextView) findViewById(id.shower);//æ˜¾ç¤ºæ‰€é€‰æ‹©çš„å†…å®¹
+		 nameone=(TextView) findViewById(id.nameone);//æ˜¾ç¤ºåå­—
+		 nametwo=(TextView) findViewById(id.nametwo);//æ˜¾ç¤ºåå­—2
+		 namethree=(TextView) findViewById(id.namethree);//æ˜¾ç¤ºåå­—3
+		 ImageView save=(ImageView) findViewById(id.imageView3);//ä¿å­˜é¡¹ç›®
 		 gird = (GridView) findViewById(R.id.gridView1);
 		 gird.setAdapter(myAdpter);
 		
 		 
 		 
-		//ÉèÖÃ¶Ô»°¿òµÄ±ß¿ò
+		//è®¾ç½®å¯¹è¯æ¡†çš„è¾¹æ¡†
 		 plot.setBackgroundDrawable(null);
 		 address.setBackgroundDrawable(null);
 		 area.setBackgroundDrawable(null);
 		 volume.setBackgroundDrawable(null);
 		 
-		 //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		 string=getIntent().getStringExtra("token");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄtokenÖµ"+string);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 		 username=getIntent().getStringExtra("name");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÓÃ»§Ãû"+username);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 		 password=getIntent().getStringExtra("password");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company2=getIntent().getStringArrayListExtra("company");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄËùÊôµ¥Î»"+company);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+department);
-		 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+department);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-		 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
 		 
-		 //ÏÔÊ¾ÇøÓò³ÇÊĞ
+		 //æ˜¾ç¤ºåŒºåŸŸåŸå¸‚
 		 if(district!=null&&province!=null){
 			 String ss=district.get(0);  String sss=province.get(0);
 			 System.out.println("sss"+ss);  System.out.println("ddd"+sss);
@@ -166,15 +166,15 @@ public class Project extends Activity {
 		 
 			
 		 
-		 //Éú³É±íµÄ²Ù×÷
+		 //ç”Ÿæˆè¡¨çš„æ“ä½œ
 		 Mysqlite mysqlite=new Mysqlite(Project.this);
 	     mysqlite.getWritableDatabase();
-	 	//ÉèÖÃ±£´æµÄÓ¦ÓÃ
-			arrayList111=new ArrayList<String>();//Õâ¸öÓÃÀ´´æµÚÒ»´ÎµÄÖµ
-			arrayList112=new ArrayList<String>();//Õâ¸öÓÃÀ´´æµÄµÚÒ»¸öĞŞ¸ÄµÄÖµ
-			arrayList113=new ArrayList<String>();//Õâ¸öÓÃÀ´´æµÄµÚ¶ş¸öĞŞ¸ÄµÄÖµ
-			arrayList114=new ArrayList<String>();//Õâ¸öÓÃÀ´´æµÄµÚÈı¸öĞŞ¸ÄµÄÖµ
-		  //ÖĞ×ªÎÒµÄÖµ
+	 	//è®¾ç½®ä¿å­˜çš„åº”ç”¨
+			arrayList111=new ArrayList<String>();//è¿™ä¸ªç”¨æ¥å­˜ç¬¬ä¸€æ¬¡çš„å€¼
+			arrayList112=new ArrayList<String>();//è¿™ä¸ªç”¨æ¥å­˜çš„ç¬¬ä¸€ä¸ªä¿®æ”¹çš„å€¼
+			arrayList113=new ArrayList<String>();//è¿™ä¸ªç”¨æ¥å­˜çš„ç¬¬äºŒä¸ªä¿®æ”¹çš„å€¼
+			arrayList114=new ArrayList<String>();//è¿™ä¸ªç”¨æ¥å­˜çš„ç¬¬ä¸‰ä¸ªä¿®æ”¹çš„å€¼
+		  //ä¸­è½¬æˆ‘çš„å€¼
 	        arrayList3=new ArrayList<String>();
 	        arrayList3=getIntent().getStringArrayListExtra("two");	
 	        arrayList4=new ArrayList<String>();
@@ -193,10 +193,10 @@ public class Project extends Activity {
 	        arrayList10=getIntent().getStringArrayListExtra("nine");	
 	        arrayList11=new ArrayList<String>();
 	        arrayList11=getIntent().getStringArrayListExtra("ten");		
-	     //½ÓÊÜÖµ
+	     //æ¥å—å€¼
 	     ArrayList<String>stringssArrayList=getIntent().getStringArrayListExtra("one");
-	     System.out.println("¿´¿´´«»ØÀ´ÊÇÊ²Ã´"+stringssArrayList);
-	     //½ØÈ¡Öµ²¢¸³Öµ
+	     System.out.println("çœ‹çœ‹ä¼ å›æ¥æ˜¯ä»€ä¹ˆ"+stringssArrayList);
+	     //æˆªå–å€¼å¹¶èµ‹å€¼
 	     str1=new String(); str2=new String(); str3=new String(); str4=new String(); str5=new String();
 	     str6=new String(); str7=new String(); str8=new String(); 
 	     
@@ -212,12 +212,12 @@ public class Project extends Activity {
 	     }
 
 	     
-     //±£´æµ½±¾µØ
+     //ä¿å­˜åˆ°æœ¬åœ°
 	   save.setOnClickListener(new OnClickListener() {
 		
 		@Override
 		public void onClick(View arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			  
 		Intent intent=new Intent(Project.this,Myself.class);
 		intent.putExtra("one", arrayList);
@@ -245,21 +245,21 @@ public class Project extends Activity {
 		
 		startActivity(intent);
 		finish();
-		 Toast.makeText(Project.this, "±£´æµ½±¾µØ³É¹¦", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(Project.this, "ä¿å­˜åˆ°æœ¬åœ°æˆåŠŸ", Toast.LENGTH_SHORT).show();
 		}
 	});
 	   
 	   
-	    //Ìø×ªÑ¡Ïî
+	    //è·³è½¬é€‰é¡¹
 			 jump.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View arg0) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					   
-					//±£´æ½çÃæµÄÖµ
+					//ä¿å­˜ç•Œé¢çš„å€¼
 					arrayList.add(plot.getText().toString());
 					arrayList.add(show.getText().toString());
 					arrayList.add(address.getText().toString());
@@ -267,7 +267,7 @@ public class Project extends Activity {
 					arrayList.add(volume.getText().toString());
 					arrayList.add(shower.getText().toString());
 					
-					System.out.println("Êı¾İ"+arrayList.toString());
+					System.out.println("æ•°æ®"+arrayList.toString());
 					
 					Intent intent=new Intent(Project.this,Content.class);
 					intent.putExtra("key", "1");
@@ -299,40 +299,40 @@ public class Project extends Activity {
 
          
 		
-		//Ôö¼ÓÓÃ»§ĞÅÏ¢
+		//å¢åŠ ç”¨æˆ·ä¿¡æ¯
 		bidders.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Project.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
 				
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 				
-				//¸ÚÎ»
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Project.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -344,32 +344,32 @@ public class Project extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Project.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Project.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
 						
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Project.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Project.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Project.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Project.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList111.size()>10){
-								Toast.makeText(Project.this, "Ãû¶îÒÑÂú£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Project.this, "åé¢å·²æ»¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -382,7 +382,7 @@ public class Project extends Activity {
 						    arrayList111.add(company.getText().toString());               
 						    arrayList111.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList111);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList111);
 						String stringone=new String();  
 						
 						if(arrayList111!=null&&arrayList111.size()==5){
@@ -409,39 +409,39 @@ public class Project extends Activity {
 		
 		
 		
-		//Ôö¼ÓÓÃ»§ĞÅÏ¢
+		//å¢åŠ ç”¨æˆ·ä¿¡æ¯
 		choose.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 				final AlertDialog builder=new AlertDialog.Builder(Project.this).create();
 				builder.setView(view,0,0,0,0);
-				name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-				phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+				name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+				phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 				station=(TextView)view.findViewById(id.station);
-				showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-				company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-				addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-				saveimage=(ImageView)view.findViewById(id.save);//±£´æ
-				//¸ÚÎ»
+				showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+				company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+				addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+				saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
+				//å²—ä½
 				station.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					AlertDialog.Builder builder=new AlertDialog.Builder(Project.this);
 					builder.setItems(strings, new AlertDialog. OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
-							// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+							// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							for(int i=0;i<strings.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+						         //æ˜¾ç¤ºå²—ä½åç§°
 				                 showsss.setText(strings[arg1]);	
 				                 String fiveString =showsss.getText().toString();
 				                  arg0.dismiss();
@@ -453,32 +453,32 @@ public class Project extends Activity {
 				
 					}
 				});
-				//±£´æ
+				//ä¿å­˜
 				saveimage.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						
-						//Ìí¼Óµç»°
+						//æ·»åŠ ç”µè¯
 						String two=phone.getText().toString();  int three=phone.getText().length();
 						if(two.equals("")){
-					    	   Toast.makeText(Project.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					    	   Toast.makeText(Project.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 					       }
 						
-						//Ìí¼ÓĞÕÃû
+						//æ·»åŠ å§“å
 					       String one=name.getText().toString(); int four=name.getText().length();
 						if(one.equals("")){
-					          Toast.makeText(Project.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+					          Toast.makeText(Project.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}else if(four>4){
-							Toast.makeText(Project.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Project.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 						}
 						
-						//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+						//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 						if(!two.equals("")&&!one.equals("")&&four<5){
 							if(arrayList111.size()>10){
-								Toast.makeText(Project.this, "Ãû¶îÒÑÂú£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+								Toast.makeText(Project.this, "åé¢å·²æ»¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 								
 							}else{
 								builder.dismiss();
@@ -491,7 +491,7 @@ public class Project extends Activity {
 						    arrayList111.add(company.getText().toString());               
 						    arrayList111.add(addressimage.getText().toString()); 
 						}
-						System.out.println("´¢´æµÄÊı¾İ"+arrayList111);
+						System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList111);
 						String stringone=new String();  
 						
 						if(arrayList111!=null&&arrayList111.size()==5){
@@ -515,22 +515,22 @@ public class Project extends Activity {
 		});
 		 
 		 
-		//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚÒ»Î»
+		//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬ä¸€ä½
 				nameone.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 						final AlertDialog builder=new AlertDialog.Builder(Project.this).create();
 						builder.setView(view,0,0,0,0);
-						name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-						phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+						name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+						phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 						station=(TextView)view.findViewById(id.station);
-						showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-						company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-						addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-						saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+						showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+						company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+						addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+						saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 						
 						String string1=new String();   	String string2=new String();   	String string3=new String();
 						String string4=new String();    String string5=new String();
@@ -571,22 +571,22 @@ public class Project extends Activity {
 						
 						
 						
-						//¸ÚÎ»
+						//å²—ä½
 						station.setOnClickListener(new OnClickListener() {
 							
 							@Override
 							public void onClick(View arg0) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							AlertDialog.Builder builder=new AlertDialog.Builder(Project.this);
 							builder.setItems(strings, new AlertDialog. OnClickListener() {
 								
 								@Override
 								public void onClick(DialogInterface arg0, int arg1) {
-									// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+									// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 									for(int i=0;i<strings.length;i++){
 										if(i==arg1){
 								
-								         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+								         //æ˜¾ç¤ºå²—ä½åç§°
 						                 showsss.setText(strings[arg1]);	
 						                 String fiveString =showsss.getText().toString();
 						                  arg0.dismiss();
@@ -598,33 +598,33 @@ public class Project extends Activity {
 						
 							}
 						});
-						//±£´æ
+						//ä¿å­˜
 						saveimage.setOnClickListener(new OnClickListener() {
 							
 							@Override
 							public void onClick(View arg0) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							
 								
-								//Ìí¼Óµç»°
+								//æ·»åŠ ç”µè¯
 								String two=phone.getText().toString();  int three=phone.getText().length();
 								if(two.equals("")){
-							    	   Toast.makeText(Project.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+							    	   Toast.makeText(Project.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							       }
 								
-								//Ìí¼ÓĞÕÃû
+								//æ·»åŠ å§“å
 							       String one=name.getText().toString(); int four=name.getText().length();
 								if(one.equals("")){
-							          Toast.makeText(Project.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+							          Toast.makeText(Project.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 								}else if(four>4){
-									Toast.makeText(Project.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Project.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 								}
 								
-								//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-								//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+								//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+								//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 								if(!two.equals("")&&!one.equals("")&&four<5){
 									if(arrayList112.size()>10){
-										Toast.makeText(Project.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+										Toast.makeText(Project.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 										
 									}else{
 										builder.dismiss();
@@ -637,7 +637,7 @@ public class Project extends Activity {
 								    arrayList112.add(company.getText().toString());               
 								    arrayList112.add(addressimage.getText().toString()); 
 								}
-								System.out.println("´¢´æµÄÊı¾İ"+arrayList112);
+								System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList112);
 								String stringone=new String();  
 								
 								if(arrayList112!=null&&arrayList112.size()==5){
@@ -661,22 +661,22 @@ public class Project extends Activity {
 			
 				
 				
-				//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚ¶şÎ»
+				//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬äºŒä½
 				nametwo.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 						final AlertDialog builder=new AlertDialog.Builder(Project.this).create();
 						builder.setView(view,0,0,0,0);
-						name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-						phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+						name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+						phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 						station=(TextView)view.findViewById(id.station);
-						showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-						company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-						addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-						saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+						showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+						company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+						addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+						saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 						
 						String string1=new String();   	String string2=new String();   	String string3=new String();
 						String string4=new String();    String string5=new String();
@@ -713,22 +713,22 @@ public class Project extends Activity {
 							string5 =arrayList113.get(14);  addressimage.setText(string5);
 						}
 					
-						//¸ÚÎ»
+						//å²—ä½
 						station.setOnClickListener(new OnClickListener() {
 							
 							@Override
 							public void onClick(View arg0) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							AlertDialog.Builder builder=new AlertDialog.Builder(Project.this);
 							builder.setItems(strings, new AlertDialog. OnClickListener() {
 								
 								@Override
 								public void onClick(DialogInterface arg0, int arg1) {
-									// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+									// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 									for(int i=0;i<strings.length;i++){
 										if(i==arg1){
 								
-								         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+								         //æ˜¾ç¤ºå²—ä½åç§°
 						                 showsss.setText(strings[arg1]);	
 						                 String fiveString =showsss.getText().toString();
 						                  arg0.dismiss();
@@ -740,33 +740,33 @@ public class Project extends Activity {
 						
 							}
 						});
-						//±£´æ
+						//ä¿å­˜
 						saveimage.setOnClickListener(new OnClickListener() {
 							
 							@Override
 							public void onClick(View arg0) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							
 								
-								//Ìí¼Óµç»°
+								//æ·»åŠ ç”µè¯
 								String two=phone.getText().toString();  int three=phone.getText().length();
 								if(two.equals("")){
-							    	   Toast.makeText(Project.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+							    	   Toast.makeText(Project.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							       }
 								
-								//Ìí¼ÓĞÕÃû
+								//æ·»åŠ å§“å
 							       String one=name.getText().toString(); int four=name.getText().length();
 								if(one.equals("")){
-							          Toast.makeText(Project.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+							          Toast.makeText(Project.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 								}else if(four>4){
-									Toast.makeText(Project.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Project.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 								}
 								
-								//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-								//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+								//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+								//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 								if(!two.equals("")&&!one.equals("")&&four<5){
 									if(arrayList113.size()>10){
-										Toast.makeText(Project.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+										Toast.makeText(Project.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 										
 									}else{
 										builder.dismiss();
@@ -779,7 +779,7 @@ public class Project extends Activity {
 								    arrayList113.add(company.getText().toString());               
 								    arrayList113.add(addressimage.getText().toString()); 
 								}
-								System.out.println("´¢´æµÄÊı¾İ"+arrayList113);
+								System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList113);
 								String stringone=new String();  
 								
 								if(arrayList113!=null&&arrayList113.size()==5){
@@ -803,22 +803,22 @@ public class Project extends Activity {
 				
 		
 		
-				//ĞŞ¸ÄÈıÎ»ÁªÏµÈË  µÚÈıÎ»
+				//ä¿®æ”¹ä¸‰ä½è”ç³»äºº  ç¬¬ä¸‰ä½
 				namethree.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View arg0) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 						View view = getLayoutInflater().inflate(R.layout.activity__message,null);
 						final AlertDialog builder=new AlertDialog.Builder(Project.this).create();
 						builder.setView(view,0,0,0,0);
-						name =(EditText)view.findViewById(id.name);//Ìí¼ÓĞÕÃû
-						phone=(EditText)view.findViewById(id.phone);//Ìí¼Óµç»°
+						name =(EditText)view.findViewById(id.name);//æ·»åŠ å§“å
+						phone=(EditText)view.findViewById(id.phone);//æ·»åŠ ç”µè¯
 						station=(TextView)view.findViewById(id.station);
-						showsss=(TextView)view.findViewById(id.show);//ÏÔÊ¾¸ÚÎ»
-						company=(EditText)view.findViewById(id.company);//ÅÄÂôµ¥Î»
-						addressimage=(EditText)view.findViewById(id.address);//ÅÄÂôµ¥Î»
-						saveimage=(ImageView)view.findViewById(id.save);//±£´æ
+						showsss=(TextView)view.findViewById(id.show);//æ˜¾ç¤ºå²—ä½
+						company=(EditText)view.findViewById(id.company);//æ‹å–å•ä½
+						addressimage=(EditText)view.findViewById(id.address);//æ‹å–å•ä½
+						saveimage=(ImageView)view.findViewById(id.save);//ä¿å­˜
 						
 						String string1=new String();   	String string2=new String();   	String string3=new String();
 						String string4=new String();    String string5=new String();
@@ -855,22 +855,22 @@ public class Project extends Activity {
 							string5 =arrayList114.get(14);  addressimage.setText(string5);
 						}
 						
-						//¸ÚÎ»
+						//å²—ä½
 						station.setOnClickListener(new OnClickListener() {
 							
 							@Override
 							public void onClick(View arg0) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							AlertDialog.Builder builder=new AlertDialog.Builder(Project.this);
 							builder.setItems(strings, new AlertDialog. OnClickListener() {
 								
 								@Override
 								public void onClick(DialogInterface arg0, int arg1) {
-									// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+									// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 									for(int i=0;i<strings.length;i++){
 										if(i==arg1){
 								
-								         //ÏÔÊ¾¸ÚÎ»Ãû³Æ
+								         //æ˜¾ç¤ºå²—ä½åç§°
 						                 showsss.setText(strings[arg1]);	
 						                 String fiveString =showsss.getText().toString();
 						                  arg0.dismiss();
@@ -882,33 +882,33 @@ public class Project extends Activity {
 						
 							}
 						});
-						//±£´æ
+						//ä¿å­˜
 						saveimage.setOnClickListener(new OnClickListener() {
 							
 							@Override
 							public void onClick(View arg0) {
-								// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+								// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							
 								
-								//Ìí¼Óµç»°
+								//æ·»åŠ ç”µè¯
 								String two=phone.getText().toString();  int three=phone.getText().length();
 								if(two.equals("")){
-							    	   Toast.makeText(Project.this, "µç»°ºÅÂë²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+							    	   Toast.makeText(Project.this, "ç”µè¯å·ç ä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 							       }
 								
-								//Ìí¼ÓĞÕÃû
+								//æ·»åŠ å§“å
 							       String one=name.getText().toString(); int four=name.getText().length();
 								if(one.equals("")){
-							          Toast.makeText(Project.this, "ĞÕÃû²»ÄÜÎª¿Õ£¬ÇëÊäÈë", Toast.LENGTH_SHORT).show();
+							          Toast.makeText(Project.this, "å§“åä¸èƒ½ä¸ºç©ºï¼Œè¯·è¾“å…¥", Toast.LENGTH_SHORT).show();
 								}else if(four>4){
-									Toast.makeText(Project.this, "ĞÕÃû³¤¶È×î³¤Îª4Î»£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_SHORT).show();
+									Toast.makeText(Project.this, "å§“åé•¿åº¦æœ€é•¿ä¸º4ä½ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_SHORT).show();
 								}
 								
-								//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
-								//ÅĞ¶ÏÊäÈëµÄÖµÊÇ·ñ·ûºÏ±£´æµÄÒªÇó
+								//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
+								//åˆ¤æ–­è¾“å…¥çš„å€¼æ˜¯å¦ç¬¦åˆä¿å­˜çš„è¦æ±‚
 								if(!two.equals("")&&!one.equals("")&&four<5){
 									if(arrayList114.size()>10){
-										Toast.makeText(Project.this, "×î¶àÖ»ÄÜĞŞ¸ÄÈı´Î£¬ÇëÑ¡ÔñĞŞ¸ÄÆäËûÓÃ»§", Toast.LENGTH_SHORT).show();
+										Toast.makeText(Project.this, "æœ€å¤šåªèƒ½ä¿®æ”¹ä¸‰æ¬¡ï¼Œè¯·é€‰æ‹©ä¿®æ”¹å…¶ä»–ç”¨æˆ·", Toast.LENGTH_SHORT).show();
 										
 									}else{
 										builder.dismiss();
@@ -921,7 +921,7 @@ public class Project extends Activity {
 								    arrayList114.add(company.getText().toString());               
 								    arrayList114.add(addressimage.getText().toString()); 
 								}
-								System.out.println("´¢´æµÄÊı¾İ"+arrayList114);
+								System.out.println("å‚¨å­˜çš„æ•°æ®"+arrayList114);
 								String stringone=new String();  
 								
 								if(arrayList114!=null&&arrayList114.size()==5){
@@ -945,58 +945,58 @@ public class Project extends Activity {
 		
 				
 				
-		 //µØ¿éÓÃÍ¾£¨¶àÑ¡Ôñ¶Ô»°¿ò£©
+		 //åœ°å—ç”¨é€”ï¼ˆå¤šé€‰æ‹©å¯¹è¯æ¡†ï¼‰
 		 purpose.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			final boolean[]	checkedItems =new boolean[]{false,false,false,false,false,false};
 			
 			AlertDialog.Builder builder=new AlertDialog.Builder(Project.this);
 			AlertDialog.Builder builder2=new AlertDialog.Builder(Project.this);
-			builder2.setTitle("ÓÃÍ¾");
+			builder2.setTitle("ç”¨é€”");
 			builder2.setMultiChoiceItems(str, checkedItems, new AlertDialog.OnMultiChoiceClickListener() {
 				@Override
 				public void onClick(DialogInterface arg0, int arg1, boolean arg2) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-				checkedItems[arg1]=arg2;          //¸Ä±ä±»²Ù×÷ÁĞ±íµÄ×´Ì¬
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+				checkedItems[arg1]=arg2;          //æ”¹å˜è¢«æ“ä½œåˆ—è¡¨çš„çŠ¶æ€
 				}
 			});
-			builder2.setPositiveButton("È·¶¨", new AlertDialog. OnClickListener() {
+			builder2.setPositiveButton("ç¡®å®š", new AlertDialog. OnClickListener() {
 				
 				@Override
 				public void onClick(DialogInterface arg0, int arg1) {
-					// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 
-					String result="";          //ÓÃÓÚ±£´æÑ¡Ôñ½á¹û
+					String result="";          //ç”¨äºä¿å­˜é€‰æ‹©ç»“æœ
 					for(int i=0;i<checkedItems.length;i++){
 						if(checkedItems[i]){
-							result+=str[i]+"¡¢";        //½«Ñ¡ÏîÄÚÈİÌí¼Óµ½resultÖĞ
+							result+=str[i]+"ã€";        //å°†é€‰é¡¹å†…å®¹æ·»åŠ åˆ°resultä¸­
 						}
 					}
-					//ÅĞ¶ÏÒ»ÏÂresult²»Îª¿ÕµÄÊ±ºò£¬½«ËùµÃµ½µÄ½á¹ûÏÔÊ¾³öÀ´
+					//åˆ¤æ–­ä¸€ä¸‹resultä¸ä¸ºç©ºçš„æ—¶å€™ï¼Œå°†æ‰€å¾—åˆ°çš„ç»“æœæ˜¾ç¤ºå‡ºæ¥
 				if(result.equals("")){
 					shower.setText(null);
 				}	
 					content=result.substring(0,result.length());
-						shower.setText(content);     //ÏÔÊ¾ËùÑ¡ÔñµÄÄÚÈİ
+						shower.setText(content);     //æ˜¾ç¤ºæ‰€é€‰æ‹©çš„å†…å®¹
 					
 				}
 			});
-			builder2.setNegativeButton("È¡Ïû", null);
+			builder2.setNegativeButton("å–æ¶ˆ", null);
 			builder2.show();
 				
 			}
 		});
 		 
-		 //·µ»ØÉèÖÃ
+		 //è¿”å›è®¾ç½®
 		 back.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-				//±£´æ½çÃæµÄÖµ
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+				//ä¿å­˜ç•Œé¢çš„å€¼
 				arrayList.add(plot.getText().toString());
 				arrayList.add(show.getText().toString());
 				arrayList.add(address.getText().toString());
@@ -1004,7 +1004,7 @@ public class Project extends Activity {
 				arrayList.add(volume.getText().toString());
 				arrayList.add(shower.getText().toString());
 				
-				System.out.println("Êı¾İ"+arrayList.toString());
+				System.out.println("æ•°æ®"+arrayList.toString());
 				
 				Intent intent=new Intent(Project.this,Content.class);
 				intent.putExtra("key", "1");
@@ -1088,12 +1088,12 @@ public class Project extends Activity {
 		}
 	    
 
-    //ÉèÖÃ·µ»Ø¼ü
+    //è®¾ç½®è¿”å›é”®
      @Override
     public void onBackPressed() {
 	  // TODO Auto-generated method stub
 	
-    		//±£´æ½çÃæµÄÖµ
+    		//ä¿å­˜ç•Œé¢çš„å€¼
 			arrayList.add(plot.getText().toString());
 			arrayList.add(show.getText().toString());
 			arrayList.add(address.getText().toString());
@@ -1101,7 +1101,7 @@ public class Project extends Activity {
 			arrayList.add(volume.getText().toString());
 			arrayList.add(shower.getText().toString());
 			
-			System.out.println("Êı¾İ"+arrayList.toString());
+			System.out.println("æ•°æ®"+arrayList.toString());
 			
 			Intent intent=new Intent(Project.this,Content.class);
 			intent.putExtra("key", "1");

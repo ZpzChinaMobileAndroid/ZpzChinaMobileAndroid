@@ -51,39 +51,39 @@ public class Allproject extends Activity {
 			int areaOfStructure=0;
 		 ArrayList<String>arrayList=new ArrayList<String>();
 	/*
-	 * ÎªÁË±ÜÃâÄÚ´æÒç³ö ÈíÒıÓÃ ×÷ÓÃ£º·²ÊÇ´æÈëÈíÒıÓÃµÄBitmap¶ÔÏó£¬ÏµÍ³»á×Ô¶¯¸ù¾İÊ£ÓàµÄÄÚ´æÇé¿öÀ´¾ö¶¨ÊÇ·ñÒªÊÍ·Å×ÊÔ´
+	 * ä¸ºäº†é¿å…å†…å­˜æº¢å‡º è½¯å¼•ç”¨ ä½œç”¨ï¼šå‡¡æ˜¯å­˜å…¥è½¯å¼•ç”¨çš„Bitmapå¯¹è±¡ï¼Œç³»ç»Ÿä¼šè‡ªåŠ¨æ ¹æ®å‰©ä½™çš„å†…å­˜æƒ…å†µæ¥å†³å®šæ˜¯å¦è¦é‡Šæ”¾èµ„æº
 	 */
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__allproject);
 		
-		//½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		string=getIntent().getStringExtra("token");
-		System.out.println("×®»ù½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-		//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+		System.out.println("æ¡©åŸºç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 		username=getIntent().getStringExtra("name");
-		System.out.println("×®»ù½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-		//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+		System.out.println("æ¡©åŸºç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+		//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 		password=getIntent().getStringExtra("password");
-		System.out.println("×®»ù½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		System.out.println("æ¡©åŸºç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("×®»ù½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("æ¡©åŸºç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company2=getIntent().getStringArrayListExtra("company");
-		 System.out.println("×®»ù½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company2);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("æ¡©åŸºç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company2);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("×®»ù½çÃæÊÕµ½µÄÖ°Îñ"+department);
-		 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+		 System.out.println("æ¡©åŸºç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-		 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
 		
 	
 
@@ -92,29 +92,29 @@ public class Allproject extends Activity {
 		ImageView save = (ImageView) findViewById(id.imageView2);
 		ImageView advaced = (ImageView) findViewById(id.imageView1);
 		
-		//ÊÊÅäÆ÷
+		//é€‚é…å™¨
 		listView.setAdapter(new MyAdpter());
 		
 		
 		
 		  
-		// Ò»¼¶ÁĞ±íµÄµã»÷ÊÂ¼ş
+		// ä¸€çº§åˆ—è¡¨çš„ç‚¹å‡»äº‹ä»¶
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			}
 		});
 		
 		
 		
-		//½øĞĞ¸ß¼¶ËÑË÷¼ü
+		//è¿›è¡Œé«˜çº§æœç´¢é”®
 		advaced.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Allproject.this,Choosemenu.class);
 				startActivity(intent);
@@ -127,9 +127,9 @@ public class Allproject extends Activity {
 	
 		new Thread(){
 			public void run(){
-				//¼ÓÔØÄÚÈİ
+				//åŠ è½½å†…å®¹
 				
-		// ÍøÂçÁ¬½Ó
+		// ç½‘ç»œè¿æ¥
 
 				HttpClient httpClient = new DefaultHttpClient();
 				HttpGet httpGet = new HttpGet("http://eipqas.zhongjichina.com/ZPZChina.svc/projects/"+string+"?startIndex=0&pageSize=10");
@@ -140,27 +140,27 @@ public class Allproject extends Activity {
 					if (response.getStatusLine().getStatusCode() == 200) {
 						HttpEntity httpEntity = response.getEntity();
 						String string = EntityUtils.toString(httpEntity);
-						System.out.println("È«²¿ÏîÄ¿ÊÇ·ñÓĞ·µ»ØÖµ" + string);
+						System.out.println("å…¨éƒ¨é¡¹ç›®æ˜¯å¦æœ‰è¿”å›å€¼" + string);
 						analysis(string);
 					}
 					
 				} catch (ClientProtocolException e) {
-					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 					e.printStackTrace();
 				} catch (IOException e) {
-					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 					e.printStackTrace();
 				}
 			}
 		
 			
-			// ½âÎö·½·¨
+			// è§£ææ–¹æ³•
 			private void analysis(String string) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				try {
 					JSONObject jsonObject = new JSONObject(string);
-					JSONObject jsonObject1 = jsonObject.getJSONObject("d");// µÚÒ»²ãÃû×Ö
-					 jsonArray = jsonObject1.getJSONArray("data");// µÚ¶ş²ãÃû×Ö
+					JSONObject jsonObject1 = jsonObject.getJSONObject("d");// ç¬¬ä¸€å±‚åå­—
+					 jsonArray = jsonObject1.getJSONArray("data");// ç¬¬äºŒå±‚åå­—
 				
 			
 					 
@@ -171,9 +171,9 @@ public class Allproject extends Activity {
 					
 					if (jsonObject2.has("baseContacts")) {
 					
-					 jsonArray2 = jsonObject2.getJSONArray("baseContacts");//µÚÈı²ã
+					 jsonArray2 = jsonObject2.getJSONArray("baseContacts");//ç¬¬ä¸‰å±‚
 
-					 //½âÎö³öĞèÒªµÄÖµ
+					 //è§£æå‡ºéœ€è¦çš„å€¼
 					 if (jsonObject2.has("investment")) {
 							investment = (int) jsonObject2.getLong("investment");
 						}
@@ -184,7 +184,7 @@ public class Allproject extends Activity {
 						
 						JSONObject jsonObject3 = jsonArray2.getJSONObject(i1);
 					
-						 jsonArray3 = jsonObject3.getJSONArray("data");//µÚËÄ²ã
+						 jsonArray3 = jsonObject3.getJSONArray("data");//ç¬¬å››å±‚
 						 
 						 
 						for(int i2=0;i2<jsonArray3.length();i2++){
@@ -198,7 +198,7 @@ public class Allproject extends Activity {
 			        }	
 			   	  }		 
 				} catch (JSONException e) {
-					// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+					// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 					e.printStackTrace();
 				}
 
@@ -206,12 +206,12 @@ public class Allproject extends Activity {
 		}.start();
 		
 		
-		//·µ»Øµ½Ö÷Ò³
+		//è¿”å›åˆ°ä¸»é¡µ
 		backImageView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Allproject.this,Homepage.class);
 				    intent.putExtra("token", string);
@@ -228,7 +228,7 @@ public class Allproject extends Activity {
 		});
 	}
 
-	// ´´½¨ÊÊÅäÆ÷
+	// åˆ›å»ºé€‚é…å™¨
 	class MyAdpter extends BaseAdapter {
 		LayoutInflater inflater;
 		Context context;
@@ -237,25 +237,25 @@ public class Allproject extends Activity {
 
 		@Override
 		public int getCount() {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			return arrayList.size();
 		}
 
 		@Override
 		public Object getItem(int arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			return null;
 		}
 
 		@Override
 		public long getItemId(int arg0) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			return 0;
 		}
 
 		@Override
 		public View getView(int arg0, View arg1, ViewGroup arg2) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			View view = getLayoutInflater().inflate(R.layout.test,null);
 
 			name = (TextView) view.findViewById(id.name);
@@ -272,26 +272,26 @@ public class Allproject extends Activity {
 			eight = (ImageView) view.findViewById(id.eight);
 			elevent = (ImageView) view.findViewById(id.elevent);
 
-			name.setText("ÉÏº£ÖĞ¼¼×®ÒµÏîÄ¿Ãû³Æ");
-			one.setText("Í¶×Ê¶î");
-			two.setText("½¨ÖşÃæ»ı");
+			name.setText("ä¸Šæµ·ä¸­æŠ€æ¡©ä¸šé¡¹ç›®åç§°");
+			one.setText("æŠ•èµ„é¢");
+			two.setText("å»ºç­‘é¢ç§¯");
 //			three.setText(investment);
 //			four.setText(areaOfStructure);
 			five.setText("2014-10-30");
 			six.setText("2014-11-01");
 			senven.setBackgroundResource(R.drawable.h4);
 			eight.setBackgroundResource(R.drawable.h2);
-			nine.setText("»ªÄÏÇø");
-			ten.setText("ÉÏº£ÊĞãëË®Â·928ºÅ");
+			nine.setText("åå—åŒº");
+			ten.setText("ä¸Šæµ·å¸‚æ±¶æ°´è·¯928å·");
 			elevent.setBackgroundResource(R.drawable.h3);
 			
 			return view;
 		}
 	}
-	//·µ»Ø¼üÉèÖÃ
+	//è¿”å›é”®è®¾ç½®
 	@Override
 	public void onBackPressed() {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		Intent intent=new Intent(Allproject.this,Homepage.class);
 		    intent.putExtra("token", string);
 			intent.putExtra("name", username);

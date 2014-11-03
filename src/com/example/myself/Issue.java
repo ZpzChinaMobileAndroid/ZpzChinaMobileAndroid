@@ -38,35 +38,35 @@ import com.example.sqlite.Information;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__commonality);
 		
-		 //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		 string=getIntent().getStringExtra("token");
-		 System.out.println("±¾µØÏîÄ¿½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+		 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 		 username=getIntent().getStringExtra("name");
-		 System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+		 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 		 password=getIntent().getStringExtra("password");
-		 System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company=getIntent().getStringArrayListExtra("company");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄÖ°Îñ"+department);
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
 		 
 		 
 		
-		//Ìí¼Ó¼ÙÊı¾İ
+		//æ·»åŠ å‡æ•°æ®
 		senven = (ImageView)findViewById(id.senven);
 	
 		senven.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			
 		Intent intent=new Intent(Issue.this,jJ.class);		
 		startActivity(intent);
@@ -79,63 +79,63 @@ import com.example.sqlite.Information;
 //		listView.setAdapter(new MyAdpter());
 //		
 //		
-//		//Ò»¼¶ÁĞ±íµÄµã»÷ÊÂ¼ş
+//		//ä¸€çº§åˆ—è¡¨çš„ç‚¹å‡»äº‹ä»¶
 //		listView.setOnItemClickListener(new OnItemClickListener() {
 //
 //			@Override
 //			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 //					long arg3) {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				
-//			//Ñ¡ÏîÉèÖÃ
+//			//é€‰é¡¹è®¾ç½®
 //				AlertDialog.Builder builder=new AlertDialog.Builder(Issue.this);
-//				builder.setTitle("Ñ¡Ïî");
-//				builder.setItems(new String[]{"·¢²¼ÏîÄ¿","²é¿´ÏêÇé"}, new AlertDialog.OnClickListener() {
+//				builder.setTitle("é€‰é¡¹");
+//				builder.setItems(new String[]{"å‘å¸ƒé¡¹ç›®","æŸ¥çœ‹è¯¦æƒ…"}, new AlertDialog.OnClickListener() {
 //					
 //					@Override
 //					public void onClick(DialogInterface arg0, int arg1) {
-//						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //					
-//						//·¢²¼ÏîÄ¿
+//						//å‘å¸ƒé¡¹ç›®
 //						if(arg1==0){
 //							
 //						}
-//						//²é¿´ÏêÇé
+//						//æŸ¥çœ‹è¯¦æƒ…
 //						else if(arg1==1){
 //							
 //						}
 //					}
 //				});
-//				builder.setNegativeButton("·µ»Ø", null);
+//				builder.setNegativeButton("è¿”å›", null);
 //				builder.show();
 //			}
 //		});
 //	}
-//		//Ìí¼ÓÊÊÅäÆ÷
+//		//æ·»åŠ é€‚é…å™¨
 //		class MyAdpter extends BaseAdapter{
 //
 //			@Override
 //			public int getCount() {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				return arrayList.size();
 //			}
 //
 //			@Override
 //			public Object getItem(int arg0) {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				return null;
 //			}
 //			
 //
 //			@Override
 //			public long getItemId(int arg0) {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				return 0;
 //			}
 //
 //			@Override
 //			public View getView(int arg0, View arg1, ViewGroup arg2) {
-//				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+//				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 //				
 //				View view = getLayoutInflater().inflate(R.layout.activity__commonality,null);
 //
@@ -160,10 +160,10 @@ import com.example.sqlite.Information;
 //				return view;
 //			}
 		
-		//·µ»Ø¼üÉèÖÃ
+		//è¿”å›é”®è®¾ç½®
 			@Override
 			public void onBackPressed() {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				Intent intent=new Intent(Issue.this,Homepage.class);
 				intent.putExtra("token", string);
 				intent.putExtra("name", username);

@@ -4,42 +4,42 @@ import java.io.Serializable;
 
 public class Information implements Serializable  {
 
-	String projectID;//ÏîÄ¿ID
-	String projectCode;//ÏîÄ¿±àºÅ
-	String projectVersion;//°æ±¾ºÅ
-	String landName;//µØ¿éÃû³Æ
-	String district;//ËùÔÚÇøÓò
-	String province;//ËùÔÚÊ¡ÊĞ
-	String city;//ÊĞÇøÏØ
-	String landAddress;//µØ¿éµØÖ·£¨ÏîÄ¿µØÖ·£©
-	String area;//ÍÁµØÃæ»ı
-	String plotRatio;//ÍÁµØÈİ»ıÂÊ
-	String usage;//µØ¿éÓÃÍ¾
-	String auctionUnit;//ÅÄÂôµ¥Î»
-	String projectName;//ÏîÄ¿Ãû³Æ
-	String description;//ÏîÄ¿ÃèÊö
-	String owner;//ÒµÖ÷µ¥Î»
-	String expectedStartTime;//Ô¤¼Æ¿ª¹¤Ê±¼ä
-	String expectedFinishTime;//Ô¤¼Æ¿¢¹¤Ê±¼ä
-	String investment;//Í¶×Ê¶î
-	String areaOfStructure;//½¨ÖşÃæ»ı
-	String storeyHeight;//½¨Öş²ã¸ß
-	String foreignInvestment;//Íâ×Ê²ÎÓë
-	String ownerType;//ÒµÖ÷ÀàĞÍ
-	String longitude;//¾­¶È
-	String latitude;//Î³¶È
-	String mainDesignStage;//Ö÷ÌåÉè¼Æ½×¶Î
-	String propertyElevator;//µçÌİ
-	String propertyAirCondition;//¿Õµ÷
-	String propertyHeating;//¹©Å¯
-	String propertyExternalWallMeterial;//ÍâÇ½²ÄÁÏ
-	String propertyStealStructure;//¸Ö½á¹¹
-	String actualStartTime;//Êµ¼Ê¿ª¹¤Ê±¼ä		
-	String fireControl;//Ïû·À
-	String green;//ÂÌ»¯
-	String electroweakInstallation;//Èõµç°²×°
-	String decorationSituation;//×°ĞŞÇé¿ö
-	String decorationProgress;//×°ĞŞ½ø¶È
+	String projectID;//é¡¹ç›®ID
+	String projectCode;//é¡¹ç›®ç¼–å·
+	String projectVersion;//ç‰ˆæœ¬å·
+	String landName;//åœ°å—åç§°
+	String district;//æ‰€åœ¨åŒºåŸŸ
+	String province;//æ‰€åœ¨çœå¸‚
+	String city;//å¸‚åŒºå¿
+	String landAddress;//åœ°å—åœ°å€ï¼ˆé¡¹ç›®åœ°å€ï¼‰
+	String area;//åœŸåœ°é¢ç§¯
+	String plotRatio;//åœŸåœ°å®¹ç§¯ç‡
+	String usage;//åœ°å—ç”¨é€”
+	String auctionUnit;//æ‹å–å•ä½
+	String projectName;//é¡¹ç›®åç§°
+	String description;//é¡¹ç›®æè¿°
+	String owner;//ä¸šä¸»å•ä½
+	String expectedStartTime;//é¢„è®¡å¼€å·¥æ—¶é—´
+	String expectedFinishTime;//é¢„è®¡ç«£å·¥æ—¶é—´
+	String investment;//æŠ•èµ„é¢
+	String areaOfStructure;//å»ºç­‘é¢ç§¯
+	String storeyHeight;//å»ºç­‘å±‚é«˜
+	String foreignInvestment;//å¤–èµ„å‚ä¸
+	String ownerType;//ä¸šä¸»ç±»å‹
+	String longitude;//ç»åº¦
+	String latitude;//çº¬åº¦
+	String mainDesignStage;//ä¸»ä½“è®¾è®¡é˜¶æ®µ
+	String propertyElevator;//ç”µæ¢¯
+	String propertyAirCondition;//ç©ºè°ƒ
+	String propertyHeating;//ä¾›æš–
+	String propertyExternalWallMeterial;//å¤–å¢™ææ–™
+	String propertyStealStructure;//é’¢ç»“æ„
+	String actualStartTime;//å®é™…å¼€å·¥æ—¶é—´		
+	String fireControl;//æ¶ˆé˜²
+	String green;//ç»¿åŒ–
+	String electroweakInstallation;//å¼±ç”µå®‰è£…
+	String decorationSituation;//è£…ä¿®æƒ…å†µ
+	String decorationProgress;//è£…ä¿®è¿›åº¦
 	String url;//url
 	
 	
@@ -47,7 +47,7 @@ public class Information implements Serializable  {
 	     	super();
 	     	
 	} 	
-		//ËùÓĞµÄµÄÊı¾İ¸³Öµ
+		//æ‰€æœ‰çš„çš„æ•°æ®èµ‹å€¼
 
   public Information(String projectID,String projectCode,String projectVersion,String landName,
 		 String district,String province,String city,String landAddress,String area,
@@ -58,7 +58,7 @@ public class Information implements Serializable  {
 		 String propertyAirCondition,String propertyHeating,String propertyExternalWallMeterial,
 	     String propertyStealStructure,String actualStartTime,String fireControl,String green,
 		 String electroweakInstallation,String decorationSituation,String decorationProgress,String url) {
-	    		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+	    		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 	    	   	
 		this.projectID = projectID;   this.projectID = projectID;    this.projectVersion = projectVersion;
 		this.landName = landName;     this.district = district;      this.province = province;

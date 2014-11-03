@@ -33,67 +33,67 @@ public class Content extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity__content);
 	
-		//½ÓÊÕËùÓĞµÄÖµ²¢½øĞĞ´«µİ
+		//æ¥æ”¶æ‰€æœ‰çš„å€¼å¹¶è¿›è¡Œä¼ é€’
 	   final ArrayList<String> string1=getIntent().getStringArrayListExtra("one");
-	   System.out.println("ÍÁµØ¹æ»®½ÓÊÕµÄÖµ"+string1);
+	   System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶çš„å€¼"+string1);
 	   final ArrayList<String> string2=getIntent().getStringArrayListExtra("two");
-	   System.out.println("ÏîÄ¿Á¢Ïî½ÓÊÕµÄÖµ"+string2);
+	   System.out.println("é¡¹ç›®ç«‹é¡¹æ¥æ”¶çš„å€¼"+string2);
 	   final ArrayList<String> string3=getIntent().getStringArrayListExtra("three");
-	   System.out.println("µØ¿±½×¶Î½ÓÊÕµÄÖµ"+string3);
+	   System.out.println("åœ°å‹˜é˜¶æ®µæ¥æ”¶çš„å€¼"+string3);
 	   final ArrayList<String> string4=getIntent().getStringArrayListExtra("four");
-	   System.out.println("Éè¼Æ½×¶Î½ÓÊÕµÄÖµ"+string4);
+	   System.out.println("è®¾è®¡é˜¶æ®µæ¥æ”¶çš„å€¼"+string4);
 	   final ArrayList<String> string5=getIntent().getStringArrayListExtra("five");
-	   System.out.println("³öÍ¼½×¶Î½ÓÊÕµÄÖµ"+string5);
+	   System.out.println("å‡ºå›¾é˜¶æ®µæ¥æ”¶çš„å€¼"+string5);
 	   final ArrayList<String> string6=getIntent().getStringArrayListExtra("six");
-	   System.out.println("µØÆ½½×¶Î½ÓÊÕµÄÖµ"+string6);
+	   System.out.println("åœ°å¹³é˜¶æ®µæ¥æ”¶çš„å€¼"+string6);
 	   final ArrayList<String> string7=getIntent().getStringArrayListExtra("senven");
-	   System.out.println("×®»ù»ù¿Ó½ÓÊÕµÄÖµ"+string7);
+	   System.out.println("æ¡©åŸºåŸºå‘æ¥æ”¶çš„å€¼"+string7);
 	   final ArrayList<String> string8=getIntent().getStringArrayListExtra("six");
-	   System.out.println("Ö÷ÌåÊ©¹¤½ÓÊÕµÄÖµ"+string8);
+	   System.out.println("ä¸»ä½“æ–½å·¥æ¥æ”¶çš„å€¼"+string8);
 	   final ArrayList<String> string9=getIntent().getStringArrayListExtra("nine");
-	   System.out.println("Ïû·ÀÂÌ»¯½ÓÊÕµÄÖµ"+string9);
+	   System.out.println("æ¶ˆé˜²ç»¿åŒ–æ¥æ”¶çš„å€¼"+string9);
 	   final ArrayList<String> string10=getIntent().getStringArrayListExtra("ten");
-	   System.out.println("×°ĞŞ½×¶Î½ÓÊÕµÄÖµ"+string10);
+	   System.out.println("è£…ä¿®é˜¶æ®µæ¥æ”¶çš„å€¼"+string10);
 
-	     //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+	     //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		 string=getIntent().getStringExtra("token");
-		 System.out.println("½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+		 System.out.println("ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 		 username=getIntent().getStringExtra("name");
-		 System.out.println("½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+		 System.out.println("ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 		 password=getIntent().getStringExtra("password");
-		 System.out.println("½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		 System.out.println("ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company=getIntent().getStringArrayListExtra("company");
-		 System.out.println("½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("½çÃæÊÕµ½µÄÖ°Îñ"+department);
-		 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+		 System.out.println("ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-		 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
 		 
 		 
 		 
-		auction=(TextView) findViewById(id.auction);//ÍÁµØ¹æ»®/ÅÄÂô
-		approve=(TextView) findViewById(id.approve);//ÏîÄ¿Á¢Ïî
-		plan=(TextView) findViewById(id.plan);//µØ¿±½×¶Î
-		design=(TextView) findViewById(id.design);//Éè¼Æ½×¶Î
-		save=(ImageView) findViewById(R.id.imageView3);//±£´æÏîÄ¿
-		back=(ImageView) findViewById(id.back);//·µ»Ø»ØÈ¥
-		plot=(TextView) findViewById(id.plot);//³öÍ¼½×¶Î
-		horizon =(TextView) findViewById(id.horizon);//µØÆ½
-		foundation =(TextView) findViewById(id.foundation);//×®»ù»ù¿Ó
-		construct =(TextView) findViewById(id.construct);//Ö÷ÌåÊ©¹¤
-		afforest=(TextView) findViewById(id.afforest);//Ïû·À/¾°¹ÛÂÌ»¯
-		fitment=(TextView) findViewById(id.fitment);//×°ĞŞ½×¶Î
+		auction=(TextView) findViewById(id.auction);//åœŸåœ°è§„åˆ’/æ‹å–
+		approve=(TextView) findViewById(id.approve);//é¡¹ç›®ç«‹é¡¹
+		plan=(TextView) findViewById(id.plan);//åœ°å‹˜é˜¶æ®µ
+		design=(TextView) findViewById(id.design);//è®¾è®¡é˜¶æ®µ
+		save=(ImageView) findViewById(R.id.imageView3);//ä¿å­˜é¡¹ç›®
+		back=(ImageView) findViewById(id.back);//è¿”å›å›å»
+		plot=(TextView) findViewById(id.plot);//å‡ºå›¾é˜¶æ®µ
+		horizon =(TextView) findViewById(id.horizon);//åœ°å¹³
+		foundation =(TextView) findViewById(id.foundation);//æ¡©åŸºåŸºå‘
+		construct =(TextView) findViewById(id.construct);//ä¸»ä½“æ–½å·¥
+		afforest=(TextView) findViewById(id.afforest);//æ¶ˆé˜²/æ™¯è§‚ç»¿åŒ–
+		fitment=(TextView) findViewById(id.fitment);//è£…ä¿®é˜¶æ®µ
 		sky=(ImageView) findViewById(id.sky);
 		sky1=(ImageView) findViewById(id.sky1);
 		sky2=(ImageView) findViewById(id.sky2);
@@ -105,12 +105,12 @@ public class Content extends Activity {
 		sky8=(ImageView) findViewById(id.sky8);
 		sky9=(ImageView) findViewById(id.sky9);
 		
-		//ÍÁµØ¹æ»®/ÅÄÂô 
+		//åœŸåœ°è§„åˆ’/æ‹å– 
 		auction.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Project.class);
 				intent.putExtra("one",string1);
@@ -187,12 +187,12 @@ public class Content extends Activity {
 			   sky9.setVisibility(View.VISIBLE);
 		   }
 		
-		//ÏîÄ¿Á¢Ïî
+		//é¡¹ç›®ç«‹é¡¹
 		approve.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				Intent intent=new Intent(Content.this,Approve.class);
 				intent.putExtra("one",string1);
 				intent.putExtra("two",string2);
@@ -218,12 +218,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//µØ¿±½×¶Î
+		//åœ°å‹˜é˜¶æ®µ
 		plan.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Plan.class);
 				intent.putExtra("one",string1);
@@ -251,12 +251,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//Éè¼Æ½×¶Î
+		//è®¾è®¡é˜¶æ®µ
 		design.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Design.class);
 				intent.putExtra("one",string1);
@@ -284,12 +284,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//³öÍ¼½×¶Î
+		//å‡ºå›¾é˜¶æ®µ
 		plot.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Plot.class);
 				intent.putExtra("one",string1);
@@ -317,12 +317,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//µØÆ½
+		//åœ°å¹³
 		horizon.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Horizon.class);
 				intent.putExtra("one",string1);
@@ -350,12 +350,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//×®»ù»ù¿Ó
+		//æ¡©åŸºåŸºå‘
 		foundation.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				
 				Intent intent=new Intent(Content.this,Foundation.class);
@@ -384,12 +384,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//Ö÷ÌåÊ©¹¤
+		//ä¸»ä½“æ–½å·¥
 		construct.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Construct.class);
 				intent.putExtra("one",string1);
@@ -417,12 +417,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//Ïû·À/¾°¹ÛÂÌ»¯
+		//æ¶ˆé˜²/æ™¯è§‚ç»¿åŒ–
 		afforest.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Afforest.class);
 				intent.putExtra("one",string1);
@@ -450,12 +450,12 @@ public class Content extends Activity {
 		});
 		
 		
-		//×°ĞŞ½×¶Î
+		//è£…ä¿®é˜¶æ®µ
 		fitment.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				
 				Intent intent=new Intent(Content.this,Fitment.class);
@@ -483,12 +483,12 @@ public class Content extends Activity {
 			}
 		});
 		
-		//·µ»Øµ½Ö÷½çÃæ
+		//è¿”å›åˆ°ä¸»ç•Œé¢
 		back.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				
 				Intent intent=new Intent(Content.this,Homepage.class);
 		        intent.putExtra("token", string);
@@ -506,7 +506,7 @@ public class Content extends Activity {
     }
 	
 	
-	//ÉèÖÃ·µ»Ø¼ü
+	//è®¾ç½®è¿”å›é”®
 	@Override
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
@@ -524,23 +524,23 @@ public class Content extends Activity {
 		finish();	
 	}
 	
-	// ÉèÖÃ²Ëµ¥¼ü
+	// è®¾ç½®èœå•é”®
 		@Override
 		public boolean onCreateOptionsMenu(Menu arg0) {
 			// TODO Auto-generated method stub
-			arg0.add(0, 2, 3, "Ö÷½çÃæ").setOnMenuItemClickListener(
+			arg0.add(0, 2, 3, "ä¸»ç•Œé¢").setOnMenuItemClickListener(
 					new OnMenuItemClickListener() {
 						@Override
 						public boolean onMenuItemClick(MenuItem item) {
 							// TODO Auto-generated method stub
 							AlertDialog.Builder builder=new AlertDialog.Builder(Content.this);
 						    builder.setIcon(R.drawable.icon48);
-						    builder.setTitle("ÌáÊ¾");
-						    builder.setMessage("ÊÇ·ñ·ÅÆúÕıÔÚĞÂ½¨µÄÏîÄ¿");
-					     	builder.setPositiveButton("È·¶¨",  new AlertDialog. OnClickListener() {
+						    builder.setTitle("æç¤º");
+						    builder.setMessage("æ˜¯å¦æ”¾å¼ƒæ­£åœ¨æ–°å»ºçš„é¡¹ç›®");
+					     	builder.setPositiveButton("ç¡®å®š",  new AlertDialog. OnClickListener() {
 						     @Override
 					    	 public void onClick(DialogInterface arg0, int arg1) {
-						    // TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						    // TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 							 Intent intent=new Intent(Content.this,Homepage.class);
 							 intent.putExtra("token", string);
 							 intent.putExtra("name", username);
@@ -552,12 +552,12 @@ public class Content extends Activity {
 							 finish();
 					}
 					});
-					       builder.setNegativeButton("È¡Ïû", null);
+					       builder.setNegativeButton("å–æ¶ˆ", null);
 					       builder.show();
 						             return false;
 				}
 			});
-			arg0.add(0,0, 1, "²é¿´È«²¿ÈÎÎñ").setOnMenuItemClickListener(
+			arg0.add(0,0, 1, "æŸ¥çœ‹å…¨éƒ¨ä»»åŠ¡").setOnMenuItemClickListener(
 					new OnMenuItemClickListener() {
 
 						@Override
@@ -565,22 +565,22 @@ public class Content extends Activity {
 							// TODO Auto-generated method stub
 			AlertDialog.Builder builder=new AlertDialog.Builder(Content.this);
 		    builder.setIcon(R.drawable.icon48);
-		    builder.setTitle("ÌáÊ¾");
-		    builder.setMessage("ÊÇ·ñ·ÅÆúÕıÔÚĞÂ½¨µÄÏîÄ¿");
-	     	builder.setPositiveButton("È·¶¨",  new AlertDialog. OnClickListener() {
+		    builder.setTitle("æç¤º");
+		    builder.setMessage("æ˜¯å¦æ”¾å¼ƒæ­£åœ¨æ–°å»ºçš„é¡¹ç›®");
+	     	builder.setPositiveButton("ç¡®å®š",  new AlertDialog. OnClickListener() {
 		     @Override
 	    	 public void onClick(DialogInterface arg0, int arg1) {
-		    // TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		    // TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			 finish();
 	}
 	});
-	       builder.setNegativeButton("È¡Ïû", null);
+	       builder.setNegativeButton("å–æ¶ˆ", null);
 	       builder.show();
 		             return false;
 						}
 					});
 			
-			arg0.add(0, 3, 4, "ÍË³ö³ÌĞò").setOnMenuItemClickListener(
+			arg0.add(0, 3, 4, "é€€å‡ºç¨‹åº").setOnMenuItemClickListener(
 					new OnMenuItemClickListener() {
 
 	 	@Override
@@ -588,23 +588,23 @@ public class Content extends Activity {
 							// TODO Auto-generated method stub
 		  AlertDialog.Builder builder=new AlertDialog.Builder(Content.this);
 	      builder.setIcon(R.drawable.icon48);
-	      builder.setTitle("ÌáÊ¾");
-	      builder.setMessage("ÊÇ·ñÍË³ö");
-	      builder.setPositiveButton("È·¶¨",  new AlertDialog. OnClickListener() {
+	      builder.setTitle("æç¤º");
+	      builder.setMessage("æ˜¯å¦é€€å‡º");
+	      builder.setPositiveButton("ç¡®å®š",  new AlertDialog. OnClickListener() {
 									
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			finish();
 			}
 		});
-	      builder.setNegativeButton("È¡Ïû", null);
+	      builder.setNegativeButton("å–æ¶ˆ", null);
 		    builder.show();
 		return false;
 						}
 					});
 			
-			arg0.add(0,1, 2, "²é¿´±¾µØÈÎÎñ").setOnMenuItemClickListener(
+			arg0.add(0,1, 2, "æŸ¥çœ‹æœ¬åœ°ä»»åŠ¡").setOnMenuItemClickListener(
 					new OnMenuItemClickListener() {
 
 						@Override
@@ -612,18 +612,18 @@ public class Content extends Activity {
 							// TODO Auto-generated method stub
          AlertDialog.Builder builder=new AlertDialog.Builder(Content.this);
 	     builder.setIcon(R.drawable.icon48);
-	     builder.setTitle("ÌáÊ¾");
-		 builder.setMessage("ÊÇ·ñ·ÅÆúÕıÔÚĞÂ½¨µÄÏîÄ¿");
-         builder.setPositiveButton("È·¶¨",  new AlertDialog. OnClickListener() {
+	     builder.setTitle("æç¤º");
+		 builder.setMessage("æ˜¯å¦æ”¾å¼ƒæ­£åœ¨æ–°å»ºçš„é¡¹ç›®");
+         builder.setPositiveButton("ç¡®å®š",  new AlertDialog. OnClickListener() {
 		@Override
 	     public void onClick(DialogInterface arg0, int arg1) {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			Intent intent=new Intent(Content.this,Myself.class);
 			startActivity(intent);
 			finish();
 		}
 		});
-	     builder.setNegativeButton("È¡Ïû", null);
+	     builder.setNegativeButton("å–æ¶ˆ", null);
 		 builder.show();
 		   return false;
 						}

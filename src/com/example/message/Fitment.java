@@ -21,8 +21,8 @@ import com.example.sqlite.Sqlite;
 
 public class Fitment extends Activity {
 	
-	String[] str={"ÕĞ±ê","ÕıÔÚÊ©¹¤","Ê©¹¤Íê³É"};
-	String[] str1={"ÎŞ×°ĞŞ","¼òµ¥È«×°ĞŞ","²¿·Ö×°ĞŞ","¾«×°ĞŞ"};
+	String[] str={"æ‹›æ ‡","æ­£åœ¨æ–½å·¥","æ–½å·¥å®Œæˆ"};
+	String[] str1={"æ— è£…ä¿®","ç®€å•å…¨è£…ä¿®","éƒ¨åˆ†è£…ä¿®","ç²¾è£…ä¿®"};
 	 ArrayList<String> arrayList,arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
 	 String string,password,username;
 	 ArrayList<String >cellphone,company,department,province,district;
@@ -32,19 +32,19 @@ public class Fitment extends Activity {
 		setContentView(R.layout.activity__fitment);
 		
 		
-		TextView fitment=(TextView) findViewById(id.jump);//·µ»Øµ½Ö®Ç°½çÃæ
-		ImageView save=(ImageView) findViewById(id.imageView3);//±£´æÏîÄ¿
-    	ImageView back=(ImageView) findViewById(id.back);//·µ»Ø½çÃæ
-    	TextView current=(TextView) findViewById(id.current);//Èõµã°²×°
-    	TextView condition=(TextView) findViewById(id.condition);//×°ĞŞÇé¿ö
-    	TextView schedule=(TextView) findViewById(id.schedule);//×°ĞŞ½ø¶È
-    	final TextView show=(TextView) findViewById(id.show);//ÏÔÊ¾Èõµã
-    	final TextView shower=(TextView) findViewById(id.shower);//Çé¿ö
-    	final TextView showers=(TextView) findViewById(id.showers);//½ø¶È
-    	ImageView camera=(ImageView) findViewById(id.camera);//Ïà»ú
+		TextView fitment=(TextView) findViewById(id.jump);//è¿”å›åˆ°ä¹‹å‰ç•Œé¢
+		ImageView save=(ImageView) findViewById(id.imageView3);//ä¿å­˜é¡¹ç›®
+    	ImageView back=(ImageView) findViewById(id.back);//è¿”å›ç•Œé¢
+    	TextView current=(TextView) findViewById(id.current);//å¼±ç‚¹å®‰è£…
+    	TextView condition=(TextView) findViewById(id.condition);//è£…ä¿®æƒ…å†µ
+    	TextView schedule=(TextView) findViewById(id.schedule);//è£…ä¿®è¿›åº¦
+    	final TextView show=(TextView) findViewById(id.show);//æ˜¾ç¤ºå¼±ç‚¹
+    	final TextView shower=(TextView) findViewById(id.shower);//æƒ…å†µ
+    	final TextView showers=(TextView) findViewById(id.showers);//è¿›åº¦
+    	ImageView camera=(ImageView) findViewById(id.camera);//ç›¸æœº
 		
-    	  //ÖĞ×ªÎÒµÄÖµ
-  	  //ÖĞ×ªÎÒµÄÖµ
+    	  //ä¸­è½¬æˆ‘çš„å€¼
+  	  //ä¸­è½¬æˆ‘çš„å€¼
  	    arrayList2=new ArrayList<String>();
         arrayList2=getIntent().getStringArrayListExtra("one");	
         arrayList3=new ArrayList<String>();
@@ -64,38 +64,38 @@ public class Fitment extends Activity {
         arrayList10=new ArrayList<String>();
         arrayList10=getIntent().getStringArrayListExtra("nine");	
        
-        //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+        //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
         string=getIntent().getStringExtra("token");
-     	System.out.println("×°ĞŞ½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-        //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+     	System.out.println("è£…ä¿®ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+        //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
         username=getIntent().getStringExtra("name");
-        System.out.println("×°ĞŞ½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-      	//½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+        System.out.println("è£…ä¿®ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+      	//æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
       	password=getIntent().getStringExtra("password");
-      	System.out.println("×°ĞŞ½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-        //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+      	System.out.println("è£…ä¿®ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+        //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
      	 cellphone=getIntent().getStringArrayListExtra("cellphone");
-     	 System.out.println("×°ĞŞ½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-   	     //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+     	 System.out.println("è£…ä¿®ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+   	     //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
    	    company=getIntent().getStringArrayListExtra("company");
-   	    System.out.println("×°ĞŞ½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-     	 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+   	    System.out.println("è£…ä¿®ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+     	 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
      	 department=getIntent().getStringArrayListExtra("department");
-     	 System.out.println("×°ĞŞ½çÃæÊÕµ½µÄÖ°Îñ"+department);
-     	 //½ÓÊÕ´«¹ıÀ´µÄÇøÓò
+     	 System.out.println("è£…ä¿®ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
+     	 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŒºåŸŸ
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+district);
-		 //½ÓÊÕ´«¹ıÀ´µÄ³ÇÊĞ
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+district);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„åŸå¸‚
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("ÍÁµØ¹æ»®½ÓÊÕµ½µÄÖ°Îñ"+province);
+		 System.out.println("åœŸåœ°è§„åˆ’æ¥æ”¶åˆ°çš„èŒåŠ¡"+province);
      
         	 
-        //±£´æµ½±¾µØ
+        //ä¿å­˜åˆ°æœ¬åœ°
  	   save.setOnClickListener(new OnClickListener() {
  		
  		@Override
  		public void onClick(View arg0) {
- 			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+ 			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
  		arrayList=new ArrayList<String>();
 	    arrayList.add(show.getText().toString());
 		arrayList.add(shower.getText().toString());
@@ -127,16 +127,16 @@ public class Fitment extends Activity {
  		
  		startActivity(intent);
  		finish();
- 		 Toast.makeText(Fitment.this, "±£´æµ½±¾µØ³É¹¦", Toast.LENGTH_SHORT).show();
+ 		 Toast.makeText(Fitment.this, "ä¿å­˜åˆ°æœ¬åœ°æˆåŠŸ", Toast.LENGTH_SHORT).show();
  		}
  	});
     
-    	//ÕÕÏà»ú
+    	//ç…§ç›¸æœº
       	 camera.setOnClickListener(new OnClickListener() {
       			
       			@Override
       			public void onClick(View arg0) {
-      				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+      				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
       				
       				 Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
       				 startActivityForResult(intent, 1);
@@ -157,12 +157,12 @@ public class Fitment extends Activity {
       			}
       		});
       	    
-      	//·µ»Øµ½Ö®Ç°½çÃæ
+      	//è¿”å›åˆ°ä¹‹å‰ç•Œé¢
       	fitment.setOnClickListener(new OnClickListener() {
     			
     			@Override
     			public void onClick(View arg0) {
-    				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+    				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
     				
     			    arrayList=new ArrayList<String>();
     				arrayList.add(show.getText().toString());
@@ -203,12 +203,12 @@ public class Fitment extends Activity {
         	 string3=arrayList11.get(0);  show.setText(string3);
         	 string1=arrayList11.get(1);  shower.setText(string1);
         	 string2=arrayList11.get(2);  showers.setText(string2);
-      //·µ»Øµ½Ö®Ç°½çÃæ
+      //è¿”å›åˆ°ä¹‹å‰ç•Œé¢
       	back.setOnClickListener(new OnClickListener() {
     			
     			@Override
     			public void onClick(View arg0) {
-    				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+    				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
     				
     			    arrayList=new ArrayList<String>();
     				arrayList.add(show.getText().toString());
@@ -242,23 +242,23 @@ public class Fitment extends Activity {
     		});
       	
          }
-      	//Èõµã°²×°
+      	//å¼±ç‚¹å®‰è£…
       	current.setOnClickListener(new OnClickListener() {
    			
    			@Override
    			public void onClick(View arg0) {
-   				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+   				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
    				AlertDialog.Builder builder=new AlertDialog.Builder(Fitment.this);
    				builder.setItems(str,new AlertDialog.OnClickListener() {
    					
    					@Override
    					public void onClick(DialogInterface arg0, int arg1) {
-   						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+   						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
    					
    							for(int i=0;i<str.length;i++){
    								if(i==arg1){
    						
-   						         //ÏÔÊ¾Èõµã°²×°
+   						         //æ˜¾ç¤ºå¼±ç‚¹å®‰è£…
    				                  show.setText(str[arg1]);	
    				                  arg0.dismiss();
    								}
@@ -270,22 +270,22 @@ public class Fitment extends Activity {
    		});
        	
        
-   	//×°ĞŞÇé¿ö
+   	//è£…ä¿®æƒ…å†µ
       	condition.setOnClickListener(new OnClickListener() {
    			
    			@Override
    			public void onClick(View arg0) {
-   				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+   				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
    				AlertDialog.Builder builder=new AlertDialog.Builder(Fitment.this);
    				builder.setItems(str1, new AlertDialog.OnClickListener() {
    					@Override
    					public void onClick(DialogInterface arg0, int arg1) {
-   						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+   						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
    					
    							for(int i=0;i<str1.length;i++){
    								if(i==arg1){
    						
-   						         //ÏÔÊ¾×°ĞŞÇé¿ö
+   						         //æ˜¾ç¤ºè£…ä¿®æƒ…å†µ
    				                  shower.setText(str1[arg1]);	
    				                  arg0.dismiss();
    								}
@@ -297,23 +297,23 @@ public class Fitment extends Activity {
    		});
       
 		
-	//×°ĞŞ½ø¶È
+	//è£…ä¿®è¿›åº¦
       	schedule.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 				AlertDialog.Builder builder=new AlertDialog.Builder(Fitment.this);
 				builder.setItems(str,new AlertDialog.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
-						// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+						// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 					
 							for(int i=0;i<str.length;i++){
 								if(i==arg1){
 						
-						         //ÏÔÊ¾×°ĞŞ½ø¶È
+						         //æ˜¾ç¤ºè£…ä¿®è¿›åº¦
 				                  showers.setText(str[arg1]);	
 				                  arg0.dismiss();
 								}
@@ -325,7 +325,7 @@ public class Fitment extends Activity {
 		});
 	}
     
-	//ÉèÖÃ·µ»Ø¼ü
+	//è®¾ç½®è¿”å›é”®
 			@Override
 			public void onBackPressed() {
 				// TODO Auto-generated method stub

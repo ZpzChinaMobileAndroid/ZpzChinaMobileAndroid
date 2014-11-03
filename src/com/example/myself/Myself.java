@@ -34,31 +34,31 @@ public class Myself extends TabActivity{
     ArrayList<String >cellphone,company,department;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.activity__myself);
 		
 		host = getTabHost();
 	//	widget = host.getTabWidget();
 		
-		 //½ÓÊÕ´«¹ıÀ´µÄtokenÖµ
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„tokenå€¼
 		 string=getIntent().getStringExtra("token");
-		 System.out.println("±¾µØÏîÄ¿½çÃæ½ÓÊÕµ½µÄtokenÖµ"+string);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼Ãû
+		 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ¥æ”¶åˆ°çš„tokenå€¼"+string);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å
 		 username=getIntent().getStringExtra("name");
-		 System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄÓÃ»§Ãû"+username);
-		 //½ÓÊÕ´«¹ıÀ´µÄµÇÂ¼ÃÜÂë
+		 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç”¨æˆ·å"+username);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„ç™»å½•å¯†ç 
 		 password=getIntent().getStringExtra("password");
-		 System.out.println("±¾µØÏîÄ¿½çÃæÊÕµ½µÄµÇÂ¼ÃÜÂë"+password);
-		 //½ÓÊÕ´«¹ıÀ´µÄÊÖ»úºÅ
+		 System.out.println("æœ¬åœ°é¡¹ç›®ç•Œé¢æ”¶åˆ°çš„ç™»å½•å¯†ç "+password);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰‹æœºå·
 		 cellphone=getIntent().getStringArrayListExtra("cellphone");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄÊÖ»úºÅ"+cellphone);
-		 //½ÓÊÕ´«¹ıÀ´µÄËùÊôµ¥Î»
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰‹æœºå·"+cellphone);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„æ‰€å±å•ä½
 		 company=getIntent().getStringArrayListExtra("company");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄËùÊôµ¥Î»"+company);
-		 //½ÓÊÕ´«¹ıÀ´µÄÖ°Îñ
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„æ‰€å±å•ä½"+company);
+		 //æ¥æ”¶ä¼ è¿‡æ¥çš„èŒåŠ¡
 		 department=getIntent().getStringArrayListExtra("department");
-		 System.out.println("Ö÷½çÃæÊÕµ½µÄÖ°Îñ"+department);
+		 System.out.println("ä¸»ç•Œé¢æ”¶åˆ°çš„èŒåŠ¡"+department);
 		 
 		 
 		 
@@ -93,10 +93,10 @@ public class Myself extends TabActivity{
 		 
 		 
 		
-		//ÉèÖÃÊ¹ÓÃTabHost²¼¾Ö ¡¡¡¡¡¡
+		//è®¾ç½®ä½¿ç”¨TabHostå¸ƒå±€ ã€€ã€€ã€€
 		LayoutInflater.from(this).inflate(R.layout.activity__myself, host.getTabContentView(),true);
-		host.addTab(host.newTabSpec("tab1").setIndicator("ÎÒ·¢²¼µÄÏîÄ¿").setContent(new Intent(Myself.this,Issue.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department)));
-		host.addTab(host.newTabSpec("tab2").setIndicator("±¾µØ±£´æÏîÄ¿").setContent(new Intent(Myself.this,Preserve.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department)));
+		host.addTab(host.newTabSpec("tab1").setIndicator("æˆ‘å‘å¸ƒçš„é¡¹ç›®").setContent(new Intent(Myself.this,Issue.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department)));
+		host.addTab(host.newTabSpec("tab2").setIndicator("æœ¬åœ°ä¿å­˜é¡¹ç›®").setContent(new Intent(Myself.this,Preserve.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department)));
 //		widget.getChildAt(0).setBackgroundResource(R.drawable.g5);
 //		widget.getChildAt(1).setBackgroundResource(R.drawable.g4);
 		 
@@ -116,10 +116,10 @@ public class Myself extends TabActivity{
 			}
 		});
 	}
-	//·µ»Ø¼üÉèÖÃ
+	//è¿”å›é”®è®¾ç½®
 		@Override
 		public void onBackPressed() {
-			// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
 			Intent intent=new Intent(Myself.this,Homepage.class);
 			startActivity(intent);
 			finish();
