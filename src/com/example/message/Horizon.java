@@ -38,7 +38,7 @@ public class Horizon extends Activity {
 	
 	String[] strings={"采购负责人","现场经理"};
 	 TextView	show;
-	 ArrayList<String >cellphone,company2,department,province,district,realname;
+	 ArrayList<String >cellphone,company2,department,province,district;
 	 private EditText name , phone, companys , addressimage;
 		private	 TextView  station,showsss,nameone,nametwo,namethree ;
 		private ImageView saveimage;
@@ -181,9 +181,6 @@ public class Horizon extends Activity {
 			 //接收传过来的城市
 			 province=getIntent().getStringArrayListExtra("province");
 			 System.out.println("土地规划接收到的职务"+province);
-			 //接收传过来的城市
-			 realname=getIntent().getStringArrayListExtra("realname");
-			 System.out.println("土地规划接收到的职务"+realname);
 		 
 		//返回到之前界面
 		 result.setOnClickListener(new OnClickListener() {
@@ -215,7 +212,6 @@ public class Horizon extends Activity {
 	   				intent.putExtra("department", department);
 	   				intent.putExtra("district", district);
 	   				intent.putExtra("province", province);
-	   				intent.putExtra("realname", realname);
 					startActivity(intent);
 					overridePendingTransition(R.anim.onout,R.anim.inout);
 					finish();
@@ -1084,7 +1080,6 @@ public class Horizon extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
-   				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();

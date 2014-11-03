@@ -45,7 +45,7 @@ public class Allproject extends Activity {
 	ProgressDialog dialog;
 	 String tokenkey;
 		String string,username,password;
-		 ArrayList<String >cellphone,company2,department,province,district,realname;
+		 ArrayList<String >cellphone,company2,department,province,district;
 			JSONArray jsonArray,jsonArray2,jsonArray3;
 			int investment= 0;
 			int areaOfStructure=0;
@@ -84,9 +84,6 @@ public class Allproject extends Activity {
 		 //接收传过来的城市
 		 province=getIntent().getStringArrayListExtra("province");
 		 System.out.println("土地规划接收到的职务"+province);
-		 //接收传过来的城市
-		 realname=getIntent().getStringArrayListExtra("realname");
-		 System.out.println("土地规划接收到的职务"+realname);
 		
 	
 
@@ -225,7 +222,6 @@ public class Allproject extends Activity {
 					intent.putExtra("department", department);
 					intent.putExtra("district", district);
 					intent.putExtra("province", province);
-					intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();
 			}
@@ -304,7 +300,6 @@ public class Allproject extends Activity {
 			intent.putExtra("company", company2);
 			intent.putExtra("department", department);
 			intent.putExtra("district", district);
-			intent.putExtra("province", province);
 			intent.putExtra("province", province);
 		startActivity(intent);
 		finish();

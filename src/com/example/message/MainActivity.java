@@ -81,7 +81,6 @@ public class MainActivity extends Activity {
 	ArrayList<String> arrayList5 = new ArrayList<String>();
 	ArrayList<String> arrayList6 = new ArrayList<String>();
 	ArrayList<String> arrayList7 = new ArrayList<String>();
-	ArrayList<String> arrayList8 = new ArrayList<String>();
 	Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
 			if (msg.what == 1) {
@@ -95,7 +94,6 @@ public class MainActivity extends Activity {
 				intent.putExtra("department", arrayList5);//将所属公司
 				intent.putExtra("district", arrayList6);//将所属公司
 				intent.putExtra("province", arrayList7);//将所属公司
-				intent.putExtra("realname", arrayList8);//将所属公司
 				startActivity(intent);
 				finish();
 			} else if (msg.what == 2) {
@@ -137,6 +135,11 @@ public class MainActivity extends Activity {
 		public void onClick(View arg0) {
 				// TODO 自动生成的方法存根
 
+//				//临时数据的跳转 
+		//		Intent intent = new Intent(MainActivity.this, Homepage.class);
+		//		startActivity(intent);
+		//		finish();
+			//	 判断输入的内容
 				
 				String str = username.getText().toString();
 				if (str.trim().equals("")) {
@@ -146,6 +149,13 @@ public class MainActivity extends Activity {
 				if (str1.trim().equals("")) {
 					Toast.makeText(MainActivity.this, "请输入密码",Toast.LENGTH_SHORT).show();
 			}
+				yonghu=username.getText().toString();
+				mima=userpassword.getText().toString();
+				System.out.println("储存起来的用户名是："+yonghu);
+				//存储账号密码
+				arrayList.add(yonghu);arrayList1.add(mima);
+				System.out.println("储存起来的账号"+arrayList);
+				System.out.println("储存起来的密码"+arrayList1);
 	
 
 				new Thread() {
@@ -201,6 +211,41 @@ public class MainActivity extends Activity {
 			}
 		});
 		
+//		// 记录密码设置
+//		remeber.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				// TODO 自动生成的方法存根
+//				
+//				//图标的切换
+//				if(num%2==0){
+//					   forgo.setVisibility(View.GONE);
+//				       chosse.setVisibility(View.VISIBLE);
+//				   	//记住账号密码的操作
+//				       arrayList.add(yonghu);arrayList1.add(mima);
+//					System.out.println("储存起来的账号"+arrayList);
+//					System.out.println("储存起来的密码"+arrayList1);
+//				//   username.setText(arrayList.toString().replace("[", "").replace("]", ""));
+//				//  userpassword.setText(arrayList1.toString().replace("[", "").replace("]", ""));
+//				}else {
+//					 forgo.setVisibility(View.VISIBLE);
+//				     chosse.setVisibility(View.GONE);
+//				}
+//				num++;		
+//
+//			}
+//		});
+
+//		// //设置忘记密码步骤
+//		forget.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View arg0) {
+//				// TODO 自动生成的方法存根
+//
+//			}
+//		});
 
 	}
 
@@ -213,7 +258,6 @@ public class MainActivity extends Activity {
 			JSONArray jsonArray = jsonObject1.getJSONArray("data");// 第二层名字
 			JSONObject json = jsonArray.getJSONObject(0);
 
-			
 			// 获取需要的资料文本的键值
 			String userid = json.getString("userID");
 			String token = json.getString("userToken");
@@ -222,7 +266,6 @@ public class MainActivity extends Activity {
 			String title=json.getString("department");
 			String district=json.getString("district");
 			String province=json.getString("province");
-			String realname=json.getString("realName");
 
 			System.out.println("用户ID值:" + userid);
 			System.out.println("用户Token值:" + token);
@@ -231,7 +274,6 @@ public class MainActivity extends Activity {
 			System.out.println("用户职称:" +title);
 			System.out.println("用户区域:" +district);
 			System.out.println("用户城市:" +province);
-			System.out.println("用户名:" +realname);
 			
 
 			// 将解析出来的键值存起来
@@ -247,8 +289,6 @@ public class MainActivity extends Activity {
 			System.out.println("储存起来的东西"+arrayList6);
 			arrayList7.add(province);
 			System.out.println("储存起来的东西"+arrayList7);
-			arrayList8.add(realname);
-			System.out.println("储存起来的东西"+arrayList8);
 			
 			
 		} catch (JSONException e) {

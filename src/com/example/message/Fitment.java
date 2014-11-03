@@ -25,7 +25,7 @@ public class Fitment extends Activity {
 	String[] str1={"无装修","简单全装修","部分装修","精装修"};
 	 ArrayList<String> arrayList,arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
 	 String string,password,username;
-	 ArrayList<String >cellphone,company,department,province,district,realname;
+	 ArrayList<String >cellphone,company,department,province,district;
 	 @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -88,9 +88,6 @@ public class Fitment extends Activity {
 		 //接收传过来的城市
 		 province=getIntent().getStringArrayListExtra("province");
 		 System.out.println("土地规划接收到的职务"+province);
-		//接收传过来的城市
-		 realname=getIntent().getStringArrayListExtra("realname");
-		 System.out.println("土地规划接收到的职务"+realname);
      
         	 
         //保存到本地
@@ -123,7 +120,6 @@ public class Fitment extends Activity {
 		intent.putExtra("department", department);
 		intent.putExtra("district", district);
 		intent.putExtra("province", province);
-		intent.putExtra("reaalname", realname);
 // 		intent.putExtra("user", arrayList111);
 // 		intent.putExtra("user1", arrayList112);
 // 		intent.putExtra("user2", arrayList113);
@@ -193,7 +189,6 @@ public class Fitment extends Activity {
        				intent.putExtra("department", department);
        				intent.putExtra("district", district);
        				intent.putExtra("province", province);
-       				intent.putExtra("reaalname", realname);
     				startActivity(intent);
     				overridePendingTransition(R.anim.onout,R.anim.inout);
     				finish();
@@ -240,7 +235,6 @@ public class Fitment extends Activity {
        				intent.putExtra("department", department);
        				intent.putExtra("district", district);
        				intent.putExtra("province", province);
-       				intent.putExtra("reaalname", realname);
     				startActivity(intent);
     				overridePendingTransition(R.anim.onout,R.anim.inout);
     				finish();
@@ -355,7 +349,6 @@ public class Fitment extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
-   				intent.putExtra("reaalname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();

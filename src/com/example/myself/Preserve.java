@@ -48,10 +48,9 @@ public class Preserve extends Activity {
 	TextView name, one, two, three, four, five, six, nine, ten;
 	ImageView photo, senven, eight, elevent;
 	String string,username,password;
-	ArrayList<String >cellphone,company,department,realname;
+	ArrayList<String >cellphone,company,department;
 	String[] content={"查看项目详情","发布任务"};
 	ArrayList<String>aList=new ArrayList<String>();
-	MyAdpter myAdpter=new  MyAdpter();
 	ArrayList<String>arrayList,arrayList1,arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
     ArrayList<String>arrayList111,arrayList112,arrayList113,arrayList114;
     String string0,string1,string2,string3,string4,string5,string6,string7,string8,string9,string10,string11,
@@ -97,13 +96,10 @@ public class Preserve extends Activity {
 			 //接收传过来的职务
 			 department=getIntent().getStringArrayListExtra("department");
 			 System.out.println("主界面收到的职务"+department);
-			 //接收传过来的职务
-			 realname=getIntent().getStringArrayListExtra("realname");
-			 System.out.println("主界面收到的职务"+realname);
 			 
 			 
 			 ListView listView=(ListView) findViewById(id.listview);
-			 listView.setAdapter(myAdpter);
+			 listView.setAdapter(new MyAdpter());
 			 
 			 //土地规划
 		        arrayList=new ArrayList<String>();
@@ -114,7 +110,7 @@ public class Preserve extends Activity {
 		        	string4=new String();  string5=new String();string6=new String();string7=new String();
 		        	
 		        	string0=arrayList.get(0);string1=arrayList.get(1);string2=arrayList.get(2);string3=arrayList.get(3);string4=arrayList.get(4);
-		        	string5=arrayList.get(5);string6=arrayList.get(6);
+		        	string5=arrayList.get(5);
 		        
 		        }
 		     // 项目立项
@@ -128,7 +124,7 @@ public class Preserve extends Activity {
 		        	
 		        	string8=arrayList1.get(0);string9=arrayList1.get(1);string10=arrayList1.get(2);string11=arrayList1.get(3);string12=arrayList1.get(4);
 		         	string13=arrayList1.get(5);string14=arrayList1.get(6);string15=arrayList1.get(7);string16=arrayList1.get(8);string17=arrayList1.get(9);
-		        	string18=arrayList1.get(10);
+		        	
 	            }
 		     //  地勘阶段
 		        arrayList2=new ArrayList<String>();
@@ -214,9 +210,11 @@ public class Preserve extends Activity {
 	 
 		        
 		        
-		      myAdpter.notifyDataSetChanged();//刷新适配器
+		      
 		     
 		        
+			    
+			    
 			    
 //			    
 //			  //选择
@@ -264,22 +262,22 @@ public class Preserve extends Activity {
 //							information.setProjectVersion(null);
 //							information.setLandName(string0);
 //							information.setDistrict(string1);
-//							information.setProvince(string2);
-//							information.setCity(string2);
-//							information.setLandAddress(string3);
-//							information.setArea(string4);
-//							information.setPlotRatio(string5);
-//							information.setUsage(string6);
+//							information.setProvince(string1);
+//							information.setCity(string1);
+//							information.setLandAddress(string2);
+//							information.setArea(string3);
+//							information.setPlotRatio(string4);
+//							information.setUsage(string5);
 //							information.setProjectName(string8);
-//							information.setDescription(string11);
+//							information.setDescription(string10);
 //							information.setOwner(null);
-//							information.setExpectedStartTime(string12);
-//							information.setExpectedFinishTime(string13);
-//							information.setInvestment(string14);
-//							information.setAreaOfStructure(string15);
-//							information.setStoreyHeight(string16);
-//							information.setForeignInvestment(string17);
-//							information.setOwnerType(string18);
+//							information.setExpectedStartTime(string11);
+//							information.setExpectedFinishTime(string12);
+//							information.setInvestment(string13);
+//							information.setAreaOfStructure(string14);
+//							information.setStoreyHeight(string15);
+//							information.setForeignInvestment(string16);
+//							information.setOwnerType(string17);
 //							information.setLongitude(null);
 //							information.setLatitude(null);
 //							information.setMainDesignStage(string20);
@@ -472,7 +470,7 @@ public class Preserve extends Activity {
 			six.setText(xinxiArrayList.get(arg0).getExpectedFinishTime());
 			nine.setText("华南区");
 			ten.setText("上海市汶水路928号");
-						
+			
 			return view;
 		}
 		
@@ -500,7 +498,6 @@ public class Preserve extends Activity {
 		intent.putExtra("cellphone", cellphone);
 		intent.putExtra("company", company);
 		intent.putExtra("department", department);
-		intent.putExtra("realname", realname);
 		startActivity(intent);
 		finish();
 	}

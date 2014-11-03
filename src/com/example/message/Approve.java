@@ -29,16 +29,15 @@ import com.guozg.wheelview.views.WheelView;
 public class Approve extends Activity {
 	
 	private	EditText projectname,describe,invest,area,higth;
-	private	TextView unit,address,address1,address2,start,stop,participation,owner,approve,show,shower,show1,shower1,nameone,nametwo,namethree;
+	private	TextView unit,address,start,stop,participation,owner,approve,show,shower,show1,shower1,nameone,nametwo,namethree;
 	private	ImageView choose;
 	String[] str={"外资独资","中外独资","私人企业","政府机关","国有企业","其他"};
 	String[] str2={"参与","不参与"};
-	ArrayList<String >cellphone,company2,department,province,district,realname;
+	ArrayList<String >cellphone,company2,department,province,district;
 	String[] strings={"项目负责人","项目经理","设计经理","项目总负责人","其他"};
 	ArrayList<String>arrayList=new ArrayList<String>();
 	String string,password,username;
 	 TextView  station,showsss ;
-	 String ss,sss;
 	 ImageView saveimage;
 	 EditText name,phone,addressimage,company;
 	ArrayList<String>arrayList111,arrayList112,arrayList113,arrayList114;
@@ -74,8 +73,6 @@ public class Approve extends Activity {
 		setContentView(R.layout.activity__approve);
 		
 	   projectname=(EditText) findViewById(id.prjoctname);//项目名称
-	   address1=(TextView) findViewById(id.address1);//项目地址区域
-	   address2=(TextView) findViewById(id.address2);//项目地址城市
 	   address=(TextView) findViewById(id.address);//项目地址
 	   describe=(EditText) findViewById(id.describe);//项目描述
 	   invest=(EditText) findViewById(id.invest);//投资额
@@ -135,9 +132,6 @@ public class Approve extends Activity {
 		 //接收传过来的城市
 		 province=getIntent().getStringArrayListExtra("province");
 		 System.out.println("土地规划接收到的职务"+province);
-		 //接收传过来的用户名
-		 realname=getIntent().getStringArrayListExtra("realname");
-		 System.out.println("土地规划接收到的名字"+realname);
 	   
 		  //中转我的值
 	    arrayList2=new ArrayList<String>();
@@ -159,14 +153,6 @@ public class Approve extends Activity {
        arrayList11=new ArrayList<String>();
        arrayList11=getIntent().getStringArrayListExtra("ten");		
        
-       //显示区域城市
-		 if(district!=null&&province!=null){
-			  ss=district.get(0); sss=province.get(0);
-			 System.out.println("sss"+ss);  System.out.println("ddd"+sss);
-			 address1.setText(ss);    address2.setText(sss);
-		 }
-       
-       
 	   //项目立项返回之前界面
 	   approve.setOnClickListener(new OnClickListener() {
 			
@@ -175,8 +161,7 @@ public class Approve extends Activity {
 				// TODO 自动生成的方法存根
 				
 				arrayList.add(projectname.getText().toString());
-				arrayList.add(ss);
-				arrayList.add(sss);
+				arrayList.add(address.getText().toString());
 				arrayList.add(describe.getText().toString());
 				arrayList.add(show1.getText().toString());
 				arrayList.add(shower1.getText().toString());
@@ -207,7 +192,6 @@ public class Approve extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
-   				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();
@@ -252,7 +236,6 @@ public class Approve extends Activity {
 		intent.putExtra("department", department);
 		intent.putExtra("district", district);
 		intent.putExtra("province", province);
-		intent.putExtra("realname", realname);
 //		intent.putExtra("user", arrayList111);
 //		intent.putExtra("user1", arrayList112);
 //		intent.putExtra("user2", arrayList113);
@@ -304,7 +287,6 @@ public class Approve extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
-   				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();
@@ -1204,33 +1186,32 @@ public class Approve extends Activity {
 		            dialog.show();
 		        }
 	        }
-	//设置返回键
-			@Override
-			public void onBackPressed() {
-				// TODO Auto-generated method stub
-				Intent intent=new Intent(Approve.this,Content.class);
-				intent.putExtra("key1", "1");
-				intent.putExtra("two", arrayList);
-				intent.putExtra("one", arrayList2);
-   				intent.putExtra("three", arrayList4);
-   				intent.putExtra("four", arrayList5);
-   				intent.putExtra("five", arrayList6);
-   				intent.putExtra("six", arrayList7);
-   				intent.putExtra("senven", arrayList8);
-   				intent.putExtra("eight", arrayList9);
-   				intent.putExtra("nine", arrayList10);
-   				intent.putExtra("ten", arrayList11);
-   				intent.putExtra("token", string);
-   				intent.putExtra("name", username);
-   				intent.putExtra("password", password);
-   				intent.putExtra("cellphone", cellphone);
-   				intent.putExtra("company", company2);
-   				intent.putExtra("department", department);
-   				intent.putExtra("district", district);
-   				intent.putExtra("province", province);
-		        intent.putExtra("realname", realname);
-				startActivity(intent);
-				overridePendingTransition(R.anim.onout,R.anim.inout);
-				finish();
-			}
+//	//设置返回键
+//			@Override
+//			public void onBackPressed() {
+//				// TODO Auto-generated method stub
+//				Intent intent=new Intent(Approve.this,Content.class);
+//				intent.putExtra("key1", "1");
+//				intent.putExtra("two", arrayList);
+//				intent.putExtra("one", arrayList2);
+//   				intent.putExtra("three", arrayList4);
+//   				intent.putExtra("four", arrayList5);
+//   				intent.putExtra("five", arrayList6);
+//   				intent.putExtra("six", arrayList7);
+//   				intent.putExtra("senven", arrayList8);
+//   				intent.putExtra("eight", arrayList9);
+//   				intent.putExtra("nine", arrayList10);
+//   				intent.putExtra("ten", arrayList11);
+//   				intent.putExtra("token", string);
+//   				intent.putExtra("name", username);
+//   				intent.putExtra("password", password);
+//   				intent.putExtra("cellphone", cellphone);
+//   				intent.putExtra("company", company2);
+//   				intent.putExtra("department", department);
+//   				intent.putExtra("district", district);
+//   				intent.putExtra("province", province);
+//				startActivity(intent);
+//				overridePendingTransition(R.anim.onout,R.anim.inout);
+//				finish();
+//			}
 	}

@@ -42,7 +42,7 @@ public class Homepage extends Activity {
 	private	 TextView name,moblile,companyshow,title,geographic,geographic1;
 	private	 ImageView project,myself,allproject,result;
     String string,username,password;
-	ArrayList<String >cellphone,company,department,city,province,district,realname;
+	ArrayList<String >cellphone,company,department,city,province,district;
 	SlidingMenu menu ;
 	Handler handler=new Handler(){
 		public void handleMessage(android.os.Message msg) {
@@ -79,7 +79,7 @@ public class Homepage extends Activity {
 	 string=getIntent().getStringExtra("token").replace("[", "").replace("]", "");
 	 System.out.println("主界面接收到的token值"+string);
 	 //接收传过来的登录名
-	  username=getIntent().getStringExtra("realname");
+	  username=getIntent().getStringExtra("name");
 	 System.out.println("主界面收到的用户名"+username);
 	 //接收传过来的登录密码
 	 password=getIntent().getStringExtra("password");
@@ -99,9 +99,6 @@ public class Homepage extends Activity {
 	//接收传过来的城市
 	province=getIntent().getStringArrayListExtra("province");
 	System.out.println("主界面收到的城市"+province);
-	//接收传过来的城市
-	realname=getIntent().getStringArrayListExtra("realname");
-	System.out.println("主界面收到的城市"+realname);
 	 
 	
 	
@@ -113,12 +110,11 @@ public class Homepage extends Activity {
 			}
 			
 	 //显示职务联系方式
-			if(cellphone!=null&&company!=null&&department!=null&&realname!=null){
+			if(cellphone!=null&&company!=null&&department!=null){
 				
-	           String string1 =cellphone.get(0);String string2=company.get(0);String string3=department.get(0); String string4=realname.get(0);
-	           name.setText(string4);     moblile.setText(string1);   companyshow.setText(string2);    title.setText(string3);
-	          
-			}
+	           String string1 =cellphone.get(0);String string2=company.get(0);String string3=department.get(0);
+	           name.setText(username);     moblile.setText(string1);   companyshow.setText(string2);    title.setText(string3);
+	 }
 	//显示区域城市
 			if(district!=null&&province!=null){
 				String string=district.get(0);  geographic.setText(string);
@@ -142,7 +138,6 @@ public class Homepage extends Activity {
 			intent.putExtra("department", department);
 			intent.putExtra("district", district);
 			intent.putExtra("province", province);
-			intent.putExtra("realname", realname);
 			startActivity(intent);
 			overridePendingTransition(R.anim.in_from_left,R.anim.out_to_left);
 			finish();
@@ -172,9 +167,6 @@ public class Homepage extends Activity {
 				intent.putExtra("cellphone", cellphone);
 				intent.putExtra("company", company);
 				intent.putExtra("department", department);
-				intent.putExtra("district", district);
-				intent.putExtra("province", province);
-				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();
 			}
@@ -196,7 +188,6 @@ public class Homepage extends Activity {
 			intent.putExtra("department", department);
 			intent.putExtra("district", district);
 			intent.putExtra("province", province);
-			intent.putExtra("realname", realname);
 			startActivity(intent);
 			finish();
 		}
@@ -227,7 +218,7 @@ public class Homepage extends Activity {
 	TextView retreat=(TextView)menu. findViewById(id.retreat);//退出登陆
 	TextView modification=(TextView)menu. findViewById(id.modification);//修改密码
 	TextView users=(TextView)menu. findViewById(id.user);//用户名显示
-	users.setText(realname.toString().replace("[","").replace("]",""));
+	users.setText(username);
 	
 	////退出登录
 	 retreat.setOnClickListener(new OnClickListener() {
@@ -293,15 +284,14 @@ public class Homepage extends Activity {
 			// TODO 自动生成的方法存根
 			
 			Intent  intent=new Intent(Homepage.this,Modification.class);
-			intent.putExtra("token", string);
-			intent.putExtra("name", username);
-			intent.putExtra("password", password);
+			intent.putExtra("token",string);
+			intent.putExtra("username",username);
+			intent.putExtra("userpassword",password);
 			intent.putExtra("cellphone", cellphone);
 			intent.putExtra("company", company);
 			intent.putExtra("department", department);
 			intent.putExtra("district", district);
 			intent.putExtra("province", province);
-			intent.putExtra("realname", realname);
 			startActivity(intent);
 			finish();
 		}

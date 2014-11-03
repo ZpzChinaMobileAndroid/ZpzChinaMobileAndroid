@@ -31,7 +31,7 @@ public class Plan extends Activity {
 	String[] strings={"项目负责人"};
 	 ArrayList<String>arrayList, arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11,arrayList111,arrayList112,arrayList113,arrayList114;
 	 String string,password,username;
-	 ArrayList<String >cellphone,company2,department,province,district,realname;
+	 ArrayList<String >cellphone,company2,department,province,district;
 	   private EditText name , phone, companys , addressimage;
 	   private	 TextView  station,showsss ,nameone,nametwo,namethree;
 	   private ImageView saveimage;
@@ -110,9 +110,6 @@ public class Plan extends Activity {
 	 //接收传过来的城市
 	 province=getIntent().getStringArrayListExtra("province");
 	 System.out.println("土地规划接收到的职务"+province);
-	 //接收传过来的城市
-	 realname=getIntent().getStringArrayListExtra("realname");
-	 System.out.println("土地规划接收到的职务"+realname);
       
       
       //保存到本地
@@ -141,7 +138,6 @@ public class Plan extends Activity {
 		intent.putExtra("department", department);
 		intent.putExtra("district", district);
 		intent.putExtra("province", province);
-		intent.putExtra("realname", realname);
 //		intent.putExtra("user", arrayList111);
 //		intent.putExtra("user1", arrayList112);
 //		intent.putExtra("user2", arrayList113);
@@ -290,7 +286,6 @@ public class Plan extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
-				intent.putExtra("realname", realname);
 			startActivity(intent);
 			overridePendingTransition(R.anim.onout,R.anim.inout);
 			finish();
@@ -328,7 +323,6 @@ public class Plan extends Activity {
 					intent.putExtra("department", department);
 					intent.putExtra("district", district);
 					intent.putExtra("province", province);
-					intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();
@@ -963,7 +957,6 @@ public class Plan extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
-				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();
