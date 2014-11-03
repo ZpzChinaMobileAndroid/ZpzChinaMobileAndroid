@@ -31,7 +31,7 @@ import com.example.sqlite.Information;
 			TextView name, one, two, three, four, five, six, nine, ten;
 			ImageView photo, senven, eight, elevent;
 			String string,username,password;
-			ArrayList<String >cellphone,company,department;
+			ArrayList<String >cellphone,company,department,realname;
 			ArrayList<Information>arrayList=new ArrayList<Information>();
 		@Override
 	    protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,9 @@ import com.example.sqlite.Information;
 		 //接收传过来的职务
 		 department=getIntent().getStringArrayListExtra("department");
 		 System.out.println("主界面收到的职务"+department);
+		 //接收传过来的职务
+		 realname=getIntent().getStringArrayListExtra("realname");
+		 System.out.println("主界面收到的职务"+realname);
 		 
 		 
 		
@@ -171,6 +174,7 @@ import com.example.sqlite.Information;
 				intent.putExtra("cellphone", cellphone);
 				intent.putExtra("company", company);
 				intent.putExtra("department", department);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();
 			}

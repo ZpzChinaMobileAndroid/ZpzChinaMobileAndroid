@@ -31,7 +31,7 @@ public class Foundation extends Activity {
 	String[] strings={"现场经理","采购负责人"};
 	 ArrayList<String>arrayList, arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
 	 String string,password,username;
-	 ArrayList<String >cellphone,company2,department,province,district;
+	 ArrayList<String >cellphone,company2,department,province,district,realname;
 	 private EditText name , phone, company , addressimage;
 		private	 TextView  station,showsss,nameone,nametwo,namethree ;
 		private ImageView saveimage;
@@ -105,6 +105,9 @@ public class Foundation extends Activity {
 			 //接收传过来的城市
 			 province=getIntent().getStringArrayListExtra("province");
 			 System.out.println("土地规划接收到的职务"+province);
+			 //接收传过来的城市
+			 realname=getIntent().getStringArrayListExtra("realname");
+			 System.out.println("土地规划接收到的职务"+realname);
 			
 			
 	        arrayList=new ArrayList<String>();
@@ -136,6 +139,7 @@ public class Foundation extends Activity {
 			intent.putExtra("department", department);
 			intent.putExtra("district", district);
 			intent.putExtra("province", province);
+		    intent.putExtra("realname", realname);
 //	 		intent.putExtra("user", arrayList111);
 //	 		intent.putExtra("user1", arrayList112);
 //	 		intent.putExtra("user2", arrayList113);
@@ -176,6 +180,7 @@ public class Foundation extends Activity {
 	   				intent.putExtra("department", department);
 	   				intent.putExtra("district", district);
 	   				intent.putExtra("province", province);
+	   			    intent.putExtra("realname", realname);
 					startActivity(intent);
 					overridePendingTransition(R.anim.onout,R.anim.inout);
 					finish();
@@ -209,6 +214,7 @@ public class Foundation extends Activity {
 	   				intent.putExtra("department", department);
 	   				intent.putExtra("district", district);
 	   				intent.putExtra("province", province);
+	   			    intent.putExtra("realname", realname);
 					startActivity(intent);
 					overridePendingTransition(R.anim.onout,R.anim.inout);
 					finish();
@@ -940,6 +946,7 @@ public class Foundation extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
+   			    intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();

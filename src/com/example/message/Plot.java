@@ -36,7 +36,7 @@ public class Plot extends Activity {
 	private	TextView plot,design,start,stop, elevator,condition,heating,material,structure,show,show1,show2,show3,show4,show5,show6;
 	private	ImageView choose,save,back;
 	String string,password,username;
-	ArrayList<String >cellphone,company2,department,province,district;
+	ArrayList<String >cellphone,company2,department,province,district,realname;
 	//年月日
 		public String category1[] = new String[] { "2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024年","2025","2026","2027","2028","2029","2030","2031","2032","2033"};
 		public String category2[][] = new String[][]{{"01","02","03","04","05","06","07","08","09","10","11","12" },{"01","02","03","04","05","06","07","08","09","10","11","12" },
@@ -146,6 +146,9 @@ public class Plot extends Activity {
 	 //接收传过来的城市
 	 province=getIntent().getStringArrayListExtra("province");
 	 System.out.println("土地规划接收到的职务"+province);
+	 //接收传过来的城市
+	 realname=getIntent().getStringArrayListExtra("realname");
+	 System.out.println("土地规划接收到的职务"+realname);
 		
 		
 	    //保存到本地
@@ -183,6 +186,7 @@ public class Plot extends Activity {
 			intent.putExtra("department", department);
 			intent.putExtra("district", district);
 			intent.putExtra("province", province);
+			intent.putExtra("realname", realname);
 //			intent.putExtra("user", arrayList111);
 //			intent.putExtra("user1", arrayList112);
 //			intent.putExtra("user2", arrayList113);
@@ -272,6 +276,7 @@ public class Plot extends Activity {
 		   				intent.putExtra("department", department);
 		   				intent.putExtra("district", district);
 		   				intent.putExtra("province", province);
+		   				intent.putExtra("realname", realname);
 						startActivity(intent);
 						overridePendingTransition(R.anim.onout,R.anim.inout); 
 						finish();
@@ -1247,6 +1252,7 @@ public class Plot extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
+   				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();

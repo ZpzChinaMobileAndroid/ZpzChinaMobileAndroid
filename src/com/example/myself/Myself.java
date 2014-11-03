@@ -31,7 +31,7 @@ public class Myself extends TabActivity{
 	String string,username,password;
 	ArrayList<String>arrayList,arrayList1,arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
     ArrayList<String>arrayList111,arrayList112,arrayList113,arrayList114;
-    ArrayList<String >cellphone,company,department;
+    ArrayList<String >cellphone,company,department,realname;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO 自动生成的方法存根
@@ -59,6 +59,9 @@ public class Myself extends TabActivity{
 		 //接收传过来的职务
 		 department=getIntent().getStringArrayListExtra("department");
 		 System.out.println("主界面收到的职务"+department);
+		 //接收传过来的职务
+		 realname=getIntent().getStringArrayListExtra("realname");
+		 System.out.println("主界面收到的职务"+realname);
 		 
 		 
 		 
@@ -95,8 +98,8 @@ public class Myself extends TabActivity{
 		
 		//设置使用TabHost布局 　　　
 		LayoutInflater.from(this).inflate(R.layout.activity__myself, host.getTabContentView(),true);
-		host.addTab(host.newTabSpec("tab1").setIndicator("我发布的项目").setContent(new Intent(Myself.this,Issue.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department)));
-		host.addTab(host.newTabSpec("tab2").setIndicator("本地保存项目").setContent(new Intent(Myself.this,Preserve.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department)));
+		host.addTab(host.newTabSpec("tab1").setIndicator("我发布的项目").setContent(new Intent(Myself.this,Issue.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department).putExtra("realname",realname)));
+		host.addTab(host.newTabSpec("tab2").setIndicator("本地保存项目").setContent(new Intent(Myself.this,Preserve.class).putExtra("one", arrayList).putExtra("two", arrayList1).putExtra("three", arrayList2).putExtra("four", arrayList3).putExtra("five", arrayList4).putExtra("six", arrayList5).putExtra("seven", arrayList6).putExtra("eight", arrayList7).putExtra("nine", arrayList8).putExtra("ten", arrayList9).putExtra("name", username).putExtra("password", password).putExtra("token", string).putExtra("cellphone",cellphone).putExtra("company", company).putExtra("department", department).putExtra("realname",realname)));
 //		widget.getChildAt(0).setBackgroundResource(R.drawable.g5);
 //		widget.getChildAt(1).setBackgroundResource(R.drawable.g4);
 		 

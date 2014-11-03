@@ -26,7 +26,7 @@ public class Content extends Activity {
 	String string2;
 	String string,password,username;
 	ImageView sky,sky1, sky2,sky3, sky4,sky5, sky6,sky7, sky8,sky9;
-	ArrayList<String >cellphone,company,department,province,district;
+	ArrayList<String >cellphone,company,department,province,district,realname;
 	String str,str1,str2,str3,str4,str5,str6,str7,str8,str9;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +75,13 @@ public class Content extends Activity {
 		 System.out.println("界面收到的职务"+department);
 		 //接收传过来的区域
 		 district=getIntent().getStringArrayListExtra("district");
-		 System.out.println("土地规划接收到的职务"+district);
+		 System.out.println("界面接收到的职务"+district);
 		 //接收传过来的城市
 		 province=getIntent().getStringArrayListExtra("province");
-		 System.out.println("土地规划接收到的职务"+province);
-		 
+		 System.out.println("界面接收到的职务"+province);
+		 //接收传过来的用户名
+		 realname=getIntent().getStringArrayListExtra("realname");
+		 System.out.println("界面接收到的名字"+realname);
 		 
 		 
 		auction=(TextView) findViewById(id.auction);//土地规划/拍卖
@@ -130,6 +132,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -211,6 +214,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -243,6 +247,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -276,6 +281,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -309,6 +315,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -342,6 +349,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -376,6 +384,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -409,6 +418,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -442,6 +452,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -476,6 +487,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 				overridePendingTransition(R.anim.onout,R.anim.inout);
@@ -499,6 +511,7 @@ public class Content extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();	
 			}
@@ -520,6 +533,7 @@ public class Content extends Activity {
 		intent.putExtra("department", department);
 		intent.putExtra("district", district);
 		intent.putExtra("province", province);
+		intent.putExtra("realname", realname);
 		startActivity(intent);
 		finish();	
 	}
