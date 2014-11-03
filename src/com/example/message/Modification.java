@@ -32,7 +32,7 @@ public class Modification extends Activity{
 	ImageView result,sucess;
 	EditText oldpassword,newpassword,newpasswordtwo;
 	String token,userpassword,username;
-	ArrayList<String >cellphone,company,department,province,district;
+	ArrayList<String >cellphone,company,department,province,district,realname;
 	
 	Handler handler=new Handler(){
 	   public void handleMessage(android.os.Message msg) {
@@ -97,6 +97,9 @@ public class Modification extends Activity{
 		 //接收传过来的城市
 		 province=getIntent().getStringArrayListExtra("province");
 		 System.out.println("土地规划接收到的职务"+province);
+		 //接收传过来的城市
+		 realname=getIntent().getStringArrayListExtra("realname");
+		 System.out.println("土地规划接收到的职务"+realname);
 		
 		
 		//修改密码的操作
@@ -186,6 +189,7 @@ public class Modification extends Activity{
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 				startActivity(intent);
 				finish();
 			}
@@ -205,6 +209,7 @@ public class Modification extends Activity{
 		intent.putExtra("department", department);
 		intent.putExtra("district", district);
 		intent.putExtra("province", province);
+		intent.putExtra("realname", realname);
 		startActivity(intent);
 		finish();
 	}

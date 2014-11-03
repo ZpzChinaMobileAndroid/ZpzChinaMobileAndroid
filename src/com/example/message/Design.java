@@ -26,7 +26,7 @@ public class Design extends Activity {
 	String[] str={"结构","立面","幕墙","暖通","扩初","蓝图","送审","审结"}; 
 	String[] strings={"建筑师","结构工程师","电气工程师","暖通工程师","给排水工程师","幕墙工程师"};
 	String string,password,username;
-	ArrayList<String >cellphone,company2,department,province,district;
+	ArrayList<String >cellphone,company2,department,province,district,realname;
 	 private EditText name , phone, company , addressimage;
 		private	 TextView  station,showsss,nameone,nametwo,namethree ;
 		private ImageView saveimage;
@@ -94,7 +94,9 @@ public class Design extends Activity {
     		 //接收传过来的城市
     		 province=getIntent().getStringArrayListExtra("province");
     		 System.out.println("土地规划接收到的职务"+province);
-      		
+    		 //接收传过来的城市
+    		 realname=getIntent().getStringArrayListExtra("realname");
+    		 System.out.println("土地规划接收到的名字"+province);
       		
       		
       	  //保存到本地
@@ -124,6 +126,7 @@ public class Design extends Activity {
      		intent.putExtra("cellphone", cellphone);
 			intent.putExtra("company", company2);
 			intent.putExtra("department", department);
+			intent.putExtra("realname",realname);
 //     		intent.putExtra("user", arrayList111);
 //     		intent.putExtra("user1", arrayList112);
 //     		intent.putExtra("user2", arrayList113);
@@ -199,6 +202,7 @@ public class Design extends Activity {
        				intent.putExtra("department", department);
        				intent.putExtra("district", district);
        				intent.putExtra("province", province);
+       				intent.putExtra("realname",realname);
     				startActivity(intent);
     				overridePendingTransition(R.anim.onout,R.anim.inout);
     				finish();
@@ -908,6 +912,7 @@ public class Design extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
+   				intent.putExtra("realname",realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();

@@ -1,5 +1,7 @@
 package com.example.allproject;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -24,6 +26,9 @@ public class Advanced extends Activity {
 
 	EditText keyword, companyname;
 	TextView district, province, stage, category, show, show1, show2, show3;
+	String string,password,username;
+	ArrayList<String> arrayList;
+	ArrayList<String >cellphone,company,department,province1,district1,realname;
 	ImageView found, back;
 	String[] strings = { "工业", "酒店及餐饮", "商务办公", "住宅/经济适用用房", "公用事业设施", "其他" };
 	public String category1[] = new String[] { "北京市", "天津市", "上海市", "重庆市",
@@ -95,6 +100,34 @@ public class Advanced extends Activity {
 		show1 = (TextView) findViewById(id.show1);
 		show2 = (TextView) findViewById(id.show2);
 		show3 = (TextView) findViewById(id.show3);
+		
+		 //接收传过来的token值
+   	    string=getIntent().getStringExtra("token");
+   	    System.out.println("消防绿化界面接收到的token值"+string);
+        //接收传过来的登录名
+   	    username=getIntent().getStringExtra("name");
+   	    System.out.println("消防绿化界面收到的用户名"+username);
+   	    //接收传过来的登录密码
+   	    password=getIntent().getStringExtra("password");
+   	    System.out.println("消防绿化界面收到的登录密码"+password);
+   	    //接收传过来的手机号
+   	    cellphone=getIntent().getStringArrayListExtra("cellphone");
+   	     System.out.println("消防绿化界面收到的手机号"+cellphone);
+   	    //接收传过来的所属单位
+   	     company=getIntent().getStringArrayListExtra("company");
+   	     System.out.println("消防绿化界面收到的所属单位"+company);
+   	    //接收传过来的职务
+   	     department=getIntent().getStringArrayListExtra("department");
+   	     System.out.println("消防绿化界面收到的职务"+department);
+   	    //接收传过来的区域
+		 district1=getIntent().getStringArrayListExtra("district");
+		 System.out.println("土地规划接收到的职务"+district1);
+		 //接收传过来的城市
+		 province1=getIntent().getStringArrayListExtra("province");
+		 System.out.println("土地规划接收到的职务"+province1);
+		 //接收传过来的城市
+		 realname=getIntent().getStringArrayListExtra("realname");
+		 System.out.println("土地规划接收到的名字"+province);
 
 		// 去掉边框
 		keyword.setBackgroundDrawable(null);
@@ -298,6 +331,15 @@ public class Advanced extends Activity {
 
 		Intent intent = new Intent(Advanced.this, Choosemenu.class);
 		startActivity(intent);
+		intent.putExtra("token", string);
+		intent.putExtra("name", username);
+		intent.putExtra("password", password);
+		intent.putExtra("cellphone", cellphone);
+		intent.putExtra("company", company);
+		intent.putExtra("department", department);
+		intent.putExtra("district", district1);
+		intent.putExtra("province", province1);
+		intent.putExtra("realname", realname);
 		finish();
 
 	}

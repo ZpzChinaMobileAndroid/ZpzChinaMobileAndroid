@@ -27,7 +27,7 @@ public class Construct extends Activity {
 	
 	 ArrayList<String> arrayList,arrayList2,arrayList3,arrayList4,arrayList5,arrayList6,arrayList7,arrayList8,arrayList9,arrayList10,arrayList11;
 	 String string,password,username;
-	 ArrayList<String >cellphone,company,department,province,district;
+	 ArrayList<String >cellphone,company,department,province,district,realname;
 	 GridView gird;
 		boolean bo = true;
 		static List<Bitmap> list = new LinkedList<Bitmap>();
@@ -39,13 +39,13 @@ public class Construct extends Activity {
 		setContentView(R.layout.activity__construct);
 		
 	
-		 ImageView  save=(ImageView) findViewById(id.imageView3);//������Ŀ
-		 ImageView  back=(ImageView) findViewById(id.back);//���ؽ���
-		 TextView jumpTextView=(TextView) findViewById(id.jump);//��ת��ȥ
+		 ImageView  save=(ImageView) findViewById(id.imageView3);//保存项目
+		 ImageView  back=(ImageView) findViewById(id.back);//返回界面
+		 TextView jumpTextView=(TextView) findViewById(id.jump);//跳转回去
 		 gird = (GridView) findViewById(R.id.girdview);
 		 gird.setAdapter(myAdpter);
-		  //��ת�ҵ�ֵ
-		  //��ת�ҵ�ֵ
+		  //中转我的值
+		  //中转我的值
 	 	    arrayList2=new ArrayList<String>();
 	        arrayList2=getIntent().getStringArrayListExtra("one");	
 	        arrayList3=new ArrayList<String>();
@@ -67,39 +67,41 @@ public class Construct extends Activity {
 	        arrayList11=new ArrayList<String>();
 	        arrayList11=getIntent().getStringArrayListExtra("ten");		
 	       
-	      //���մ�������tokenֵ
+	      //接收传过来的token值
 			string=getIntent().getStringExtra("token");
-			System.out.println("����ʩ��������յ���tokenֵ"+string);
-			//���մ������ĵ�¼��
+			System.out.println("主体施工界面接收到的token值"+string);
+			//接收传过来的登录名
 			username=getIntent().getStringExtra("name");
-			System.out.println("����ʩ�������յ����û���"+username);
-			//���մ������ĵ�¼����
+			System.out.println("主体施工界面收到的用户名"+username);
+			//接收传过来的登录密码
 			password=getIntent().getStringExtra("password");
-			System.out.println("����ʩ�������յ��ĵ�¼����"+password);
-			 //���մ��������ֻ��
+			System.out.println("主体施工界面收到的登录密码"+password);
+			 //接收传过来的手机号
 			 cellphone=getIntent().getStringArrayListExtra("cellphone");
-			 System.out.println("����ʩ�������յ����ֻ��"+cellphone);
-			 //���մ�������������λ
+			 System.out.println("主体施工界面收到的手机号"+cellphone);
+			 //接收传过来的所属单位
 			 company=getIntent().getStringArrayListExtra("company");
-			 System.out.println("����ʩ�������յ���������λ"+company);
-			 //���մ�������ְ��
+			 System.out.println("主体施工界面收到的所属单位"+company);
+			 //接收传过来的职务
 			 department=getIntent().getStringArrayListExtra("department");
-			 System.out.println("����ʩ�������յ���ְ��"+department);
-			 //���մ�����������
+			 System.out.println("主体施工界面收到的职务"+department);
+			 //接收传过来的区域
 			 district=getIntent().getStringArrayListExtra("district");
-			 System.out.println("���ع滮���յ���ְ��"+district);
-			 //���մ������ĳ���
+			 System.out.println("主体施工接收到的职务"+district);
+			 //接收传过来的城市
 			 province=getIntent().getStringArrayListExtra("province");
-			 System.out.println("���ع滮���յ���ְ��"+province);
+			 System.out.println("主体施工接收到的职务"+province);
+			 //接收传过来的用户名
+			 realname=getIntent().getStringArrayListExtra("realname");
+			 System.out.println("主体施工接收到的名字"+realname);
 			 
 			 
-			 
-			 //��ת��ȥ��ѡ�����
+			 //跳转回去到选择界面
 			 back.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View arg0) {
-						// TODO �Զ���ɵķ������
+						// TODO 自动生成的方法存根
 						
 						Intent intent=new Intent(Construct.this,Content.class);
 						intent.putExtra("key7", "1");
@@ -121,6 +123,7 @@ public class Construct extends Activity {
 		   				intent.putExtra("department", department);
 		   				intent.putExtra("district", district);
 		   				intent.putExtra("province", province);
+		   				intent.putExtra("realname", realname);
 						startActivity(intent);
 						overridePendingTransition(R.anim.onout,R.anim.inout);
 						
@@ -129,12 +132,12 @@ public class Construct extends Activity {
 				});
 			
 			 
-			  //���浽����
+			  //保存到本地
 			   save.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View arg0) {
-					// TODO �Զ���ɵķ������
+					// TODO 自动生成的方法存根
 					  
 				Intent intent=new Intent(Construct.this,Myself.class);
 				intent.putExtra("one", arrayList);
@@ -155,6 +158,7 @@ public class Construct extends Activity {
 				intent.putExtra("department", department);
 				intent.putExtra("district", district);
 				intent.putExtra("province", province);
+				intent.putExtra("realname", realname);
 //				intent.putExtra("user", arrayList111);
 //				intent.putExtra("user1", arrayList112);
 //				intent.putExtra("user2", arrayList113);
@@ -162,16 +166,16 @@ public class Construct extends Activity {
 				
 				startActivity(intent);
 				finish();
-				 Toast.makeText(Construct.this, "���浽���سɹ�", Toast.LENGTH_SHORT).show();
+				 Toast.makeText(Construct.this, "保存到本地成功", Toast.LENGTH_SHORT).show();
 				}
 			});
 			 
-		 //��ת��ȥ��ѡ�����
+		 //跳转回去到选择界面
 		 jumpTextView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				// TODO �Զ���ɵķ������
+				// TODO 自动生成的方法存根
 				
 				Intent intent=new Intent(Construct.this,Content.class);
 				intent.putExtra("key7", "1");
@@ -193,6 +197,7 @@ public class Construct extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
+   				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();
@@ -201,12 +206,12 @@ public class Construct extends Activity {
 		 
 		
 //		 
-//		//�����
+//		//照相机
 //		 camera.setOnClickListener(new OnClickListener() {
 //				
 //				@Override
 //				public void onClick(View arg0) {
-//					// TODO �Զ���ɵķ������
+//					// TODO 自动生成的方法存根
 //					
 //					 Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 //					 startActivityForResult(intent, 1);
@@ -273,7 +278,7 @@ public class Construct extends Activity {
 
 		}
 	 
-	//���÷��ؼ�
+	//设置返回键
 			@Override
 			public void onBackPressed() {
 				// TODO Auto-generated method stub
@@ -297,8 +302,9 @@ public class Construct extends Activity {
    				intent.putExtra("department", department);
    				intent.putExtra("district", district);
    				intent.putExtra("province", province);
+   				intent.putExtra("realname", realname);
 				startActivity(intent);
 				overridePendingTransition(R.anim.onout,R.anim.inout);
 				finish();
 			}
-	}
+		}
