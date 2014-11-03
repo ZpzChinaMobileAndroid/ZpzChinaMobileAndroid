@@ -29,7 +29,7 @@ import com.guozg.wheelview.views.WheelView;
 public class Approve extends Activity {
 	
 	private	EditText projectname,describe,invest,area,higth;
-	private	TextView unit,address,start,stop,participation,owner,approve,show,shower,show1,shower1,nameone,nametwo,namethree;
+	private	TextView abc,unit,address,start,stop,participation,owner,approve,show,shower,show1,shower1,nameone,nametwo,namethree;
 	private	ImageView choose;
 	String[] str={"外资独资","中外独资","私人企业","政府机关","国有企业","其他"};
 	String[] str2={"参与","不参与"};
