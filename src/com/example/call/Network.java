@@ -15,7 +15,7 @@ public class Network {
             result = true;
         } else {
             result = false;
-            
+            //init
         }
         return result;
     }
