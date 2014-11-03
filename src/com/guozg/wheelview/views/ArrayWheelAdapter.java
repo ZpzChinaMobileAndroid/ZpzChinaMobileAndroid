@@ -42,6 +42,7 @@ public class ArrayWheelAdapter<T> implements WheelAdapter {
 
     public ArrayWheelAdapter(String[][] strings) {
 		// TODO 自动生成的构造函数存根
+//init
 	}
 
     public ArrayWheelAdapter(String[][][] strings) {
